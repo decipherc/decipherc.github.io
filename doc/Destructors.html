@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Destructors &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Pointers" href="Pointers.html"/>
+        <link rel="prev" title="Constructors" href="Constructors.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Destructors</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Destructors.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="destructors">
+<h1>Destructors<a class="headerlink" href="#destructors" title="Permalink to this headline">¶</a></h1>
+<p>Destructors delete all variables you may have defined in your class.
+Just like with constructors, C++ will define a destructor for you if you don’t.
+Then why do you need to define your own? Let’s first go over when a destructor is called and used.
+You probably already know that variables have scopes.
+If you define a variable inside a function or a loop (these are called local variables)
+and try to access outside of the function of loop (or its scope), the compiler is unhappy.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">foo</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>   <span class="c1">// error! (assuming you don&#39;t have another variable named foo that was defined outside of the loop)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">foo</span><span class="p">(){</span>
+<span class="kt">bool</span> <span class="n">bar</span><span class="p">;}</span>
+<span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+
+   <span class="n">bar</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>  <span class="c1">// error!</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Why does this happen?
+What going out of scope really means is that you are trying to access a variable after it was already destructed!</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">foo</span><span class="p">;</span>
+<span class="p">}</span>          <span class="c1">// foo&#39;s destructor is called here, after the end of this block</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">foo</span><span class="p">()</span>
+<span class="p">{</span>
+   <span class="kt">bool</span> <span class="n">bar</span><span class="p">;</span>
+<span class="p">}</span>     <span class="c1">// bar&#39;s destructor is called here</span>
+
+<span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+   <span class="n">bar</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>  <span class="c1">// error!</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Okay.
+We get it.
+So why would you need to define your own destructor?
+Because dynamically allocated variables (or anything created with the new command) will not be destructed automatically by the compiler.
+Well why not, you scream at your computer. When you create dynamically allocated variables or arrays, they are created in memory in the heap, whereas all other variables are created in the stack.
+The heap and the stack work differently.
+The heap is basically extra space that you can rent and use at your own discretion; that is, you are responsible for what you put in there, not the compiler.
+The compiler takes care of things in the stack.
+If you don’t delete variables that are in the heap after you are done with them, they will stay there, using up memory with out you realizing
+(this is called a memory leak).
+Side note: According to the lecture notes you should also have a destructor whenever you open a disk file or connect to another computer over the network, but we haven’t done anything with that.</p>
+<p>Let’s look at the C++ code for a destructor.
+The name of a destructor must be the name of the class (like the constructor) but with a tilde (~) in front of it, and no return type.
+Now you finally get use for that key on your keyboard! But unlike the constructor, the destructor has NO parameters and you can have only one in every class.</p>
+<p>Here’s an inline destructor for the class Foo:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">~</span><span class="n">Foo</span><span class="p">()</span>
+<span class="p">{}</span>
+</pre></div>
+</div>
+<p>And here it is outside of the class:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Foo</span><span class="o">::~</span><span class="n">Foo</span><span class="p">()</span>
+<span class="p">{}</span>
+</pre></div>
+</div>
+<p>You delete a dynamically allocated variable or array with “delete” or “delete []”.
+If use <code class="docutils literal notranslate"><span class="pre">new</span></code> command you have to use <code class="docutils literal notranslate"><span class="pre">delete</span></code> to avoid memory leak.
+If use have <code class="docutils literal notranslate"><span class="pre">[]</span></code> after the <code class="docutils literal notranslate"><span class="pre">new</span></code> command you have to use <code class="docutils literal notranslate"><span class="pre">delete</span> <span class="pre">[]</span></code> to avoid memory leak.</p>
+<p>For example,</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Foo</span> <span class="n">ptr</span><span class="o">*</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Foo</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>later needs</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">delete</span> <span class="n">ptr</span><span class="o">*</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>and,</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Foo</span> <span class="n">ptr</span><span class="o">*</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Foo</span><span class="p">[</span><span class="mi">12</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>later needs</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">delete</span><span class="p">[]</span> <span class="n">ptr</span><span class="o">*</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>If you use the word <code class="docutils literal notranslate"><span class="pre">delete</span></code> outside of the destructor, you are also calling the destructor.
+For what variables is the destructor called?
+Note that it will always be called after the last brace of the variable’s scope.</p>
+<ol class="arabic simple">
+<li>Destructor is called for every element of an array that is of type class.</li>
+</ol>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">Foo</span> <span class="n">arr</span><span class="p">[</span><span class="mi">33</span><span class="p">];</span>
+<span class="p">}</span>  <span class="c1">// Destructor is called 33 times at the end of the function (after the last brace)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Destructor is called for an instance or object of type class.</li>
+</ol>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">Foo</span> <span class="n">bar</span><span class="p">;</span>
+<span class="p">}</span> <span class="c1">// Destructor is called</span>
+</pre></div>
+</div>
+<p>Destructor is NOT called for pointers of class type.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">Foo</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+<span class="p">}</span> <span class="c1">// Destructor is not called</span>
+</pre></div>
+</div>
+<p>But be careful; you can have memory leaks if you do not use <code class="docutils literal notranslate"><span class="pre">delete</span></code> properly.</p>
+<p>Memory leak below:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+ <span class="n">Foo</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Foo</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="c1">// pointer is destroyed because it goes out of scope but not the object it pointed to. memory leak!!!</span>
+</pre></div>
+</div>
+<p>No memory leak below:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">Foo</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Foo</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">);</span>
+ <span class="p">...</span>
+ <span class="k">delete</span> <span class="n">ptr</span><span class="p">;</span> <span class="c1">// object pointer points is deleted; no memory leak!</span>
+<span class="p">}</span> <span class="c1">// pointer is destroyed because it goes out of scope</span>
+</pre></div>
+</div>
+<p>No memory leak below:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">Foo</span> <span class="n">foo</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="c1">// no memory leak, object goes out of scope</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Pointers.html" class="btn btn-neutral float-right" title="Pointers">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Constructors.html" class="btn btn-neutral" title="Constructors"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

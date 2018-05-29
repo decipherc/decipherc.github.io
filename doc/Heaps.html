@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Unordered map &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Unordered map</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Heaps.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="unordered-map">
+<h1>Unordered map<a class="headerlink" href="#unordered-map" title="Permalink to this headline">¶</a></h1>
+<p>The unordered map doesn’t sort the items alphanumerically and uses a hash table.
+That means its operations have the same big-O as those of a hash table.
+You use it in the same way as a map, but you need to include</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;unordered_map&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>instead of</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;map&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>as well as</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">namepace</span> <span class="n">std</span><span class="o">::</span><span class="n">tr1</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>If you use a map that stores some self-defined class, you need to write your own hash function.</p>
+</div>
+<div class="section" id="heap">
+<h1>Heap<a class="headerlink" href="#heap" title="Permalink to this headline">¶</a></h1>
+<p>A heap is a type of data structure that orders its items either by largest to smallest or vice versa.
+It uses a complete binary tree.
+A complete binary tree is a binary tree whose top <code class="docutils literal notranslate"><span class="pre">n-1</span></code> levels are completely filled, and the nodes on the bottom-most level must be as far left as possible (meaning there are no empty children pointers in between).</p>
+<p>Examples of valid complete binary trees (x represents empty child pointer):</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>      <span class="n">a</span>
+  <span class="n">b</span>       <span class="n">c</span>
+<span class="n">d</span>   <span class="n">e</span>    <span class="n">x</span>  <span class="n">x</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>      <span class="n">a</span>
+  <span class="n">b</span>        <span class="n">c</span>
+<span class="n">d</span>   <span class="n">e</span>    <span class="n">f</span>   <span class="n">x</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>      <span class="n">a</span>
+  <span class="n">b</span>       <span class="n">c</span>
+<span class="n">d</span>   <span class="n">e</span>    <span class="n">f</span>  <span class="n">e</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>   <span class="n">a</span>
+<span class="n">b</span>    <span class="n">x</span>
+</pre></div>
+</div>
+<p>Examples of invalid complete binary trees:</p>
+<p>Notice that there is an empty pointer in between d and e</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>      <span class="n">a</span>
+  <span class="n">b</span>      <span class="n">x</span>
+<span class="n">d</span>  <span class="n">e</span>
+</pre></div>
+</div>
+<p>There are two types of heaps: maxheap and minheap.
+Maxheap organizes its items with the largest item at top and minheap has the smallest item at top.
+Note that a heap is NOT a binary search tree.
+A maxheap follows these rules: the value of any node must be greater than or equal to the values of its two children.
+In a minheap, the value must be less than or equal to the values of the children.
+Notice that in a BST, the left subtree must be less than any node’s value and right subtree must be greater.
+In a heap the value must greater than or less than both of its children.
+In a maxheap, the biggest item is always the root of the tree. In a minheap, the smallest item is the root of the tree.</p>
+<p>Let’s go over the operations</p>
+<div class="section" id="extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">
+<h2>Extracting the biggest item from a maxheap (smallest item from a minheap)<a class="headerlink" href="#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap" title="Permalink to this headline">¶</a></h2>
+<p>Algorithm:
+1. If tree is empty, don’t do anything.
+2. Otherwise, save the top item as the biggest/smallest item
+3. If the heap only has one node, return the value of that node and delete the node
+4. Otherwise, copy the value from the bottom-most, right-most node into the root node.
+5. Delete that node
+6. Repeatedly swap the just-moved value with the larger/smaller of its two children until all the nodes are greater than or equal to both of their children.
+7. Return the saved value</p>
+<p>Notice that you can’t just return the biggest/smallest item and return; you must find a replacement to be the next biggest/smallest item.</p>
+<p>Example with maxheap:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>      <span class="mi">7</span>
+   <span class="mi">2</span>     <span class="mi">5</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>Save <code class="docutils literal notranslate"><span class="pre">7</span></code> as the biggest value</p>
+<p>Find the bottom-most, right-most value: <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
+<p>Copy it into the top node and delete the node it was in before</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>   <span class="mi">1</span>
+<span class="mi">2</span>     <span class="mi">5</span>
+</pre></div>
+</div>
+<p>Compare <code class="docutils literal notranslate"><span class="pre">1</span></code> with its children: <code class="docutils literal notranslate"><span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code>. <code class="docutils literal notranslate"><span class="pre">5</span></code> is the larger of the two children and is also larger than <code class="docutils literal notranslate"><span class="pre">1</span></code>, so swap <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>   <span class="mi">5</span>
+<span class="mi">2</span>     <span class="mi">1</span>
+</pre></div>
+</div>
+<p>We are done!</p>
+<p>Example with minheap:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>      <span class="mi">1</span>
+   <span class="mi">2</span>     <span class="mi">5</span>
+<span class="mi">7</span>
+</pre></div>
+</div>
+<p>Save <code class="docutils literal notranslate"><span class="pre">1</span></code> as the smallest value</p>
+<p>Find the bottom-most, right-most value: <code class="docutils literal notranslate"><span class="pre">7</span></code></p>
+<p>Copy it into the top node and delete the node it was in before</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>   <span class="mi">7</span>
+<span class="mi">2</span>     <span class="mi">5</span>
+</pre></div>
+</div>
+<p>Compare <code class="docutils literal notranslate"><span class="pre">7</span></code> with its children: <code class="docutils literal notranslate"><span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code>. <code class="docutils literal notranslate"><span class="pre">2</span></code> is the smaller of the two children and is also smaller than <code class="docutils literal notranslate"><span class="pre">7</span></code>, so swap <code class="docutils literal notranslate"><span class="pre">7</span></code> and <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>   <span class="mi">2</span>
+<span class="mi">7</span>     <span class="mi">5</span>
+</pre></div>
+</div>
+<p>We are done!</p>
+</div>
+<div class="section" id="adding-a-node-to-a-maxheap-minheap-reheapification">
+<h2>Adding a node to a maxheap/minheap (reheapification)<a class="headerlink" href="#adding-a-node-to-a-maxheap-minheap-reheapification" title="Permalink to this headline">¶</a></h2>
+<p>Algorithm:
+1. If the tree is empty, create a new root node, copy the value, and return
+2. Otherwise, insert the new node in the left-most, bottom-most position of the tree (so we create a complete tree) and copy the value
+3. Repeatedly compare and swap the value with its parents until all the values are in the correct place</p>
+<p>Example with maxheap, inserting <code class="docutils literal notranslate"><span class="pre">9</span></code>:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>      <span class="mi">7</span>
+   <span class="mi">2</span>     <span class="mi">5</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>Create a new node in the left-most, bottom-most position of the tree and copy 9 into it</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>     <span class="mi">7</span>
+  <span class="mi">2</span>     <span class="mi">5</span>
+<span class="mi">1</span>   <span class="mi">9</span>
+</pre></div>
+</div>
+<p>Compare <code class="docutils literal notranslate"><span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code>. <code class="docutils literal notranslate"><span class="pre">2</span></code> is smaller than <code class="docutils literal notranslate"><span class="pre">9</span></code>, so we swap</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>     <span class="mi">7</span>
+  <span class="mi">9</span>     <span class="mi">5</span>
+<span class="mi">1</span>   <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Compare <code class="docutils literal notranslate"><span class="pre">9</span></code> and <code class="docutils literal notranslate"><span class="pre">7</span></code>. <code class="docutils literal notranslate"><span class="pre">7</span></code> is smaller than <code class="docutils literal notranslate"><span class="pre">9</span></code>, so we swap</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>     <span class="mi">9</span>
+  <span class="mi">7</span>     <span class="mi">5</span>
+<span class="mi">1</span>   <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Compare <code class="docutils literal notranslate"><span class="pre">9</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code>. <code class="docutils literal notranslate"><span class="pre">9</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">5</span></code>, so we are done</p>
+<p>Example with minheap, inserting 2:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>      <span class="mi">1</span>
+   <span class="mi">3</span>     <span class="mi">5</span>
+<span class="mi">7</span>
+</pre></div>
+</div>
+<p>Create a new node in the left-most, bottom-most position of the tree and copy <code class="docutils literal notranslate"><span class="pre">2</span></code> into it</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>     <span class="mi">1</span>
+  <span class="mi">3</span>     <span class="mi">5</span>
+<span class="mi">7</span>   <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Compare <code class="docutils literal notranslate"><span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">3</span></code>. <code class="docutils literal notranslate"><span class="pre">3</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">2</span></code>, so we swap</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>     <span class="mi">1</span>
+  <span class="mi">2</span>     <span class="mi">5</span>
+<span class="mi">7</span>   <span class="mi">3</span>
+</pre></div>
+</div>
+<p>Compare <code class="docutils literal notranslate"><span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code>. <code class="docutils literal notranslate"><span class="pre">1</span></code> is smaller than <code class="docutils literal notranslate"><span class="pre">2</span></code>, so we are done</p>
+<p>So we have gone over the algorithm and the interface, now what about the data structure?
+Maybe it seems obvious to use a binary tree with node structures, but it actually gets kind of complicated to find the bottom-most, right-most/left-most node and finding the node’s parent is not easy (for swapping).
+So instead, we could use an array.
+Just copy every level, left to right, (a la level-order traversal) into the array, with the root value at <code class="docutils literal notranslate"><span class="pre">arr[0]</span></code>.
+You also need to keep a count of the number of values.</p>
+<p>Example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>     <span class="mi">7</span>
+  <span class="mi">2</span>     <span class="mi">5</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>This is actually much more efficient! Here are some of the properties:
+- The root value is always at <code class="docutils literal notranslate"><span class="pre">arr[0]</span></code>
+- The bottom-most, right-most node is always in <code class="docutils literal notranslate"><span class="pre">arr[count</span> <span class="pre">-</span> <span class="pre">1]</span></code> (for extracting an item)
+- The bottom-most, left-most empty spot is always in <code class="docutils literal notranslate"><span class="pre">arr[count]</span></code> (for adding an item)
+- To find a the left child of a parent by using slot numbers, simply do <code class="docutils literal notranslate"><span class="pre">(2</span> <span class="pre">*</span> <span class="pre">index)</span> <span class="pre">+</span> <span class="pre">1</span></code> where index is the number of the array slot of a certain node.
+- To find a the right child of a parent by using slot numbers, simply do <code class="docutils literal notranslate"><span class="pre">(2</span> <span class="pre">*</span> <span class="pre">index)</span> <span class="pre">+</span> <span class="pre">2</span></code>
+- To find the parent’s slot of any given node, simply do <code class="docutils literal notranslate"><span class="pre">(index</span> <span class="pre">-</span> <span class="pre">1)</span> <span class="pre">/</span> <span class="pre">2</span></code></p>
+<p>Example:
+.. code-block:: c++</p>
+<blockquote>
+<div><blockquote>
+<div>0  1  2  3</div></blockquote>
+<p>{ 7, 2, 5, 1 }</p>
+</div></blockquote>
+<p>Let’s try finding the slot of the parent node of the node at <code class="docutils literal notranslate"><span class="pre">3</span></code> (value <code class="docutils literal notranslate"><span class="pre">1</span></code>).</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>The item at slot <code class="docutils literal notranslate"><span class="pre">1</span></code>, value <code class="docutils literal notranslate"><span class="pre">2</span></code>, is the parent.
+If we check back to the tree, we see that this is indeed correct</p>
+<p>Finding the left child of the item at slot <code class="docutils literal notranslate"><span class="pre">0</span></code>, item <code class="docutils literal notranslate"><span class="pre">7</span></code>:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">// Value 2</span>
+</pre></div>
+</div>
+<p>Finding the right child of the item at slot <code class="docutils literal notranslate"><span class="pre">0</span></code>, item <code class="docutils literal notranslate"><span class="pre">7</span></code>:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">// Value 5</span>
+</pre></div>
+</div>
+<p>Extracting from a maxheap/minheap (the array version):</p>
+<ol class="arabic simple">
+<li>If it is an empty tree (<code class="docutils literal notranslate"><span class="pre">count</span> <span class="pre">==</span> <span class="pre">0</span></code>), return</li>
+<li>Otherwise, save the value of <code class="docutils literal notranslate"><span class="pre">arr[0]</span></code> (it is the biggest/smallest value)</li>
+<li>If <code class="docutils literal notranslate"><span class="pre">count</span> <span class="pre">==</span> <span class="pre">1</span></code> (there is only one node), then set the <code class="docutils literal notranslate"><span class="pre">count</span></code> to <code class="docutils literal notranslate"><span class="pre">0</span></code> and return the saved value</li>
+<li>Copy the value of the bottom-most, right-most into the root node with <code class="docutils literal notranslate"><span class="pre">arr[0]</span></code> (<code class="docutils literal notranslate"><span class="pre">arr[0]</span> <span class="pre">=</span> <span class="pre">arr[count</span> <span class="pre">-</span> <span class="pre">1]</span></code>)</li>
+<li>Delete the right-most node in the bottom-most row with <code class="docutils literal notranslate"><span class="pre">count--</span></code></li>
+<li>Repeatedly compare and swap the values of the just-moved value and the larger/smaller of its children. Starting with <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">0</span></code>, compare and swap <code class="docutils literal notranslate"><span class="pre">arr[0]</span></code> with <code class="docutils literal notranslate"><span class="pre">arr[2</span> <span class="pre">*</span> <span class="pre">i</span> <span class="pre">+</span> <span class="pre">1]</span></code> and <code class="docutils literal notranslate"><span class="pre">arr[2</span> <span class="pre">*</span> <span class="pre">i</span> <span class="pre">+</span> <span class="pre">2]</span></code></li>
+<li>Return the saved value</li>
+</ol>
+<p>Adding a node to a maxheap/minheap (the array version):</p>
+<ol class="arabic simple">
+<li>Insert a new node in the left-most, bottom-most open slot with <code class="docutils literal notranslate"><span class="pre">arr[count]</span> <span class="pre">=</span> <span class="pre">value</span></code>; <code class="docutils literal notranslate"><span class="pre">count++</span></code>;</li>
+<li>Compare the new value (<code class="docutils literal notranslate"><span class="pre">arr[i]</span></code>) with its parent value <code class="docutils literal notranslate"><span class="pre">arr[(i</span> <span class="pre">-</span> <span class="pre">1)</span> <span class="pre">/</span> <span class="pre">2]</span></code>. If the parent is bigger/smaller, swap them</li>
+<li>Repeatedly swap the values of the tree until it is correct</li>
+</ol>
+<p>The big-O of extracting the max/min item from a max/minheap with n values is <code class="docutils literal notranslate"><span class="pre">O(log(n))</span></code> because you need to reposition the values.
+The worst case is <code class="docutils literal notranslate"><span class="pre">log(n)</span></code>.
+The big-o of inserting a new item into a heap is <code class="docutils literal notranslate"><span class="pre">O(log(n))</span></code> because you may need to swap the new value with its parent, etc.
+The worst case is <code class="docutils literal notranslate"><span class="pre">log(n)</span></code>.</p>
+</div>
+</div>
+<div class="section" id="priority-queue">
+<h1>Priority queue<a class="headerlink" href="#priority-queue" title="Permalink to this headline">¶</a></h1>
+<p>A priority queue is an algorithm that sorts its items by priority rating.
+When you dequeue an item, it gives you the item with the highest priority rating.
+Here are its three operations of the interface:</p>
+<ol class="arabic simple">
+<li>Insert an item into the queue</li>
+<li>Get the value of the highest priority item</li>
+<li>Remove the highest priority item from the queue</li>
+</ol>
+<p>You need to define how priority is calculated.
+A priority queue uses a heap as a data structure.</p>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

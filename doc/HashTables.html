@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hash Tables &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Binary Trees" href="BinaryTrees.html"/>
+        <link rel="prev" title="Algorithm Comparison" href="Big-O.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Hash Tables</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/HashTables.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="hash-tables">
+<h1>Hash Tables<a class="headerlink" href="#hash-tables" title="Permalink to this headline">¶</a></h1>
+<p>Before I start with hash tables, first I’ll discuss some of the properties of the modulus operator.
+The modulus operator divides two numbers and gets the remainder.</p>
+<p>Example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mi">1234</span> <span class="o">%</span> <span class="mi">100</span> <span class="n">is</span> <span class="mi">34</span>
+</pre></div>
+</div>
+<p>If you use the modulus operator to divide numbers by a certain number <code class="docutils literal notranslate"><span class="pre">N</span></code>, like <code class="docutils literal notranslate"><span class="pre">5</span></code>, you will get a pattern of numbers that never go higher than <code class="docutils literal notranslate"><span class="pre">N-1</span></code>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="mi">0</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">1</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="mi">2</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="mi">3</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="mi">4</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="mi">5</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">6</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="mi">0</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">1</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="mi">2</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">3</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>A hash table is a type of ADT that is very efficient for inserting and searching for data.
+It typically uses an array for its data structure.</p>
+<p>The algorithm is that you insert a value into the array based on a specific position determined by a hash function.
+Basically, almost all values inserted have a unique position based on their value, so you can calculate the position of the value based on a function and access it in one step!</p>
+<p>Say you want to store all the students 9-digit IDs of students at UCLA.
+One possibility is to create an array of <code class="docutils literal notranslate"><span class="pre">100,000,000</span></code> items and store every value in a bucket (position) based on its literal value.</p>
+<p>Example:</p>
+<p>ID = 123456789 is stored in <code class="docutils literal notranslate"><span class="pre">arr[123456789]</span></code> (By the way, this array would be of type bool, <code class="docutils literal notranslate"><span class="pre">true</span> <span class="pre">==</span> <span class="pre">someone</span></code> has that id, false they don’t)</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">hashFunc</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="kt">int</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
+     <span class="k">return</span> <span class="n">bucket</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This will be really efficient, but it will also waste a LOT of memory (there are only 50,000 students at UCLA).
+Why don’t we use the modulus operator to get the first four digits of a student id for the bucket number, and then just have an array of 100,000 elements.</p>
+<p>Example:</p>
+<p>ID = 123456789 is stored in arr[56789]</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">hashFunc</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="kt">int</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">id</span> <span class="o">%</span> <span class="mi">100000</span><span class="p">;</span> <span class="c1">// This guarantees us we will get a bucket number between 0 and 99,999</span>
+     <span class="k">return</span> <span class="n">bucket</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This looks pretty good, but what if we want to put in an id of 111156789?
+Our hash function will return a bucket of 56789, but that spots already taken!
+This is called a collision: when two or more values both hash to the same bucket in the array.</p>
+<p>There are two ways of dealing with collisions: by creating a Closed Hash Table or an Open Hash Table.</p>
+<div class="section" id="closed-hash-table">
+<h2>Closed Hash Table<a class="headerlink" href="#closed-hash-table" title="Permalink to this headline">¶</a></h2>
+<p>The closed hash table uses a linear probing algorithm, which is basically a gross way of saying that you put each value as close as possible to its intended bucket.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">56789</span><span class="p">]</span>     <span class="mi">123456789</span>     <span class="c1">// We can&#39;t put our id here, let&#39;s try the next spot</span>
+<span class="p">[</span><span class="mi">56790</span><span class="p">]</span>     <span class="mi">111156789</span>     <span class="c1">// This is free, let&#39;s just put it here</span>
+</pre></div>
+</div>
+<p>But the problem with the closed hash table is that once you run out of empty buckets, you can’t add any new values and you can’t delete any values either.</p>
+<p>Here’s the code:</p>
+<p>In this example we will have an array of 5 phone numbers (for all of your friends).</p>
+<p>Every bucket in a closed hash table is actually a struct with a value and a bool for whether it has been used or not.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">bucket</span>
+<span class="p">{</span>
+     <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+     <span class="kt">bool</span> <span class="n">used</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Let’s create a class, a data structure, and some interface functions.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">HashTable</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">insert</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">);</span>
+     <span class="kt">bool</span> <span class="nf">search</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">);</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="kt">int</span> <span class="n">hashFunc</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="k">const</span>     <span class="c1">// Let&#39;s keep our secret hash function secret</span>
+     <span class="p">{</span>
+          <span class="kt">int</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">5</span><span class="p">;</span>     <span class="c1">// 5 is the number of total buckets</span>
+          <span class="k">return</span> <span class="n">bucket</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">bucket</span> <span class="n">m_phoneBook</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="n">HashTable</span><span class="o">::</span><span class="n">insert</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="kt">int</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">hashFunc</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+
+     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">tries</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">tries</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">tries</span><span class="o">++</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">m_phoneBook</span><span class="p">[</span><span class="n">bucket</span><span class="p">].</span><span class="n">used</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span>     <span class="c1">// If the hashed value is free</span>
+          <span class="p">{</span>
+               <span class="n">m_phoneBook</span><span class="p">[</span><span class="n">bucket</span><span class="p">].</span><span class="n">num</span> <span class="o">=</span> <span class="n">num</span><span class="p">;</span>
+               <span class="n">m_phoneBook</span><span class="p">[</span><span class="n">bucket</span><span class="p">].</span><span class="n">used</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+               <span class="k">return</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="c1">// Linear probing</span>
+          <span class="n">bucket</span> <span class="o">=</span> <span class="p">(</span><span class="n">bucket</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span><span class="p">;</span>     <span class="c1">// Advance to the next bucket. Use this rather than bucket++ because it will go from 9 to 0 and wrap around</span>
+      <span class="p">}</span>
+     <span class="c1">// If we get here, there isn&#39;t any room in the table, so we can&#39;t do anything</span>
+<span class="p">}</span>
+
+
+<span class="kt">bool</span> <span class="n">HashTable</span><span class="o">::</span><span class="n">search</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="kt">int</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">hashFunc</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+
+     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">tries</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">tries</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">tries</span><span class="o">++</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="k">if</span> <span class="p">(</span><span class="n">m_phoneBook</span><span class="p">[</span><span class="n">bucket</span><span class="p">].</span><span class="n">used</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span>     <span class="c1">// If nothing is in the hashed value, it can&#39;t be there</span>
+
+              <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+
+         <span class="k">if</span> <span class="p">(</span><span class="n">m_phoneBook</span><span class="p">[</span><span class="n">bucket</span><span class="p">].</span><span class="n">num</span> <span class="o">==</span> <span class="n">num</span><span class="p">)</span>     <span class="c1">// If it is in the hashed value, yay we found it</span>
+
+              <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+
+
+          <span class="c1">// Linear probing</span>
+          <span class="n">bucket</span> <span class="o">=</span> <span class="p">(</span><span class="n">bucket</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span><span class="p">;</span>     <span class="c1">// Advance to the next bucket. Use this rather than bucket++ because it will go from 9 to 0 and wrap around</span>
+     <span class="p">}</span>
+     <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>     <span class="c1">// Must not be in the table</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="open-hash-table">
+<h2>Open Hash Table<a class="headerlink" href="#open-hash-table" title="Permalink to this headline">¶</a></h2>
+<p>Here is the algorithm to insert an item:
+1. Compute a bucket number with your hash function
+2. Add your new value to the linked list at array[bucket]
+3. Done!</p>
+<p>To search for an item:
+1. Compute a bucket number with your hash function
+2. Search the linked list at array[bucket] for your item
+3. If you reach the end of the linked list, it’s not in the table</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">bucket</span>
+<span class="p">{</span>
+     <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+     <span class="kt">bool</span> <span class="n">used</span><span class="p">;</span>
+     <span class="n">bucket</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">HashTable</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">insert</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">);</span>
+     <span class="kt">bool</span> <span class="nf">search</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">);</span>
+     <span class="kt">void</span> <span class="nf">delete</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">);</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="kt">int</span> <span class="n">hashFunc</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="k">const</span>     <span class="c1">// Let&#39;s keep our secret hash function secret</span>
+     <span class="p">{</span>
+          <span class="kt">int</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">5</span><span class="p">;</span>     <span class="c1">// 5 is the number of total buckets</span>
+          <span class="k">return</span> <span class="n">bucket</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">bucket</span><span class="o">*</span> <span class="n">m_phoneBook</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>     <span class="c1">// Array of bucket pointers</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="n">HashTable</span><span class="o">::</span><span class="n">insert</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="kt">int</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">hashFunc</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+
+     <span class="n">bucket</span><span class="o">*</span> <span class="n">traverser</span> <span class="o">=</span> <span class="n">phoneBook</span><span class="p">[</span><span class="n">bucket</span><span class="p">];</span>
+
+     <span class="k">while</span> <span class="p">(</span><span class="n">traverser</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="n">traverser</span> <span class="o">=</span> <span class="n">traverser</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+
+     <span class="n">bucket</span><span class="o">*</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">bucket</span><span class="p">;</span>
+     <span class="n">b</span><span class="o">-&gt;</span><span class="n">num</span> <span class="o">=</span> <span class="n">num</span><span class="p">;</span>
+     <span class="n">b</span><span class="o">-&gt;</span><span class="n">used</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+     <span class="n">b</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+
+     <span class="n">traverser</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="n">HashTable</span><span class="o">::</span><span class="n">search</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="kt">int</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">hashFunc</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+
+     <span class="n">bucket</span><span class="o">*</span> <span class="n">seeker</span> <span class="o">=</span> <span class="n">phoneBook</span><span class="p">[</span><span class="n">bucket</span><span class="p">];</span>
+
+     <span class="k">while</span> <span class="p">(</span><span class="n">seeker</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">seeker</span><span class="o">-&gt;</span><span class="n">num</span> <span class="o">==</span> <span class="n">num</span><span class="p">)</span>
+               <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+          <span class="n">seeker</span> <span class="o">=</span> <span class="n">seeker</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">HashTable</span><span class="o">::</span><span class="k">delete</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="kt">int</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">hashFunc</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+
+     <span class="n">bucket</span><span class="o">*</span> <span class="n">head</span> <span class="o">=</span> <span class="n">phoneBook</span><span class="p">[</span><span class="n">bucket</span><span class="p">];</span>
+
+     <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="k">return</span><span class="p">;</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">num</span> <span class="o">==</span> <span class="n">num</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="n">bucket</span><span class="o">*</span> <span class="n">victim</span> <span class="o">==</span> <span class="n">head</span><span class="p">;</span>
+          <span class="n">head</span> <span class="o">=</span> <span class="n">victim</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+          <span class="k">delete</span> <span class="n">victim</span><span class="p">;</span>
+          <span class="k">return</span><span class="p">;</span>
+     <span class="p">}</span>
+
+     <span class="n">bucket</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+     <span class="k">while</span> <span class="p">(</span><span class="n">p</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="k">nullptr</span> <span class="o">&amp;&amp;</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">num</span> <span class="o">==</span> <span class="n">num</span><span class="p">)</span>
+               <span class="k">break</span><span class="p">;</span>
+          <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">p</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="n">bucket</span> <span class="o">*</span><span class="n">victim</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+          <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">victim</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+          <span class="k">delete</span> <span class="n">victim</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Calculating the hash table efficiency</p>
+<p>First calculate the load factor:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">(</span><span class="n">max</span> <span class="n">number</span> <span class="n">of</span> <span class="n">values</span> <span class="n">you</span> <span class="n">plan</span> <span class="n">to</span> <span class="n">insert</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">total</span> <span class="n">buckets</span> <span class="n">in</span> <span class="n">the</span> <span class="n">array</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A load of <code class="docutils literal notranslate"><span class="pre">0.1</span></code> means you will only fill <code class="docutils literal notranslate"><span class="pre">0.1*100</span> <span class="pre">=</span> <span class="pre">10%</span></code> of your array</p>
+<p>For a closed hash table, here’s how to compute the average number of tries it will take you to insert or find an item (if your <code class="docutils literal notranslate"><span class="pre">L</span></code> is less than <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p>
+<p>Average number of tries = <code class="docutils literal notranslate"><span class="pre">(1/2)(1</span> <span class="pre">+</span> <span class="pre">1</span> <span class="pre">/</span> <span class="pre">(1</span> <span class="pre">-</span> <span class="pre">L))</span></code></p>
+<p>For a open hash table, here’s how to compute the average number of tries it will take you to insert or find an item</p>
+<p>Average number of tries = <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">(L</span> <span class="pre">/</span> <span class="pre">2)</span></code></p>
+<p>To decide how big you should make your array (for an open hash), set the average number of tries equal to <code class="docutils literal notranslate"><span class="pre">1.25</span></code> and solve for <code class="docutils literal notranslate"><span class="pre">L</span></code>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mf">1.25</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">L</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mf">.5</span>
+</pre></div>
+</div>
+<p>Plug in the value for <code class="docutils literal notranslate"><span class="pre">L</span></code> and how many values you want to insert and solve.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">(</span><span class="n">max</span> <span class="n">number</span> <span class="n">of</span> <span class="n">values</span> <span class="n">you</span> <span class="n">plan</span> <span class="n">to</span> <span class="n">insert</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">total</span> <span class="n">buckets</span> <span class="n">in</span> <span class="n">the</span> <span class="n">array</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mf">0.5</span> <span class="o">=</span> <span class="p">(</span><span class="n">max</span> <span class="n">number</span> <span class="n">of</span> <span class="n">values</span> <span class="n">you</span> <span class="n">plan</span> <span class="n">to</span> <span class="n">insert</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">total</span> <span class="n">buckets</span> <span class="n">in</span> <span class="n">the</span> <span class="n">array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BinaryTrees.html" class="btn btn-neutral float-right" title="Binary Trees">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Big-O.html" class="btn btn-neutral" title="Algorithm Comparison"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

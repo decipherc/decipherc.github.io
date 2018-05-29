@@ -1,0 +1,631 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Algorithm Comparison &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Hash Tables" href="HashTables.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="Sorting.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Algorithm Comparison</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Big-O.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="algorithm-comparison">
+<h1>Algorithm Comparison<a class="headerlink" href="#algorithm-comparison" title="Permalink to this headline">¶</a></h1>
+<p>Let us talk about how to compare algorithms.
+Typically, the faster algorithm is better.
+But how do we compare speed?
+In computer science, you talk about the number of instructions an algorithm uses to for a certain size of data.
+Different algorithms work better with different sizes of data, so you can’t compare two algorithms without first specifying a variable data size.
+Let’s call the data size <code class="docutils literal notranslate"><span class="pre">N</span></code>.
+You would describe the number of instructions it takes in terms of <code class="docutils literal notranslate"><span class="pre">N</span></code>; for example <code class="docutils literal notranslate"><span class="pre">N^2</span></code> or <code class="docutils literal notranslate"><span class="pre">5N</span></code>.
+By inputting a specific data size for <code class="docutils literal notranslate"><span class="pre">N</span></code>, you would be able to compare the algorithms in the most accurate way.
+This is the background of the <strong>Big-O</strong> concept; the <code class="docutils literal notranslate"><span class="pre">f(n)</span></code>.
+The Big-O concept is a way to compare algorithms for their worst case scenario by ignoring the coefficient (the <code class="docutils literal notranslate"><span class="pre">5</span></code> in <code class="docutils literal notranslate"><span class="pre">5N</span></code>) and lower-order terms (the <code class="docutils literal notranslate"><span class="pre">N</span></code> in <code class="docutils literal notranslate"><span class="pre">N^3</span> <span class="pre">+</span> <span class="pre">N</span></code>).
+Here some conversions from <code class="docutils literal notranslate"><span class="pre">f(n)</span></code> to <code class="docutils literal notranslate"><span class="pre">Big-O</span></code>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="o">^</span><span class="mi">2</span>     <span class="n">O</span><span class="p">(</span><span class="n">N</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">4</span><span class="n">N</span><span class="o">^</span><span class="mi">2</span>   <span class="n">O</span><span class="p">(</span><span class="n">N</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">N</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">20</span>   <span class="n">O</span><span class="p">(</span><span class="n">N</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">4</span><span class="n">N</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">N</span>   <span class="n">O</span><span class="p">(</span><span class="n">N</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="o">*</span><span class="n">logN</span>   <span class="n">O</span><span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">logN</span><span class="p">)</span>
+<span class="mi">5</span><span class="n">N</span><span class="o">*</span><span class="n">logN</span>  <span class="n">O</span><span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">logN</span><span class="p">)</span>
+<span class="n">N</span><span class="o">*</span><span class="n">logN</span> <span class="o">+</span> <span class="mi">20</span>   <span class="n">O</span><span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">logN</span><span class="p">)</span>
+<span class="mi">40</span><span class="n">N</span><span class="o">*</span><span class="n">logN</span> <span class="o">+</span> <span class="n">N</span>   <span class="n">O</span><span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">logN</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Sow how do you count how many instructions are performed?
+Some examples of what an instruction is are:
+- Accessing an item (like an item in an array)
+- Evaluating a mathematical expression
+- Traversing a single link in a linked list.</p>
+<p>Let’s first practice computing the <code class="docutils literal notranslate"><span class="pre">f(n)</span></code> of an algorithm.
+Here is a really simple algorithm that prints out every item of an array.
+Remember, we don’t know how many items the array may have, so we just use <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// The initialization of a variable is equal to 1 step.</span>
+<span class="c1">// f(n) = 1</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">// It will compare i to n, n times.</span>
+<span class="c1">// f(n) = 1 + n</span>
+<span class="p">{</span>
+   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>   <span class="c1">// Accesses an item of the array n - 1 times</span>
+<span class="c1">// f(n) = 1 + n + n - 1</span>
+   <span class="n">i</span><span class="o">++</span><span class="p">;</span>    <span class="c1">// Increments i n - 1 times</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In total, <code class="docutils literal notranslate"><span class="pre">f(n)</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">2n</span></code>.
+To convert it to a Big-O value, drop the coefficient and we get <code class="docutils literal notranslate"><span class="pre">O(n)</span></code>.</p>
+<p>If you had a two dimensional array, you would need two while loops.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">n</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// The initialization of a variable is equal to 1 step.</span>
+<span class="c1">// f(n) = 1</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">// It will compare i to n, n times.</span>
+<span class="c1">// f(n) = 1 + n</span>
+<span class="p">{</span>
+     <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// The initialization of a j happens n times.</span>
+     <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>  <span class="c1">// It will compare j to n, n^2 times (n time for j, n^2 times for j evey i)</span>
+     <span class="p">{</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>   <span class="c1">// Accesses an item of the array n^2 times</span>
+          <span class="n">j</span><span class="o">++</span><span class="p">;</span>    <span class="c1">// Increments j n^2 times</span>
+    <span class="p">}</span>
+<span class="c1">// f(n) = 1 + n + n + n^2 + n^2 + n^2</span>
+   <span class="n">i</span><span class="o">++</span><span class="p">;</span>    <span class="c1">// Increments i n times</span>
+<span class="c1">// f(n) = 1 + n + n + n^2 + n^2 + n^2 + n</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In total, <code class="docutils literal notranslate"><span class="pre">f(n)</span> <span class="pre">=</span> <span class="pre">3n^2</span> <span class="pre">+</span> <span class="pre">3n</span> <span class="pre">+</span> <span class="pre">1</span></code>, or <code class="docutils literal notranslate"><span class="pre">O(n^2)</span></code>.
+When calculating the Big-O, instead of looking at every initialization, just look at the most frequently occurring operations.</p>
+<p>Here are some hints to help you figure out the big-o.
+- If you have multiple loops within one another, the big-o’s exponent increases based on how many times each loop loops (in f(n) notation you would multiply the loops’ n’s).</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+   <span class="p">...</span>  <span class="c1">// O(n)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+   <span class="p">...</span> <span class="c1">// O(n^2)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="c1">// n</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="c1">// n</span>
+      <span class="p">...</span>
+   <span class="p">...</span> <span class="c1">// O(n^2) (f(n) = n * n)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="c1">// n</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="c1">// n^2</span>
+      <span class="p">...</span>
+   <span class="p">...</span> <span class="c1">// O(n^3)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">+=</span><span class="mi">2</span><span class="p">)</span>  <span class="c1">// Notice that i is incremented by 2</span>
+   <span class="p">...</span> <span class="c1">// O(n/2)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>If you have multiple loops that are NOT within one another, take the larger <code class="docutils literal notranslate"><span class="pre">n</span></code> (in <code class="docutils literal notranslate"><span class="pre">f(n)</span></code> notation you would add the loops’ <code class="docutils literal notranslate"><span class="pre">n</span></code>’s).</li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">foo</span><span class="p">()</span>
+<span class="p">{</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>  <span class="c1">// n</span>
+   <span class="p">...</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="c1">// n^2</span>
+   <span class="p">...</span>
+<span class="p">}</span> <span class="c1">// O(n) (f(n) = n^2 + n)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>If you have a loop that that decreases how many times it loops exponentially by 2 (e.g. 8 times, 4 times, 2 times, 1 time), its big-o is <code class="docutils literal notranslate"><span class="pre">log(n)</span></code> (it is a base 2 <code class="docutils literal notranslate"><span class="pre">log</span></code>).</li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="p">...</span>
+   <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// i divided in half every time</span>
+<span class="p">}</span>  <span class="c1">// O(log(n))</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="p">...</span>
+   <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">3</span><span class="p">;</span>  <span class="c1">// i divided in three every time</span>
+<span class="p">}</span>  <span class="c1">// O(log3(n))</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span> <span class="c1">// Loops twice as many times as n</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="p">...</span>
+   <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// i divided in half every time</span>
+<span class="p">}</span>  <span class="c1">// O(log(n^2))</span>
+</pre></div>
+</div>
+<p>Same multiplication rule as above applies here</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>  <span class="c1">// n</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+   <span class="p">{</span>
+     <span class="p">...</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// i divided in half every time</span>
+   <span class="p">}</span>
+<span class="p">}</span>  <span class="c1">// O(n*log(n))</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="c1">// n^2</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+   <span class="p">{</span>
+     <span class="p">...</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// i divided in half every time</span>
+   <span class="p">}</span>
+<span class="p">}</span>  <span class="c1">// O(n^2*log(n))</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">foo</span><span class="p">()</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+   <span class="p">{</span>
+     <span class="p">...</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// i divided in half every time</span>
+   <span class="p">}</span>
+
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="c1">// n</span>
+      <span class="p">...</span>
+
+<span class="p">}</span>  <span class="c1">// O(log(n)) (f(n) = log(n) + n) Note that n is bigger than log(n), so we keep it</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">foo</span><span class="p">()</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+   <span class="p">{</span>
+      <span class="p">...</span>
+      <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// i divided in half every time</span>
+   <span class="p">}</span>
+
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+      <span class="p">...</span> <span class="c1">// O(n^2)</span>
+
+<span class="p">}</span>  <span class="c1">// O(n^2) (f(n) = log(n) + n^2) Note that n^2 is bigger than log(n), so we keep it</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+   <span class="p">{</span>
+     <span class="p">...</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// i divided in half every time</span>
+   <span class="p">}</span>
+
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="c1">// n</span>
+      <span class="p">...</span>
+<span class="p">}</span>  <span class="c1">// O(n*(log(n) + n)) = O(n^2 + n*(log(n))</span>
+</pre></div>
+</div>
+<p>You can also have the inside loop variables depend on outside variables, so they don’t have a fixed number of iterations.
+In this case you use the maximum number of iterations that loop can have.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>     <span class="c1">// n</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>   <span class="c1">// Maximum iteration is when i is at its max (which is n), so at most j will run n times.</span>
+    <span class="p">...</span> <span class="c1">// O(n^2) (n * n = n^2)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>   <span class="c1">// n^2</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>   <span class="c1">// Maximum iteration is when i is at its max (which is n^2), so at most j will run n^2 times.</span>
+    <span class="p">...</span> <span class="c1">// O(n^4) (n^2 * n^2 = n^4)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>     <span class="c1">// n</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="c1">// Maximum iteration is when i is at its max (which is n), so at most j will run n^2 times.</span>
+    <span class="p">...</span> <span class="c1">// O(n^3) (n * n^2 = n^3)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>       <span class="c1">// n</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>   <span class="c1">// Maximum iteration is when i is at its max (which is n), so at most j will run n^2 times.</span>
+     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>  <span class="c1">// Maximum iteration is when j is at its max (which is n^2), so at most k will run n^2 times</span>
+        <span class="p">...</span> <span class="c1">// O(n^5) (n * n^2 * n^2 = n^5)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>       <span class="c1">// n</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>   <span class="c1">// Maximum iteration is when i is at its max (which is n), so at most j will run n^2 times.</span>
+     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>  <span class="c1">// Maximum iteration is when i is at its max (which is n), so at most k will run n times</span>
+        <span class="p">...</span> <span class="c1">// O(n^4) (n * n^2 * n = n^4)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>   <span class="c1">// n</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>   <span class="c1">// Maximum iteration is when j is at its max (which is n), so at most i will run log(n)</span>
+   <span class="p">{</span>
+      <span class="p">...</span>
+      <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>   <span class="c1">// i divided in half every time</span>
+   <span class="p">}</span>
+<span class="p">}</span> <span class="c1">// O(n*log(n))</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>   <span class="c1">// n</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">j</span><span class="o">*</span><span class="n">j</span><span class="p">;</span>     <span class="c1">// At max i = n^2</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>    <span class="c1">// Maximum iteration is when j is at its max (which is n), so at most i will run log(n^2)</span>
+   <span class="p">{</span>
+      <span class="p">...</span>
+      <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>    <span class="c1">// i divided in half every time</span>
+   <span class="p">}</span>
+<span class="p">}</span> <span class="c1">// O(n*log(n^2))</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>   <span class="c1">// n</span>
+<span class="p">{</span>
+   <span class="n">Physicist</span> <span class="n">arr</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>          <span class="c1">// a</span>
+   <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">numComicBooks</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>   <span class="c1">// b</span>
+<span class="p">}</span> <span class="c1">// O(n^2) **Is this because of line a or b?</span>
+</pre></div>
+</div>
+<p>By the way, if you have something like</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+     <span class="p">...</span>
+</pre></div>
+</div>
+<p>you write the big-o in terms of <code class="docutils literal notranslate"><span class="pre">z</span></code> (<code class="docutils literal notranslate"><span class="pre">O(z)</span></code>).</p>
+<p>You can also have two or more different and independent data sizes.
+In that case you need to include ALL variables in your big-o calculation, even if one of them has a smaller coefficient.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>  <span class="c1">// a</span>
+     <span class="p">...</span>
+
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>  <span class="c1">// b</span>
+     <span class="p">...</span>
+<span class="p">}</span> <span class="c1">// O(a + b)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">foobar</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>   <span class="c1">// a</span>
+     <span class="p">...</span>
+
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="c1">// b^2.</span>
+     <span class="p">...</span>
+<span class="p">}</span> <span class="c1">// O(a + b^2)</span>
+</pre></div>
+</div>
+<p>If you have a loop that runs depending on one data variables within another that depends on another, you ADD them, not multiply them.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">bar</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>     <span class="c1">// a</span>
+       <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="c1">// b</span>
+          <span class="p">...</span>
+<span class="p">}</span> <span class="c1">// O(a + b)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">barfoo</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>   <span class="c1">// a</span>
+       <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="c1">// b</span>
+          <span class="p">...</span>
+<span class="p">}</span> <span class="c1">// O(a^2 + b)</span>
+</pre></div>
+</div>
+<p>STL containers’ operations also have big-o’s.
+Here is a run-down of all of them, assuming they have n items.</p>
+<p>STACK and QUEUE
+- Inserting an item     .push()     O(1)
+- Popping an item       .pop()      O(1)
+- Looking at the top    .top()      O(1)</p>
+<p>VECTOR
+- Inserting an item at the top or middle     []                        O(n)
+- Inserting an item at the bottom            .push_back()              O(1)
+- Deleting an item at the top or middle      .erase (w/ iterator)      O(n)
+- Deleting an item at the bottom             .pop_back()               O(1)
+- Accessing an item anywhere                 [], .front(), .back()     O(1)
+- Finding an item                            w/ iterator               O(n)</p>
+<p>LIST
+- Inserting an item anywhere*                .push_front(), .push_back(), .insert()     O(1)
+- Deleting an item anywhere*                 .erase()                                   O(1)
+- Accessing an item at the top or bottom     .front(), .back()                          O(1)
+- Accessing an item at the middle            w/ iterator                                O(n)
+- Finding an item                            w/ iterator                                O(n)
+* You may have to first iterate through X items (O(X))</p>
+<p>SET
+- Inserting an item     .insert()                O(log(n))
+- Finding an item       .find()                  O(log(n))
+- Deleting an item      .erase (w/ iterator)     O(log(n))</p>
+<p>MAP
+- Inserting a new item     […] = …     O(log(n))
+- Finding an item          .find()         O(log(n))
+- Deleting an item         .erase()        O(log(n))</p>
+<p>Here is an example.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">set</span> <span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">nums</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>     <span class="c1">// n</span>
+     <span class="n">nums</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>            <span class="c1">// Inserting an item in a set, log(n)</span>
+<span class="c1">// O(n*log(n))</span>
+</pre></div>
+</div>
+<p>When evaluating these algorithms, assume that the container holds the maximum number of items possible, which is <code class="docutils literal notranslate"><span class="pre">n</span></code> (or whatever variable is being used).
+So when you have <code class="docutils literal notranslate"><span class="pre">.size()</span></code>, assume it is <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span> <span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">foo</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">foo</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>   <span class="c1">// At max, foo.size() will be n</span>
+     <span class="n">foo</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>     <span class="c1">// Deleting an item from the end of a vector, O(1)</span>
+<span class="c1">// O(n)</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span> <span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">bar</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">bar</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>        <span class="c1">// At max, bar.size() will be n</span>
+     <span class="n">bar</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">bar</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>  <span class="c1">// Deleting an item from the beginning of a vector, O(n)</span>
+<span class="c1">// O(n^2)</span>
+</pre></div>
+</div>
+<p>Here are some examples with a vector of integer sets.
+To do more complex problems like these, start from the smaller/smallest container and go outwards</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="n">set</span> <span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">foo</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Each vector has <code class="docutils literal notranslate"><span class="pre">a</span></code> sets
+Each set has an average of <code class="docutils literal notranslate"><span class="pre">b</span></code> integers
+Note: a set is automatically sorted alphanumerically.</p>
+<p>What is the big-o of determining whether <code class="docutils literal notranslate"><span class="pre">foo[0]</span></code> contains the value 7?
+- To find a value in a set, it is <code class="docutils literal notranslate"><span class="pre">O(log(b))</span></code>
+- To access an item of vector, it is <code class="docutils literal notranslate"><span class="pre">O(1)</span></code>
+- Answer: <code class="docutils literal notranslate"><span class="pre">O(log(b))</span></code></p>
+<p>What is the big-o of determining whether any set contains the value 7?
+- To find a value in a set, it is <code class="docutils literal notranslate"><span class="pre">O(log(b))</span></code>
+- To access an item of vector, it is <code class="docutils literal notranslate"><span class="pre">O(1)</span></code>
+- To access every item of a vector with a items, it is <code class="docutils literal notranslate"><span class="pre">O(1*a)</span> <span class="pre">=</span> <span class="pre">O(a)</span></code>
+- Answer: <code class="docutils literal notranslate"><span class="pre">O(a</span> <span class="pre">*</span> <span class="pre">log(b))</span></code></p>
+<p>What is the big-o of determining the number of all the even values in all of foo?
+- To access an item of a set, it is <code class="docutils literal notranslate"><span class="pre">O(1)</span></code>.
+- To access every item of a set with <code class="docutils literal notranslate"><span class="pre">b</span></code> items, it is <code class="docutils literal notranslate"><span class="pre">O(1*b)</span> <span class="pre">=</span> <span class="pre">O(b)</span></code>.
+- To access an item of vector, it is <code class="docutils literal notranslate"><span class="pre">O(1)</span></code>.
+- To access every item of a vector with a items, it is <code class="docutils literal notranslate"><span class="pre">O(1*a)</span> <span class="pre">=</span> <span class="pre">O(a)</span></code>
+- Answer: <code class="docutils literal notranslate"><span class="pre">O(a</span> <span class="pre">*</span> <span class="pre">b)</span></code></p>
+<p>What is the big-o of finding the first set with a value of 7 and then counting the number of even numbers in that set?
+- To find a value in a set, it is <code class="docutils literal notranslate"><span class="pre">O(log(b))</span></code>
+- To access an item of vector, it is <code class="docutils literal notranslate"><span class="pre">O(1)</span></code>
+- To access every item of a vector with a items, it is <code class="docutils literal notranslate"><span class="pre">O(1*a)</span> <span class="pre">=</span> <span class="pre">O(a)</span></code>
+- As a result, to determine whether any set contains the value 7, it is <code class="docutils literal notranslate"><span class="pre">O(a</span> <span class="pre">*</span> <span class="pre">log(b))</span></code>
+- To explore all the integers in the set containig the values 7, it is <code class="docutils literal notranslate"><span class="pre">O(b)</span></code>.
+- Answer: <code class="docutils literal notranslate"><span class="pre">O(a</span> <span class="pre">*</span> <span class="pre">log(b)</span> <span class="pre">+</span> <span class="pre">b)</span></code></p>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="HashTables.html" class="btn btn-neutral float-right" title="Hash Tables">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Sorting.html" class="btn btn-neutral" title="&lt;no title&gt;"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

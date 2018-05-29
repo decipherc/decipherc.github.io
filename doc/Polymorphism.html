@@ -1,0 +1,467 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Polymorphism &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Virtual functions" href="Virtual_fucntions.html"/>
+        <link rel="prev" title="Inheritance" href="Inheritance.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Polymorphism</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Polymorphism.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="polymorphism">
+<h1>Polymorphism<a class="headerlink" href="#polymorphism" title="Permalink to this headline">¶</a></h1>
+<p>Polymorphism is when you use a pointer or reference to a base class to access a derived class.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{};</span>
+<span class="k">class</span> <span class="nc">Bar</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Foo</span> <span class="p">{};</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Bar</span> <span class="n">b</span><span class="p">;</span>
+    <span class="n">Foo</span> <span class="o">*</span><span class="n">f</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">;</span>    <span class="c1">// Okay!</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>But you CANNOT use a pointer of type derived class to access the base class!</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Foo</span> <span class="n">f</span><span class="p">;</span>
+    <span class="n">Bar</span> <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">f</span><span class="p">;</span>    <span class="c1">// NO!</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now let’s see how we would use polymorphism. Say we have two classes: Person and Wizard. Wizard is derived from Person.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="n">string</span> <span class="n">getName</span><span class="p">();</span>
+     <span class="n">string</span> <span class="nf">getJob</span><span class="p">();</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="n">string</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="n">string</span> <span class="n">m_job</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Wizard</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Person</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="n">string</span> <span class="n">getWand</span><span class="p">();</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="n">string</span> <span class="n">m_wand</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>And we also have a function (outside of the class) that takes in a pointer to a Person.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">party</span><span class="p">(</span><span class="n">Person</span> <span class="o">*</span><span class="n">foo</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">foo</span><span class="o">-&gt;</span><span class="n">getName</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; is not working as a &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">foo</span><span class="o">-&gt;</span><span class="n">getJob</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; right now!&quot;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>We can make both a Person and a Wizard party (party()). Why?
+Remember that all instances of Wizard inherit a name and a job from the Person class.
+When you pass the address of a Wizard to a Person pointer, the compiler just
+checks whether the Wizard has the same public functions as a Person;
+if it does, it must be a Person.
+Hence the compiler doesn’t even know that the class is more than a Person.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Person</span> <span class="n">foo</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">,</span> <span class="s">&quot;Builder&quot;</span><span class="p">);</span>
+    <span class="n">Wizard</span> <span class="n">bar</span><span class="p">(</span><span class="s">&quot;Neville&quot;</span><span class="p">,</span> <span class="s">&quot;Herbology professor&quot;</span><span class="p">);</span>
+    <span class="n">party</span><span class="p">(</span><span class="o">&amp;</span><span class="n">foo</span><span class="p">);</span>
+    <span class="n">party</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bar</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can use polymorphism to make more efficient functions instead of writing duplicate code, like we did above.
+You only need to create one function instead of two separate ones, one for a Person and one for a Wizard.
+You can also do the same thing by using the base class to access two or more derived classes.
+Let’s say we want to have a function that takes in a student of any major and outputs what they will do after they graduate.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">future</span><span class="p">(</span><span class="n">Major</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">m</span><span class="p">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; will &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m</span><span class="p">.</span><span class="n">execute</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>That means we want our Major class to have two virtual functions, getName and execute, that all derived classes will inherit.</p>
+<p>Here’s the first draft of the class Major.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Major</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="k">virtual</span> <span class="n">string</span> <span class="n">getName</span><span class="p">();</span>
+    <span class="k">virtual</span> <span class="n">string</span> <span class="nf">execute</span><span class="p">();</span>
+ <span class="p">};</span>
+</pre></div>
+</div>
+<p>What do we do with the body of Major’s getName?
+Since we are not planning on creating an instance of Major (we don’t want anyone to have a generic major), it shouldn’t return anything.
+But we still need to have it, otherwise our future function wouldn’t work
+(the compiler wouldn’t be able to access m.getName() or m.execute() because neither of them exist in m).
+Let’s just make it return an empty string for now.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Major</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="k">virtual</span> <span class="n">string</span> <span class="n">getName</span><span class="p">()</span>
+    <span class="p">{</span>
+           <span class="k">return</span> <span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">virtual</span> <span class="n">string</span> <span class="n">execute</span><span class="p">()</span>
+    <span class="p">{</span>
+           <span class="k">return</span> <span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+ <span class="p">};</span>
+</pre></div>
+</div>
+<p>Now let’s make some derived classes. Our derived classes are going to redefine the inherited functions (specialization).</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Philosophy</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Major</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">Philosophy</span> <span class="p">(</span><span class="n">string</span> <span class="n">nm</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">m_name</span> <span class="o">=</span> <span class="n">nm</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">virtual</span> <span class="n">string</span> <span class="n">getName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">m_name</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">virtual</span> <span class="n">string</span> <span class="n">execute</span><span class="p">()</span>
+    <span class="p">{</span>
+           <span class="k">return</span> <span class="p">(</span><span class="s">&quot;think&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">m_name</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Art</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Major</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">Art</span> <span class="p">(</span><span class="n">string</span> <span class="n">nm</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">m_name</span> <span class="o">=</span> <span class="n">nm</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">virtual</span> <span class="n">string</span> <span class="n">getName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">m_name</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">virtual</span> <span class="n">string</span> <span class="n">execute</span><span class="p">()</span>
+    <span class="p">{</span>
+           <span class="k">return</span> <span class="p">(</span><span class="s">&quot;try not to starve&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">m_name</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Now when we create instances of Philosophy and Art, we can call the future function and everything will work.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Philosophy</span> <span class="n">a</span><span class="p">(</span><span class="s">&quot;Betty&quot;</span><span class="p">);</span>
+    <span class="n">Art</span> <span class="n">b</span><span class="p">(</span><span class="s">&quot;John&quot;</span><span class="p">);</span>
+    <span class="n">future</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>  <span class="c1">// Outputs: &quot;Betty will think&quot;</span>
+    <span class="n">future</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>  <span class="c1">// Outputs: &quot;John will try not to starve&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The beauty of polymorphism is that you can add as many derived classes of Major as you like and you wouldn’t have to rewrite the future function!</p>
+<p>Let’s look at the Major class again.
+Notice how it isn’t doing anything useful? C++ actually has special terminology and syntax for so called “dummy” base classes.
+They are called pure virtual functions; their functions are never called and they don’t do anything.
+Instead of writing extra lines of code that don’t do anything, instead you can just write ” = 0;” after the function name.
+This is the same for all pure virtual functions, no matter what their return type is.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Major</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="k">virtual</span> <span class="n">string</span> <span class="n">getName</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">string</span> <span class="nf">execute</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+ <span class="p">};</span>
+</pre></div>
+</div>
+<p>When you define pure virtual functions in the base class, you are forcing all of your derived classes to define their own version of it, which could also be a pure virtual function if you want.
+Here’s some more terminology.
+If you have at least one pure virtual function in a base class, it is called an Abstract Base Class (ABC).
+What’s the point of having ABCs? It forces whoever is making the derived classes to define a version of every pure virtual function.
+This prevents bugs that can occur when you try and access a derived class’ function.</p>
+<p>One more topic: say you want your base class to use dynamic variables and you need to define your own destructor, in both the base and derived class.
+When defining a destructor in classes that use inheritance and/or polymorphism you MUST make them virtual!
+Why?
+Let’s see an example without using virtual destructors.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+    <span class="p">....</span>
+    <span class="o">~</span><span class="n">Foo</span><span class="p">()</span> <span class="p">{</span> <span class="k">delete</span> <span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="k">class</span> <span class="nc">Bar</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Foo</span>
+<span class="p">{</span>
+    <span class="p">....</span>
+    <span class="o">~</span><span class="n">Bar</span><span class="p">()</span> <span class="p">{</span> <span class="k">delete</span> <span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Foo</span> <span class="o">*</span><span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bar</span> <span class="n">b</span><span class="p">;</span>   <span class="c1">// haha, &quot;new barbie&quot;</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+<span class="cm">/*</span>
+<span class="cm">When the compiler gets here, b needs to get destructed, but f can only access it through class Foo.</span>
+<span class="cm">But since ~Foo() isn&#39;t declared as virtual, f doesn&#39;t know that b has its own destructor, so it just calls ~Foo() and that&#39;s it.</span>
+<span class="cm">But now there&#39;s a memory leak because we didn&#39;t deallocate the memory in b!</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+<p>Let’s see what happens when you make the destructors virtual.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+    <span class="p">....</span>
+    <span class="k">virtual</span> <span class="o">~</span><span class="n">Foo</span><span class="p">()</span> <span class="p">{</span> <span class="k">delete</span> <span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="k">class</span> <span class="nc">Bar</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Foo</span>
+<span class="p">{</span>
+    <span class="p">....</span>
+    <span class="k">virtual</span> <span class="o">~</span><span class="n">Bar</span><span class="p">()</span> <span class="p">{</span> <span class="k">delete</span> <span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Foo</span> <span class="o">*</span><span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bar</span> <span class="n">b</span><span class="p">;</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+<span class="cm">/*</span>
+<span class="cm">When the compiler gets here, f calls ~Foo(), but since it is labeled virtual,</span>
+<span class="cm">it also continues to delete the most derived version of the object it points to, so it does call ~Bar().</span>
+<span class="cm">No memory leak!</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+<p>That’s it!</p>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Virtual_fucntions.html" class="btn btn-neutral float-right" title="Virtual functions">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Inheritance.html" class="btn btn-neutral" title="Inheritance"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

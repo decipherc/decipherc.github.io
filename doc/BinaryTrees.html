@@ -1,0 +1,559 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Binary Trees &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Binary Search Trees (BST)" href="BinarySearchTrees.html"/>
+        <link rel="prev" title="Hash Tables" href="HashTables.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Binary Trees</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/BinaryTrees.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="binary-trees">
+<h1>Binary Trees<a class="headerlink" href="#binary-trees" title="Permalink to this headline">¶</a></h1>
+<p>A tree is a type of linked data structure of nodes.
+Every node has multiple pointers that point to other nodes (or nullptr).
+The whole structure is pointed to with a root pointer, which points to the root node.
+If a node points to another, the node it points to is the child node and the node itself is the parent node.
+If a tree doesn’t have any nodes, it is called an empty tree.
+If node doesn’t have any children (it doesn’t point to anything), it is called a leaf node.</p>
+<p>A binary tree is a type of tree in which every node has at most two children nodes (left and right pointer).
+Two nodes that descend form the same parent node are called sibling nodes.
+A sub-tree is a term that can be used to describe any node that isn’t the root node.
+The node depth is how many levels of siblings a certain node is from the root node.
+The root node has a depth of <code class="docutils literal notranslate"><span class="pre">0</span></code>, it’s children have a depth of <code class="docutils literal notranslate"><span class="pre">1</span></code>, etc.</p>
+<p>A full binary tree is a binary tree in which every non-leaf node has two children, and every leaf node has the same depth.</p>
+<div class="section" id="traversals">
+<h2>Traversals<a class="headerlink" href="#traversals" title="Permalink to this headline">¶</a></h2>
+<p>There are four different ways to traverse the nodes of a binary tree (to visit every node of a tree):
+- pre-order,
+- in-order,
+- post-order, and
+- level-order.</p>
+<div class="section" id="pre-order">
+<h3>PRE-ORDER<a class="headerlink" href="#pre-order" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Do something with the current node (it could be to print it out, change the value, etc.)</li>
+<li>Go to the nodes in the left sub-tree and repeat process</li>
+<li>Go to the nodes in the right sub-tree and repeat process</li>
+</ol>
+<p>Code:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">preorder</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">cur</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>     <span class="c1">// If the tree is an empty tree</span>
+          <span class="k">return</span><span class="p">;</span>
+
+     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">;</span>     <span class="c1">// In this case we print out the value</span>
+
+     <span class="n">preorder</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>     <span class="c1">// Recursively do the same to the left and right sub-trees</span>
+     <span class="n">preorder</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>        <span class="n">a</span>
+    <span class="n">b</span>        <span class="n">c</span>
+<span class="n">d</span>       <span class="n">e</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Current</span> <span class="n">root</span> <span class="n">is</span> <span class="n">a</span>
+<span class="n">Print</span> <span class="n">out</span> <span class="n">a</span>
+<span class="n">Go</span> <span class="n">to</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+     <span class="n">Print</span> <span class="n">out</span> <span class="n">b</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+          <span class="n">Print</span> <span class="n">out</span> <span class="n">d</span>
+          <span class="n">Go</span> <span class="n">to</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+               <span class="n">Return</span> <span class="p">(</span><span class="n">no</span> <span class="n">child</span><span class="p">)</span>
+          <span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+               <span class="n">Return</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+          <span class="n">Print</span> <span class="n">out</span> <span class="n">b</span>
+          <span class="n">Go</span> <span class="n">to</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+               <span class="n">Return</span>
+          <span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+               <span class="n">Return</span>
+<span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+     <span class="n">Print</span> <span class="n">out</span> <span class="n">c</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+          <span class="n">Return</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+          <span class="n">Return</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="n">b</span> <span class="n">d</span> <span class="n">e</span> <span class="n">c</span>
+</pre></div>
+</div>
+<p>How to visualize it: Go down every line of nodes diagonally, top to bottom</p>
+</div>
+<div class="section" id="in-order">
+<h3>IN-ORDER<a class="headerlink" href="#in-order" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Go to the nodes in the left sub-tree</li>
+<li>Do something with the current node</li>
+<li>Go to the nodes in the right sub-tree</li>
+</ol>
+<p>Notice that in this order we first go all the way to the left before printing anything out (this includes the root node)</p>
+<p>Code:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">inorder</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">cur</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="k">return</span><span class="p">;</span>
+
+     <span class="n">inorder</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+
+     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">;</span>
+
+     <span class="n">inorder</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>        <span class="n">a</span>
+    <span class="n">b</span>        <span class="n">c</span>
+<span class="n">d</span>       <span class="n">e</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Current</span> <span class="n">root</span> <span class="n">is</span> <span class="n">a</span>
+<span class="n">Go</span> <span class="n">to</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">b</span><span class="p">)</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">d</span><span class="p">)</span>
+          <span class="n">Go</span> <span class="n">to</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">null</span><span class="p">)</span>
+               <span class="n">Return</span>
+          <span class="n">Print</span> <span class="n">out</span> <span class="n">d</span>
+          <span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">null</span><span class="p">)</span>
+               <span class="n">Return</span>
+     <span class="n">Print</span> <span class="n">out</span> <span class="n">b</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+          <span class="n">Go</span> <span class="n">to</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">null</span><span class="p">)</span>
+               <span class="n">Return</span>
+          <span class="n">Print</span> <span class="n">out</span> <span class="n">e</span>
+          <span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">null</span><span class="p">)</span>
+               <span class="n">Return</span>
+<span class="n">Print</span> <span class="n">out</span> <span class="n">a</span>
+<span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">null</span><span class="p">)</span>
+          <span class="n">Return</span>
+     <span class="n">Print</span> <span class="n">out</span> <span class="n">c</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">null</span><span class="p">)</span>
+          <span class="n">Return</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="n">b</span> <span class="n">e</span> <span class="n">a</span> <span class="n">c</span>
+</pre></div>
+</div>
+<p>How to visualize it: start at the left side of tree, go vertically right, bottom to top</p>
+</div>
+<div class="section" id="post-order">
+<h3>POST-ORDER<a class="headerlink" href="#post-order" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Go to the nodes in the left sub-tree</li>
+<li>Go to the nodes in the right sub-tree</li>
+<li>Do something with the current node</li>
+</ol>
+<p>Code:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">postorder</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">cur</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="k">return</span><span class="p">;</span>
+
+     <span class="n">postorder</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+
+     <span class="n">postorder</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+
+     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>        <span class="n">a</span>
+    <span class="n">b</span>        <span class="n">c</span>
+<span class="n">d</span>       <span class="n">e</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Current</span> <span class="n">root</span> <span class="n">is</span> <span class="n">a</span>
+<span class="n">Go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">b</span><span class="p">)</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">d</span><span class="p">)</span>
+          <span class="n">Go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">null</span><span class="p">)</span>
+               <span class="n">Return</span>
+          <span class="n">Go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">null</span><span class="p">)</span>
+               <span class="n">Return</span>
+          <span class="n">Print</span> <span class="n">out</span> <span class="n">d</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+          <span class="n">Go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">null</span><span class="p">)</span>
+               <span class="n">Return</span>
+          <span class="n">Go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">null</span><span class="p">)</span>
+               <span class="n">Return</span>
+          <span class="n">Print</span> <span class="n">out</span> <span class="n">e</span>
+     <span class="n">Print</span> <span class="n">out</span> <span class="n">b</span>
+<span class="n">Go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">null</span><span class="p">)</span>
+         <span class="n">Return</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span> <span class="p">(</span><span class="n">null</span><span class="p">)</span>
+         <span class="n">Return</span>
+     <span class="n">Print</span> <span class="n">out</span> <span class="n">c</span>
+<span class="n">Print</span> <span class="n">out</span> <span class="n">a</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="n">e</span> <span class="n">b</span> <span class="n">c</span> <span class="n">a</span>
+</pre></div>
+</div>
+<p>How to visualize it: start at the bottom of the tree, go horizontally up, left to right</p>
+</div>
+<div class="section" id="level-order">
+<h3>LEVEL-ORDER<a class="headerlink" href="#level-order" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Use a pointer variable and a queue of pointers to nodes</li>
+<li>Push the root node pointer onto the queue</li>
+<li><dl class="first docutils">
+<dt>While the queue is not empty,</dt>
+<dd><ol class="first last loweralpha">
+<li>Pop the top node</li>
+<li>Do something to the node</li>
+<li>Push the node’s children to the queue</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+<p>Code:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">levelorder</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">cur</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="k">return</span><span class="p">;</span>
+     <span class="n">Node</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
+     <span class="n">queue</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">*&gt;</span> <span class="n">toProcess</span><span class="p">;</span>
+     <span class="n">toProcess</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">cur</span><span class="p">);</span>
+     <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">toProcess</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+     <span class="p">{</span>
+          <span class="n">temp</span> <span class="o">=</span> <span class="n">toProcess</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+          <span class="n">toProcess</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+               <span class="n">toProcess</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+               <span class="n">toProcess</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>        <span class="n">a</span>
+    <span class="n">b</span>        <span class="n">c</span>
+<span class="n">d</span>       <span class="n">e</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>Current root is a
+Push a
+QUEUE: a
+Pop a, print out a
+QUEUE:
+Push b
+Push c
+QUEUE: b c
+Pop b, print out b
+QUEUE: c
+Push d
+Push e
+QUEUE: c d e
+Pop c, print out c
+QUEUE: d e
+Don&#39;t push anything
+Pop d, print out d
+QUEUE: e
+Don&#39;t push anything
+Pop e, print out e
+Don&#39;t push anything
+Done!
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">d</span> <span class="n">e</span>
+</pre></div>
+</div>
+<p>How to visualize: Start from the top of the tree, go down horizontally, left to right</p>
+<p>The big-O of all of these traversals is <code class="docutils literal notranslate"><span class="pre">O(N)</span></code>.</p>
+<p>You can also evaluate expressions with a binary tree.
+For example, <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">3</span></code> would be represented with this tree:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>   <span class="o">+</span>
+<span class="mi">2</span>     <span class="mi">3</span>
+</pre></div>
+</div>
+<p>Here is the algorithm to evaluate it:
+1. If the current node’s value is a number, return its value
+2. Recursively evaluate the left sub-tree and get the result
+3. Recursively evaluate the right sub-tree and get the result
+4. Apply the operator in the current node to the left and right results; return the result.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">:</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>          <span class="o">*</span>
+    <span class="o">+</span>         <span class="o">-</span>
+<span class="mi">5</span>      <span class="mi">6</span>   <span class="mi">3</span>     <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Current</span> <span class="n">node</span> <span class="n">is</span> <span class="o">*</span>
+<span class="n">Go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+     <span class="n">Current</span> <span class="n">node</span> <span class="n">is</span> <span class="o">+</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+          <span class="n">Current</span> <span class="n">node</span> <span class="n">is</span> <span class="mi">5</span>
+          <span class="n">Return</span> <span class="mi">5</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+          <span class="n">Current</span> <span class="n">node</span> <span class="n">is</span> <span class="mi">6</span>
+          <span class="n">Return</span> <span class="mi">6</span>
+     <span class="n">Apply</span> <span class="o">+</span> <span class="n">to</span> <span class="mi">5</span> <span class="n">and</span> <span class="mi">6</span>
+     <span class="n">Return</span> <span class="mi">11</span>
+<span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+     <span class="n">Current</span> <span class="n">node</span> <span class="n">is</span> <span class="o">-</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">left</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+          <span class="n">Current</span> <span class="n">node</span> <span class="n">is</span> <span class="mi">3</span>
+          <span class="n">Return</span> <span class="mi">3</span>
+     <span class="n">Go</span> <span class="n">to</span> <span class="n">right</span> <span class="n">sub</span><span class="o">-</span><span class="n">tree</span>
+          <span class="n">Current</span> <span class="n">node</span> <span class="n">is</span> <span class="mi">1</span>
+          <span class="n">Return</span> <span class="mi">1</span>
+     <span class="n">Apply</span> <span class="o">-</span> <span class="n">to</span> <span class="mi">3</span> <span class="n">and</span> <span class="mi">1</span>
+     <span class="n">Return</span> <span class="mi">2</span>
+<span class="n">Apply</span> <span class="o">*</span> <span class="n">to</span> <span class="mi">11</span> <span class="n">and</span> <span class="mi">2</span>
+<span class="n">Return</span> <span class="mi">22</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BinarySearchTrees.html" class="btn btn-neutral float-right" title="Binary Search Trees (BST)">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="HashTables.html" class="btn btn-neutral" title="Hash Tables"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Recursion &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Quicksort" href="Quicksort.html"/>
+        <link rel="prev" title="Standard Template Library (STL) Classes" href="Standard_Template_Classes.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Recursion</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Recursion.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="recursion">
+<h1>Recursion<a class="headerlink" href="#recursion" title="Permalink to this headline">¶</a></h1>
+<p>Recursion is a type of algorithm used for functions that calls upon the function itself to solve a problem or implement something.
+How does that even work?
+Well, it’s similar to having a loop, but every time the function calls itself, a new copy of the function is created in the stack.
+When the last copy finishes (whenever or however that means) and returns,
+the compiler will go back to the second to last copy, and when that returns, to the previous copy, all the way back to the original.
+So unlike a loop, every iteration of a recursive function is saved with its own variables and values unique to that cycle.
+Here is a simple example.
+This is a function that calculates the power of some number.
+For example, the user could write <code class="docutils literal notranslate"><span class="pre">power(3,</span> <span class="pre">7)</span></code> and it would calculate what 3 to the power of 7 is.
+Let’s first create a function that does this with a for loop.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">power</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exp</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">exp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+          <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">exp</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="c1">// Use exp as a counter for how many times we need to multiple the number to itself,</span>
+     <span class="c1">// so we don&#39;t need to declare anything before the first semicolon.</span>
+     <span class="k">for</span> <span class="p">(</span> <span class="p">;</span> <span class="n">exp</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">exp</span><span class="o">--</span><span class="p">)</span>
+          <span class="n">result</span> <span class="o">*=</span> <span class="n">num</span><span class="p">;</span>
+     <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>When converting this into a recursive function, we will be rewriting the while loop so that it does the same thing but with recursion.
+We want to keep the first five lines of code.
+The two if statements are what are called “base cases,” meaning they check for the simplest cases that we don’t need to do any work for.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">power</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exp</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">exp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>     <span class="c1">// Base cases</span>
+          <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">exp</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+     <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now let’s take the content of the for loop and put it after the base cases.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">power</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exp</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">exp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>     <span class="c1">// Base cases</span>
+          <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">exp</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="n">result</span> <span class="o">*=</span> <span class="n">num</span><span class="p">;</span>
+     <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And now let’s add our recursive statement, that is a call to the function itself.
+What do we put as the parameters?
+We want to pass on the same number to the next iteration, so that stays the same, but we need to reflect the while loop, which decrements exp every iteration.
+We want to pass into our function <code class="docutils literal notranslate"><span class="pre">exp</span> <span class="pre">-</span> <span class="pre">1</span></code>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">power</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exp</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">exp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>     <span class="c1">// Base cases</span>
+          <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">exp</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="n">result</span> <span class="o">*=</span> <span class="n">num</span><span class="p">;</span>
+     <span class="n">power</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">exp</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+     <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The basic principle of recursive functions is that you want to keep on reducing the size or amount of information processed until you reach your base cases.
+What you do with the info from the base class depends on the problem.
+In our case, we want to keep on reducing the quantity of exp until it equals 1, and then it will return the number itself.
+All of the iterations together should return the number exp times, so if expression is <code class="docutils literal notranslate"><span class="pre">2</span></code> to 4th power, <code class="docutils literal notranslate"><span class="pre">2</span></code> will be returned 4 times.
+What do we do with four number <code class="docutils literal notranslate"><span class="pre">2``s?</span> <span class="pre">We</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">multiply</span> <span class="pre">all</span> <span class="pre">of</span> <span class="pre">them.</span>
+<span class="pre">So</span> <span class="pre">instead</span> <span class="pre">of</span> <span class="pre">just</span> <span class="pre">writing</span> <span class="pre">``result</span> <span class="pre">+=</span> <span class="pre">num</span> <span class="pre">*</span> <span class="pre">num</span></code>, let’s combine that with the recursive statement below and add a return statement.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">power</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exp</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">exp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>     <span class="c1">// Base cases</span>
+          <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">exp</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="n">num</span> <span class="o">*</span> <span class="n">power</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">exp</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+     <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Notice that we change the <code class="docutils literal notranslate"><span class="pre">*=</span></code> to <code class="docutils literal notranslate"><span class="pre">=</span></code> because the expression <code class="docutils literal notranslate"><span class="pre">esult</span> <span class="pre">=</span> <span class="pre">num</span> <span class="pre">*</span> <span class="pre">power(num,</span> <span class="pre">exp</span> <span class="pre">-</span> <span class="pre">1);</span></code> will accumulate all the multiplicants by recursion.
+Result will finally be calculated once for every iteration and every time
+(except for the last time, when the function returns for the last time and it ends)
+<code class="docutils literal notranslate"><span class="pre">power(num,</span> <span class="pre">exp</span> <span class="pre">-</span> <span class="pre">1)</span></code> is executed it will replace itself with the return result.
+You can think of it as</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">num</span> <span class="o">*</span> <span class="n">num</span> <span class="o">*</span> <span class="p">...</span> <span class="p">;</span>
+</pre></div>
+</div>
+<p>where num is multiplied by itself <code class="docutils literal notranslate"><span class="pre">exp</span></code> times.
+The iteration will keep on going deeper and deeper until result is finally calculated,
+which is when <code class="docutils literal notranslate"><span class="pre">power(num,</span> <span class="pre">exp</span> <span class="pre">-</span> <span class="pre">1)</span></code> returns <code class="docutils literal notranslate"><span class="pre">1</span></code> and result equals <code class="docutils literal notranslate"><span class="pre">num</span> <span class="pre">*</span> <span class="pre">1</span></code>.</p>
+<p>You can also write the function so that you just directly return the entire statement, without the “result” variable middle man.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">power</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span> <span class="n">exp</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">exp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+          <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">exp</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+     <span class="k">return</span> <span class="n">num</span> <span class="o">*</span> <span class="n">power</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">exp</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Quicksort.html" class="btn btn-neutral float-right" title="Quicksort">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Standard_Template_Classes.html" class="btn btn-neutral" title="Standard Template Library (STL) Classes"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

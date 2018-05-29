@@ -1,0 +1,482 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pointers &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Linked Lists" href="Linked_lists.html"/>
+        <link rel="prev" title="Destructors" href="Destructors.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Pointers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Pointers.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="pointers">
+<h1>Pointers<a class="headerlink" href="#pointers" title="Permalink to this headline">¶</a></h1>
+<p>Every variable and array that you create has an address in memory.
+If the variable takes up more than one memory space, its address is the first space it occupies.
+Where exactly the variable is in memory is basically random (except in arrays, where each of the elements are next to each other in memory).
+If you want to get the address of a variable you just stick an ampersand &amp; in front of it. But why would you even care about where the variable is in memory?
+You can use variables’ addresses to access variables indirectly with pointers.
+What do I mean by indirectly? Let’s first look at what pointers are.
+A pointer is a variable whose sole purpose is to hold another variable’s address.
+The pointer itself has its own address in memory, but we don’t care about that.
+Just remember that the pointer and the variable whose address it stores are not aliases for the same variable!
+Though you can access and/or change the value of the variable using either, you can also change the memory address that the pointer holds (or what the pointer is pointing to).
+What’s the use of pointers?
+One of the things pointers allow you to do is change the value of a variable across functions.
+If you want to change a variable’s value in a function different from the one you declared it in, you can have it take a pointer as a parameter and pass into it the address of the variable.
+That way you are changing the variable itself, not a local variable.
+You can also use pointers to access the variables of an array (the name of an array by itself is actually a pointer).
+You can also access structures or classes with a pointer of type class and dynamically allocated variables.
+Now let’s look at the actual code.
+To declare a pointer, you write the type of the variable the pointer will be pointing to, a star <code class="docutils literal notranslate"><span class="pre">*</span></code>, and whatever you want to pointer’s name to be.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="o">*</span><span class="n">foo</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>But wait! You aren’t done! Now, before you try to access the value of the variable that the pointer points to,
+you need to assign it an address to point to! Otherwise, if left uninitialized, the pointer will point to some random place in memory.
+This can be very very bad if you try and change its value!</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">bar</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">foo</span> <span class="o">=</span> <span class="n">bar</span><span class="p">;</span>      <span class="c1">// WRONG!!!!</span>
+</pre></div>
+</div>
+<p>Remember, you need to use an ampersand &amp; before the variable to access its address.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">bar</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">foo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">bar</span><span class="p">;</span>     <span class="c1">// Correct!</span>
+</pre></div>
+</div>
+<p>Now, say you want to assign a pointer a variable on a line separate of its definition. Do you do this?</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="o">*</span><span class="n">foo</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">bar</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="o">*</span><span class="n">foo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">bar</span><span class="p">;</span>    <span class="c1">// WRONG!!!</span>
+</pre></div>
+</div>
+<p>You only use the star * in two situations with a pointer:
+1) when you are declaring a pointer variable and
+2) when you want to access the value of the variable it points to.
+Confusing, right? Since we want to set the pointer foo to bar (rather, the address of bar), we don’t use the star <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="o">*</span><span class="n">foo</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">bar</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">bar</span><span class="p">;</span>    <span class="c1">// Right!</span>
+</pre></div>
+</div>
+<p>Now let’s access the value of bar using foo and change it to 6.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="o">*</span><span class="n">foo</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">bar</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">bar</span><span class="p">;</span>
+<span class="o">*</span><span class="n">foo</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>       <span class="c1">// aka bar = 6</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">foo</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>   <span class="c1">// prints out 6</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">bar</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>    <span class="c1">// prints out 6</span>
+</pre></div>
+</div>
+<p>Pointers can also point to arrays and behave like the array! Let’s look.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="n">BigBang</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;Sheldon&quot;</span><span class="p">,</span> <span class="s">&quot;Leonard&quot;</span><span class="p">,</span> <span class="s">&quot;Howard&quot;</span><span class="p">,</span> <span class="s">&quot;Raj&quot;</span><span class="p">};</span>
+<span class="n">string</span> <span class="o">*</span><span class="n">foo</span> <span class="o">=</span> <span class="n">BigBang</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Wait, you scream! You’re missing the ampersand! Well, you actually don’t need the ampersand when pointing to arrays.
+But this is NOT because the array is actually a pointer.
+C++ allows this so you can be able to use an array like a pointer (I don’t know if there is actually a better explanation, but that’s what we were told).
+Just remember that assigning a pointer to an array is the exception to the rule of the ampersand.
+Now let’s see how we can access the values of the elements of the array with the pointer.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="n">BigBang</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;Sheldon&quot;</span><span class="p">,</span> <span class="s">&quot;Leonard&quot;</span><span class="p">,</span> <span class="s">&quot;Howard&quot;</span><span class="p">,</span> <span class="s">&quot;Raj&quot;</span><span class="p">};</span>
+<span class="n">string</span> <span class="o">*</span><span class="n">foo</span> <span class="o">=</span> <span class="n">BigBang</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">foo</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; and &quot;</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="p">(</span><span class="n">foo</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; are roommates.&quot;</span><span class="p">;</span>
+<span class="c1">// prints out &quot;Sheldon and Leonard are roommates.&quot;</span>
+</pre></div>
+</div>
+<p>Notice that you can use either the pointer name and brackets with the element name OR
+the pointer name plus the number of elements to go forward surrounded by parentheses and the star.
+If you didn’t include the star in the second option, you would actually be moving the pointer forward from one element to the next.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="p">(</span><span class="n">foo</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>   <span class="c1">// Prints out &quot;Leonard&quot;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">foo</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>      <span class="c1">// Prints out the address of foo[1] (or would it be foo[2] because you move one more from before?)</span>
+</pre></div>
+</div>
+<p>You can also use pointers to access and/or change the contents of an instance of a structure or class.
+Here is a sample struct and instance without using a pointer to the struct:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">Physicist</span>
+<span class="p">{</span>
+     <span class="n">string</span> <span class="n">field</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">comicBooks</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="n">Physicist</span> <span class="n">raj</span><span class="p">;</span>
+     <span class="n">raj</span><span class="p">.</span><span class="n">field</span> <span class="o">=</span> <span class="s">&quot;Astrophysics&quot;</span><span class="p">;</span>
+     <span class="n">raj</span><span class="p">.</span><span class="n">comicBooks</span> <span class="o">=</span> <span class="mi">79</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Here is the same struct and instance but with a pointer to the instance.
+Notice that you can’t use just the dot operator when trying to modify a variable in the struct or class the pointer is pointing to.
+You must either use the value of the pointer in parentheses (because of the precedence rules) and then the dot operator–(<code class="docutils literal notranslate"><span class="pre">*foo</span></code>).–
+or just the name of the pointer and the arrow operator–<code class="docutils literal notranslate"><span class="pre">foo-&gt;</span></code>.
+These do the same thing.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">Physicist</span>
+<span class="p">{</span>
+     <span class="n">string</span> <span class="n">field</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">comicBooks</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="n">Physicist</span> <span class="n">raj</span><span class="p">;</span>
+     <span class="n">Physicist</span> <span class="o">*</span><span class="n">foo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">raj</span><span class="p">;</span>
+     <span class="p">(</span><span class="o">*</span><span class="n">foo</span><span class="p">).</span><span class="n">field</span> <span class="o">=</span> <span class="s">&quot;Astrophysics&quot;</span><span class="p">;</span>
+     <span class="n">foo</span><span class="o">-&gt;</span><span class="n">comicBooks</span> <span class="o">=</span> <span class="mi">79</span><span class="p">;</span>   <span class="c1">// this method is preferred</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>So why would we use a pointer to the object instead of just the object?
+In this case, it doesn’t matter, but if you add a function that accesses and/or changes the contents of the struct, you need to use the pointer version!
+Why?
+Because if you don’t pass the address of the object to the function, you would be changing the contents of a local variable (i.e. once the function finishes all the work will be gone). And the only (or rather best) way to pass in the address of the object to a function is for the parameter to be able to hold an address.
+And what variable does that?
+A pointer!
+Let’s see how it works by adding a function to our class.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">Physicist</span>
+<span class="p">{</span>
+     <span class="n">string</span> <span class="n">field</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">comicBooks</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kt">void</span> <span class="nf">shoppingTrip</span><span class="p">(</span><span class="n">Physicist</span> <span class="o">*</span><span class="n">bar</span><span class="p">)</span>  <span class="c1">// bar takes in an address of a variable of type Physicist</span>
+<span class="p">{</span>
+     <span class="n">bar</span><span class="o">-&gt;</span><span class="n">comicBooks</span> <span class="o">+=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="n">Physicist</span> <span class="n">raj</span><span class="p">;</span>
+     <span class="n">Physicist</span> <span class="o">*</span><span class="n">foo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">raj</span><span class="p">;</span>
+     <span class="p">(</span><span class="o">*</span><span class="n">foo</span><span class="p">).</span><span class="n">field</span> <span class="o">=</span> <span class="s">&quot;Astrophysics&quot;</span><span class="p">;</span>
+      <span class="n">foo</span><span class="o">-&gt;</span><span class="n">comicBooks</span> <span class="o">=</span> <span class="mi">79</span><span class="p">;</span>
+      <span class="n">shoppingTrip</span><span class="p">(</span><span class="o">&amp;</span><span class="n">raj</span><span class="p">);</span>   <span class="c1">// Note that you need to include the &amp; to pass the address</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can also do this with classes.
+Because classes can have variables and functions, you can access a function that belongs to an object with a pointer.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Physicist</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="n">shoppingTrip</span><span class="p">()</span>  <span class="c1">// Don&#39;t need to have a parameter of type pointer to Physicist because the function is now in the object&#39;s definition</span>
+    <span class="p">{</span>
+          <span class="n">comicBooks</span> <span class="o">+=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="n">string</span> <span class="n">field</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">comicBooks</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="n">Physicist</span> <span class="n">raj</span><span class="p">;</span>
+     <span class="n">Physicist</span> <span class="o">*</span><span class="n">foo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">raj</span><span class="p">;</span>
+     <span class="p">(</span><span class="o">*</span><span class="n">foo</span><span class="p">).</span><span class="n">field</span> <span class="o">=</span> <span class="s">&quot;Astrophysics&quot;</span><span class="p">;</span>
+      <span class="n">foo</span><span class="o">-&gt;</span><span class="n">comicBooks</span> <span class="o">=</span> <span class="mi">79</span><span class="p">;</span>
+      <span class="n">foo</span><span class="o">-&gt;</span><span class="n">shoppingTrip</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The final thing you can do with a pointer is to hold the address of a dynamic variable or array.
+Be sure to delete the pointer that points to the dynamically allocated variable or array once you are done!
+Why?
+Because you need to free the memory because it is in the heap
+(recall from before that the compiler doesn’t free the memory on the heap for you).</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="o">*</span><span class="n">foo</span><span class="p">;</span>
+<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">bar</span><span class="p">;</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">string</span><span class="p">[</span><span class="n">bar</span><span class="p">];</span>
+<span class="n">foo</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;Sheldon&quot;</span><span class="p">;</span>
+<span class="n">foo</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;Leonard&quot;</span><span class="p">;</span>
+<span class="k">delete</span> <span class="p">[]</span> <span class="n">foo</span><span class="p">;</span>
+<span class="o">--------------</span>
+<span class="n">string</span> <span class="o">*</span><span class="n">foo</span><span class="p">;</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">string</span><span class="p">(</span><span class="s">&quot;Batman&quot;</span><span class="p">);</span>
+<span class="k">delete</span> <span class="n">foo</span><span class="p">;</span>
+<span class="o">-----------</span>
+<span class="n">Physicist</span> <span class="o">*</span><span class="n">foo</span><span class="p">;</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Physicist</span><span class="p">(</span><span class="s">&quot;Sheldon&quot;</span><span class="p">);</span>
+<span class="k">delete</span> <span class="n">foo</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="section" id="void-pointers">
+<h2>Void Pointers<a class="headerlink" href="#void-pointers" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>is a pointer which can be used to assign any variable.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">f</span><span class="p">;</span>
+<span class="n">string</span> <span class="n">s</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">c</span><span class="p">;</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
+<span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">f</span><span class="p">;</span>
+<span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">;</span>
+<span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>are ok.</p>
+</div>
+<div class="section" id="fuction-pointers">
+<h2>Fuction Pointers<a class="headerlink" href="#fuction-pointers" title="Permalink to this headline">¶</a></h2>
+<p>You can also have pointer to a function:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">pee</span><span class="p">(){</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;pee&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="p">}</span>
+<span class="kt">int</span> <span class="nf">poop</span><span class="p">(){</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;poop&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="p">}</span>
+
+<span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)();</span>
+
+<span class="k">if</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">pee</span><span class="p">();</span>
+<span class="k">else</span> <span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">poop</span><span class="p">();</span>
+
+<span class="n">p</span><span class="p">();</span> <span class="c1">// will execute the function</span>
+<span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)();</span> <span class="c1">// will execute the function</span>
+</pre></div>
+</div>
+<p>or if there are arguments</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">pee</span><span class="p">(</span><span class="kt">int</span> <span class="n">p</span><span class="p">){</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;pee&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="p">}</span>
+<span class="kt">int</span> <span class="nf">poop</span><span class="p">(</span><span class="kt">int</span> <span class="n">p</span><span class="p">){</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;poop&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="p">}</span>
+
+<span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)(</span><span class="kt">int</span><span class="p">);</span>
+
+<span class="k">if</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">pee</span><span class="p">;</span>
+<span class="k">else</span> <span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">poop</span><span class="p">;</span>
+
+<span class="n">p</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// will execute the function</span>
+<span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// will execute the function</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">(*p)(int)</span></code> can be a pointer to any function that returns integer and has one integer argument.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Linked_lists.html" class="btn btn-neutral float-right" title="Linked Lists">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Destructors.html" class="btn btn-neutral" title="Destructors"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

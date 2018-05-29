@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Heapsort &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Tables" href="Tables.html"/>
+        <link rel="prev" title="Priority queue" href="Priority_queue.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Heapsort</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Heapsort.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="heapsort">
+<h1>Heapsort<a class="headerlink" href="#heapsort" title="Permalink to this headline">¶</a></h1>
+<p>The heapsort is a type of sort that uses a maxheap.
+It has two main steps:
+1. Convert an input array into a maxheap,
+2. Remove the biggest value from the heap and put it at the end.</p>
+<p>Let’s go over the Step 1 first</p>
+<div class="section" id="step-1">
+<h2>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">¶</a></h2>
+<p>Algorithm:</p>
+<ol class="arabic simple">
+<li>Set <code class="docutils literal notranslate"><span class="pre">curNode</span></code> to the <code class="docutils literal notranslate"><span class="pre">(n</span> <span class="pre">/</span> <span class="pre">2)</span> <span class="pre">-</span> <span class="pre">1</span></code> (this way we skip all the leaf nodes that by default are valid maxheaps)</li>
+<li><dl class="first docutils">
+<dt>Repeatedly decrease <code class="docutils literal notranslate"><span class="pre">curNode</span></code> until <code class="docutils literal notranslate"><span class="pre">curNode</span></code> is equal to the <code class="docutils literal notranslate"><span class="pre">root</span></code> node</dt>
+<dd><ol class="first last loweralpha">
+<li>Think of the subtree pointed to by <code class="docutils literal notranslate"><span class="pre">curNode</span></code> as a maxheap</li>
+<li>Keep shifting the top value until that subtree becomes a valid maxheap</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+<p>By the end of Step 1, the inputted array will be sorted as a maxheap</p>
+</div>
+<div class="section" id="step-2">
+<h2>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h2>
+<p>Algorithm:</p>
+<ol class="arabic simple">
+<li>Extract the biggest value from the maxheap (root node).</li>
+<li>Copy the value from the bottom-most right-most node and put it in the root</li>
+<li>Delete that node</li>
+<li>Repeatedly swap the just-moved value with the larger of its two children until the value is greater than or equal to both of its children</li>
+<li>Put the extracted value into the freed-up slot</li>
+</ol>
+<p>Example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span><span class="p">};</span>
+</pre></div>
+</div>
+<p>Even though we will be using an array as the data structure, you should draw a tree to visualize the data easier.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>           <span class="mi">0</span>
+      <span class="mi">3</span>         <span class="mi">9</span>
+  <span class="mi">1</span>     <span class="mi">5</span>    <span class="mi">4</span>   <span class="mi">18</span>
+<span class="mi">21</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">curNode</span> <span class="pre">=</span> <span class="pre">(8</span> <span class="pre">/</span> <span class="pre">2)</span> <span class="pre">-</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">3</span></code>.
+Slot 3 has the value <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>           <span class="mi">0</span>
+      <span class="mi">3</span>         <span class="mi">9</span>
+  <span class="mi">1</span>     <span class="mi">5</span>    <span class="mi">4</span>   <span class="mi">18</span>
+<span class="mi">21</span>
+</pre></div>
+</div>
+<p>Think of <code class="docutils literal notranslate"><span class="pre">curNode</span></code> and its children as a subtree.
+Is it a valid maxheap?</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>  <span class="mi">1</span>
+<span class="mi">21</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>No, we need to swap them</p>
+<p>Now it is valid.</p>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Decrease curNod**e.
+Now it points to the value at slot 2, <code class="docutils literal notranslate"><span class="pre">9</span></code>.
+Is that subtree a valid maxheap?</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>  <span class="mi">9</span>
+<span class="mi">4</span>   <span class="mi">18</span>
+</pre></div>
+</div>
+<p>No, swap <code class="docutils literal notranslate"><span class="pre">9</span></code> and <code class="docutils literal notranslate"><span class="pre">18</span></code></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>  <span class="mi">18</span>
+<span class="mi">4</span>   <span class="mi">9</span>
+</pre></div>
+</div>
+<p>Now it is valid.
+<strong>Decrease curNode</strong>.
+Now it points to the value at slot 1, <code class="docutils literal notranslate"><span class="pre">3</span></code>.
+Is that subtree a valid maxheap?</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>      <span class="mi">3</span>
+  <span class="mi">21</span>     <span class="mi">5</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>No, swap <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">21</span></code></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>     <span class="mi">21</span>
+  <span class="mi">3</span>      <span class="mi">5</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>Now it is valid.
+<strong>Decrease curNode</strong>.
+Now it points to the value at slot 0, <code class="docutils literal notranslate"><span class="pre">0</span></code>.
+Is that subtree (now entire tree) a valid maxheap?</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>           <span class="mi">0</span>
+     <span class="mi">21</span>        <span class="mi">18</span>
+  <span class="mi">3</span>     <span class="mi">5</span>    <span class="mi">4</span>    <span class="mi">9</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>No, swap <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">21</span></code></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>          <span class="mi">21</span>
+      <span class="mi">0</span>       <span class="mi">18</span>
+  <span class="mi">3</span>     <span class="mi">5</span>   <span class="mi">4</span>    <span class="mi">9</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>Now we need to swap <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code> as well</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>          <span class="mi">21</span>
+     <span class="mi">5</span>        <span class="mi">18</span>
+  <span class="mi">3</span>     <span class="mi">0</span>   <span class="mi">4</span>    <span class="mi">9</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>Now it is valid.</p>
+<p>Here is what the array look like now:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Extract the biggest value from the maxheap and copy the value from the bottom-most right-most node into the node</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>        <span class="mi">1</span>
+   <span class="mi">5</span>        <span class="mi">18</span>
+<span class="mi">3</span>     <span class="mi">0</span>   <span class="mi">4</span>    <span class="mi">9</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span>  <span class="p">}</span>
+</pre></div>
+</div>
+<p>Make all the necessary swaps to make it a maxheap</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>       <span class="mi">18</span>
+   <span class="mi">5</span>        <span class="mi">1</span>
+<span class="mi">3</span>     <span class="mi">0</span>   <span class="mi">4</span>    <span class="mi">9</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>       <span class="mi">18</span>
+   <span class="mi">5</span>        <span class="mi">9</span>
+<span class="mi">3</span>     <span class="mi">0</span>   <span class="mi">4</span>    <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>  <span class="p">}</span>
+</pre></div>
+</div>
+<p>Now it is valid.
+We insert the <code class="docutils literal notranslate"><span class="pre">21</span></code> back into the array at the freed-up slot.
+We ignore this newly inserted item when drawing out our tree, however.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">21</span> <span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>       <span class="mi">18</span>
+   <span class="mi">5</span>        <span class="mi">9</span>
+<span class="mi">3</span>     <span class="mi">0</span>   <span class="mi">4</span>    <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Extract <code class="docutils literal notranslate"><span class="pre">18</span></code> and replace it with the bottom-most right-most node and do all necessary swaps</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>       <span class="mi">1</span>
+   <span class="mi">5</span>        <span class="mi">9</span>
+<span class="mi">3</span>     <span class="mi">0</span>   <span class="mi">4</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>       <span class="mi">9</span>
+   <span class="mi">5</span>        <span class="mi">1</span>
+<span class="mi">3</span>    <span class="mi">0</span>    <span class="mi">4</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>       <span class="mi">9</span>
+   <span class="mi">5</span>        <span class="mi">4</span>
+<span class="mi">3</span>    <span class="mi">0</span>    <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Insert <code class="docutils literal notranslate"><span class="pre">18</span></code> into the freed-up slot</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Extract <code class="docutils literal notranslate"><span class="pre">9</span></code>, etc.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>       <span class="mi">1</span>
+   <span class="mi">5</span>        <span class="mi">4</span>
+<span class="mi">3</span>    <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>       <span class="mi">5</span>
+   <span class="mi">1</span>        <span class="mi">4</span>
+<span class="mi">3</span>    <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>       <span class="mi">5</span>
+   <span class="mi">3</span>        <span class="mi">4</span>
+<span class="mi">1</span>    <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Extract <code class="docutils literal notranslate"><span class="pre">5</span></code>, etc.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>       <span class="mi">0</span>
+   <span class="mi">3</span>        <span class="mi">4</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>       <span class="mi">4</span>
+   <span class="mi">3</span>        <span class="mi">0</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Extract <code class="docutils literal notranslate"><span class="pre">4</span></code>, etc.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>    <span class="mi">1</span>
+<span class="mi">3</span>        <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>    <span class="mi">3</span>
+<span class="mi">1</span>        <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Extract <code class="docutils literal notranslate"><span class="pre">3</span></code>, etc.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>    <span class="mi">3</span>
+<span class="mi">1</span>        <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>    <span class="mi">0</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>    <span class="mi">1</span>
+<span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Extract <code class="docutils literal notranslate"><span class="pre">1</span></code>, etc.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Extract <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>The big-o of the heapsort is <code class="docutils literal notranslate"><span class="pre">O(n</span> <span class="pre">*</span> <span class="pre">log(n))</span></code> for <code class="docutils literal notranslate"><span class="pre">n</span></code> items
+- The big-o of Step 1 is <code class="docutils literal notranslate"><span class="pre">O(n)</span></code>
+- The big-o of Step 2 is <code class="docutils literal notranslate"><span class="pre">O(n</span> <span class="pre">*</span> <span class="pre">log(n))</span></code> (every time you remove an item it takes <code class="docutils literal notranslate"><span class="pre">log(n)</span></code> steps to reposition the array, and you remove n items)
+- The total is <code class="docutils literal notranslate"><span class="pre">O(n</span> <span class="pre">+</span> <span class="pre">n</span> <span class="pre">*</span> <span class="pre">log(n))</span></code>, which simplifies to <code class="docutils literal notranslate"><span class="pre">O(n</span> <span class="pre">*</span> <span class="pre">log(n))</span></code></p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Tables.html" class="btn btn-neutral float-right" title="Tables">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Priority_queue.html" class="btn btn-neutral" title="Priority queue"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,696 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Algorithm Comparison" href="Big-O.html"/>
+        <link rel="prev" title="Quicksort" href="Quicksort.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>&lt;no title&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Sorting.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <p>Sorting is a way to order a bunch of items. There are different sorting
+methods that can be compared by how quick they are for a certain data
+size and whether they are stable or not. In this email I will be
+covering what Carey calls the “stupid sorts.” A stable sorting algorithm
+takes into account the initial order when sorting. Here is an example:</p>
+<p>There are two 2s.</p>
+<p>2(a) 2(b) 1</p>
+<p>A stable sort would sort them like this:</p>
+<p>1 2(a) 2(b)</p>
+<p>An unstable sort like this:</p>
+<p>1 2(b) 2(a)</p>
+<p>As I go &nbsp;into each of the algorithms, you’ll see why some sorts end up
+being stable or unstable.</p>
+<p>Here are some numbers that we will be sorting</p>
+<p>2 6 5 1 4 3</p>
+<p><strong>Selection Sort</strong></p>
+<p>The selection sort algorithm basically finds the smallest number (or
+whatever you are sorting) and swaps it with the first number. Then it
+looks at the rest of the numbers, ignoring the first, and swaps the
+smallest number of that selection.</p>
+<ol class="arabic simple">
+<li>Look at all n numbers and find the smallest number.</li>
+<li>Swap it with the first number.</li>
+<li>Look at the remaining n-1 numbers and find the smallest number.</li>
+<li>And so on</li>
+</ol>
+<p>Let’s try using the algorithm on selection of numbers, and then write
+some code to do the same thing.</p>
+<p>2 6 5&nbsp;1&nbsp;4 3</p>
+<ol class="arabic simple">
+<li>Smallest number is 1, swap 1 and 2</li>
+</ol>
+<p>1 6 5&nbsp;2&nbsp;4 3</p>
+<ol class="arabic simple" start="2">
+<li>Now the smallest number is 2, swap 2 and 6</li>
+</ol>
+<p>1 2 5 6 4&nbsp;3</p>
+<ol class="arabic simple" start="3">
+<li>Swap 3 and 5</li>
+</ol>
+<p>1 2 3 6&nbsp;4&nbsp;5</p>
+<ol class="arabic simple" start="4">
+<li>Swap 4 and 6</li>
+</ol>
+<p>1 2 3 4 6&nbsp;5</p>
+<ol class="arabic simple" start="5">
+<li>Swap 5 and 6</li>
+</ol>
+<p>1 2 3 4 5 6</p>
+<p>Notice that if the selection sort has gone through n iterations, the
+first n items&nbsp;<em>will</em>&nbsp;be in order.</p>
+<p>Here is the code, with our selection of numbers an array:</p>
+<p>void selection(int foo[], int n)</p>
+<p>{</p>
+<p>&nbsp; &nbsp; &nbsp;for (int i = 0; i &lt; n; i++)</p>
+<p>&nbsp; &nbsp; &nbsp;{</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int min = i; &nbsp; &nbsp; // Save the index of the first item</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int j = i + 1; j &lt; n; j++) &nbsp; &nbsp; // Comparing every other
+item to the first item</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (foo[j] &lt; foo[min]) &nbsp; &nbsp; // If it is less than the
+current min, that’s the new min</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; min = j;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } &nbsp; &nbsp; // Once it exits the loop, min is equal to the smallest
+item between the ith item and n-1</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap(foo[i], foo[min]); &nbsp; &nbsp; // Swap the first item with the
+smallest item</p>
+<p>}</p>
+<p>So what’s the big-o? There are two loops that each loop for n times, so
+O(n^2). As far as sorting methods go, this is pretty slow.</p>
+<p>Is it stable or unstable? This is unstable. Why? Let’s sort foo = {2, 2,
+1}</p>
+<p>2(a) 2(b) 1</p>
+<p>The smallest number is 1, so we swap that with the first one. This
+results in</p>
+<p>1 2(b) 2(a)</p>
+<p>which is unstable.</p>
+<p><strong>Insertion Sort</strong></p>
+<p>The insertion sort compares an increasingly larger size of numbers.
+Every time it compares the last number of the selected size and if it is
+in the wrong order, remove it, shift all of the other numbers, and
+insert it into the right slot.</p>
+<ol class="arabic simple">
+<li>Start with a set size ‘s’ equal to 2.</li>
+<li>Look at the first s numbers.</li>
+<li>If the last number in the set is in the wrong place</li>
+</ol>
+<p>&nbsp; &nbsp; &nbsp;i. Remove it</p>
+<p>&nbsp; &nbsp; &nbsp;ii. Shift how ever many numbers necessary before it to the right</p>
+<p>&nbsp; &nbsp; &nbsp;iii. Insert the number into the right slot (the first one in our
+case)</p>
+<ol class="arabic simple" start="4">
+<li>Increment s.</li>
+</ol>
+<p>2 6&nbsp;5 1 4 3 &nbsp; &nbsp; s = 2</p>
+<ol class="arabic simple">
+<li>6 is in the right place (it is larger than 2)</li>
+</ol>
+<p>2&nbsp;6&nbsp;5&nbsp;1 4 3 &nbsp; &nbsp;&nbsp;s = 3</p>
+<ol class="arabic simple" start="2">
+<li>5 is not in the right place. Remove it.</li>
+</ol>
+<p>2&nbsp;6&nbsp;&nbsp;&nbsp;1 4 3</p>
+<p>Shift 6 over.</p>
+<p>2&nbsp;&nbsp;6&nbsp;1 4 3</p>
+<p>Is 2 &lt; 5? Yes, insert 5 there</p>
+<p>2 5&nbsp;6&nbsp;1 4 3</p>
+<p>2 5&nbsp;6&nbsp;1&nbsp;4 3 &nbsp; &nbsp; s = 4</p>
+<ol class="arabic simple" start="3">
+<li>1 is not in the right place. Remove it.</li>
+</ol>
+<p>2 5&nbsp;6 &nbsp;&nbsp;4 3</p>
+<p>Shift 6 over.</p>
+<p>2 5&nbsp; &nbsp;6&nbsp;4 3</p>
+<p>Is 5 &lt; 1? No, shift 5 over.</p>
+<p>2 &nbsp;&nbsp;5 6&nbsp;4 3</p>
+<p>Is 2 &lt; 1? No, shift 2 over.</p>
+<p>&nbsp; 2&nbsp;5 6&nbsp;4 3</p>
+<p>Now we have no choice but to put 1 in front</p>
+<p>1 2&nbsp;5 6&nbsp;4 3</p>
+<p>1 2&nbsp;5 6&nbsp;4&nbsp;3 &nbsp; &nbsp; s = 5</p>
+<ol class="arabic simple" start="4">
+<li>4 is not in the right place. Remove it.</li>
+</ol>
+<p>…</p>
+<p>1 2&nbsp; &nbsp;5 6&nbsp;3</p>
+<p>Insert 4 there</p>
+<p>1 2&nbsp;4 5 6&nbsp;3</p>
+<p>1 2&nbsp;4 5 6&nbsp;3&nbsp;&nbsp; &nbsp; s = 6</p>
+<ol class="arabic simple" start="5">
+<li>3 is not in the right place. Remove it.</li>
+</ol>
+<p>…</p>
+<p>1 2&nbsp; &nbsp;4 5 6</p>
+<p>Insert 3 here</p>
+<p>1 2&nbsp;3 4 5 6</p>
+<p>Here is the code:</p>
+<p>void insertion(int foo[], int n)</p>
+<p>{</p>
+<p>&nbsp; &nbsp; &nbsp;for (int s = 2; s &lt;= n; s++) &nbsp; &nbsp; // Start selection to look at 2</p>
+<p>&nbsp; &nbsp; &nbsp;{</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int last = foo[s - 1]; &nbsp; &nbsp; // Look at the last item in the
+selection</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int i = s - 1; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // We want to compare the last
+item to all of the other item(s)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; while (i &gt;= 0 &amp;&amp; last &lt; foo[i]) &nbsp; &nbsp; // Keep on shifting the
+items until we found an item less than the selected item.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // If the last item isn’t less than the next-to-last one, we
+don’t shift any items</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;foo[i + 1] = foo[i]; &nbsp; &nbsp; // Shift the items to the right</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;–i; &nbsp; &nbsp; // Going backwards</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;foo[i + 1] = last; &nbsp; &nbsp; // Insert the last item in the correct
+place. If we didn’t go through the loop, if will just reinsert into the
+same place</p>
+<p>&nbsp; &nbsp; &nbsp;}</p>
+<p>}</p>
+<p>What is the big-o? The outer loop will run at most n times. The inner
+loop will run at most n-1 times. Thus it is roughly O(n^2).</p>
+<p>This is a stable sort. Let’s look at our example again.</p>
+<p>2(a) 2(b)&nbsp;1 &nbsp; &nbsp; s = 2</p>
+<p>2(b) is in the right place.</p>
+<p>2(a) 2(b)&nbsp;1&nbsp;&nbsp; &nbsp; s = 3</p>
+<p>1 is not in the right place. Remove it.</p>
+<p>2(a) 2(b)</p>
+<p>Shift 2(b) over.</p>
+<p>2(a) &nbsp; 2(b)</p>
+<p>Is 2(a) &lt; 1? No, shift it over.</p>
+<p>&nbsp; &nbsp;2(a) 2(b)</p>
+<p>Insert 1</p>
+<p>&nbsp;1 2(a) 2(b)</p>
+<p>As you can see, the 2s have remained in the same initial order.</p>
+<p><strong>Bubble Sort</strong></p>
+<p>The bubble sort compares every two elements. If they are out of order
+they get swapped. If by the end it made at least one swap, it goes
+through the whole process again.</p>
+<ol class="arabic simple">
+<li>Compare the first two elements.</li>
+</ol>
+<p>2.&nbsp;If they are out of order, swap them.</p>
+<ol class="arabic simple" start="3">
+<li>Advance one element</li>
+<li>Repeat the process until the end of the array</li>
+<li>If you made at least one swap, repeat from step 1</li>
+</ol>
+<p>2 6&nbsp;5 1 4 3</p>
+<ol class="arabic simple">
+<li>In order</li>
+</ol>
+<p>2&nbsp;6&nbsp;5&nbsp;1 4 3</p>
+<ol class="arabic simple" start="2">
+<li>Out of order, swap them</li>
+</ol>
+<p>2&nbsp;5&nbsp;6&nbsp;1 4 3</p>
+<p>2 5&nbsp;6&nbsp;1&nbsp;4 3</p>
+<ol class="arabic simple" start="3">
+<li>Out of order, swap them</li>
+</ol>
+<p>2 5&nbsp;1&nbsp;6&nbsp;4 3</p>
+<p>2 5&nbsp;1&nbsp;6&nbsp;4&nbsp;3</p>
+<p>4.&nbsp;Out of order, swap them</p>
+<p>2 5&nbsp;1&nbsp;4&nbsp;6&nbsp;3</p>
+<p>2 5&nbsp;1 4&nbsp;6&nbsp;3</p>
+<p>5.&nbsp;Out of order, swap them</p>
+<p>2 5&nbsp;1 4&nbsp;3&nbsp;6</p>
+<p>6. Did you swap at least once this iteration? Yes, go back to the
+beginning</p>
+<p>2 5&nbsp;1 4 3 6</p>
+<p>2&nbsp;1 5&nbsp;4 3 6 &nbsp; &nbsp; swap</p>
+<p>2 1&nbsp;4 5&nbsp;3 6 &nbsp; &nbsp; swap</p>
+<p>2 1 4&nbsp;3 5&nbsp;6&nbsp;&nbsp; &nbsp; swap</p>
+<p>2 1 4 3&nbsp;5 6</p>
+<p>3rd iteration</p>
+<p>1 2&nbsp;4 3 5 6 &nbsp; &nbsp; swap</p>
+<p>1&nbsp;2 4&nbsp;3 5 6</p>
+<p>1 2&nbsp;3 4&nbsp;5 6 &nbsp; &nbsp; swap. Notice at that this point we already have it in
+order, but because of the algorithm, we need to finish the iteration and
+do the next one</p>
+<p>1 2 3&nbsp;4 5&nbsp;6</p>
+<p>1 2 3 4&nbsp;5 6</p>
+<p>4th iteration (because we made at least one swap in the previous
+iteration)</p>
+<p>1 2&nbsp;3 4 5 6</p>
+<p>1&nbsp;2 3&nbsp;4 5 6</p>
+<p>1 2&nbsp;3 4&nbsp;5 6</p>
+<p>1 2 3&nbsp;4 5&nbsp;6</p>
+<p>1 2 3 4&nbsp;5 6</p>
+<p>Done!</p>
+<p>Notice that this process isn’t very efficient, but it’s good for
+something that is basically already sorted, or for checking if something
+is sorted.</p>
+<p>Here’s the code</p>
+<p>void bubble(int foo[], int n)</p>
+<p>{</p>
+<p>&nbsp; &nbsp; &nbsp;bool swap;</p>
+<p>&nbsp; &nbsp; &nbsp;do</p>
+<p>&nbsp; &nbsp; &nbsp;{</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap = false;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; (n - 1); i++) &nbsp;// Don’t want to go past
+the last element because of i+1</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (foo[i] &gt; foo[i + 1])</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap(foo[i], foo[i + 1]);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap = true;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp;}</p>
+<p>&nbsp; &nbsp; &nbsp;while (swap == true); &nbsp; &nbsp; // Only keep on looping if you swapped at
+least one time</p>
+<p>}</p>
+<p>What is the big-o? The outer loop runs at most n times (it can go
+through the entire array at most n times) and the inner loop runs at
+most n times as well. the O(n^2).</p>
+<p>This is a stable sort.</p>
+<p>2(a) 2(b)&nbsp;1</p>
+<p>They are in order</p>
+<p>2(a)&nbsp;2(b)&nbsp;1</p>
+<p>They are not in order, swap them</p>
+<p>2(a)&nbsp;1&nbsp;2(b)</p>
+<p>We did at least one swap, go through array again</p>
+<p>2(a)&nbsp;1&nbsp;2(b)</p>
+<p>They are not in order, swap them</p>
+<p>1 2(a)&nbsp;2(b)</p>
+<p>1&nbsp;2(a)&nbsp;2(b)</p>
+<p>They are in order</p>
+<p>We did at least one swap, go through array again</p>
+<p>1 2(a)&nbsp;2(b)</p>
+<p>They are in order</p>
+<p>1&nbsp;2(a)&nbsp;2(b)</p>
+<p>They are in order</p>
+<p>We did not do any swaps, so we are done!</p>
+<p>The 2s have kept their&nbsp;initial&nbsp;ordering.</p>
+<p><strong>H Sort</strong></p>
+<p>The idea of h sorting is similar to that of the bubble sort, but instead
+of comparing every element with the next one, you compare every ith
+element with the i + hth element. H is some number that you choose to
+sort the array with, like 3. Note that an h sort (unless its a 1-sort,
+like a bubble sort) does not completely sort the array, but it is used
+for a different type of sorting, the shell sort.</p>
+<ol class="arabic simple">
+<li>Pick a value for h</li>
+<li>If arr[i] and arr[i + h] are out of order, swap them</li>
+<li>Continue until the end of the array (when arr[i + h] == arr[n - 1])</li>
+</ol>
+<p>4.&nbsp;If you made at least one swap, repeat from step 1</p>
+<p>Let’s 3-sort these numbers (h = 3)</p>
+<p>2&nbsp;6 5&nbsp;1&nbsp;4 3</p>
+<p>i = 0</p>
+<p>i + h = 3</p>
+<p>Compare 2 and 1. 1 &lt; 2 so swap</p>
+<p>1&nbsp;6 5&nbsp;2&nbsp;4 3</p>
+<p>1&nbsp;6&nbsp;5&nbsp;2&nbsp;4&nbsp;3</p>
+<p>i = 1</p>
+<p>i + h = 4</p>
+<p>Compare 6 and 4. Swap</p>
+<p>1&nbsp;4&nbsp;5&nbsp;2&nbsp;6&nbsp;3</p>
+<p>1&nbsp;4&nbsp;5&nbsp;2&nbsp;6&nbsp;3</p>
+<p>i = 2</p>
+<p>i + h = 5</p>
+<p>Compare 5 and 3. Swap</p>
+<p>1&nbsp;4&nbsp;3&nbsp;2&nbsp;6&nbsp;5</p>
+<p>We swapped at least once this loop, start again</p>
+<p>1&nbsp;4&nbsp;3&nbsp;2&nbsp;6&nbsp;5</p>
+<p>i = 0</p>
+<p>i + h = 3</p>
+<p>Don’t swap</p>
+<p>1&nbsp;4&nbsp;3&nbsp;2&nbsp;6&nbsp;5</p>
+<p>i = 1</p>
+<p>i + h = 4</p>
+<p>Don’t swap</p>
+<p>1&nbsp;4&nbsp;3&nbsp;2&nbsp;6&nbsp;5</p>
+<p>i = 2</p>
+<p>i + h = 5</p>
+<p>Don’t swap, didn’t swap at all, done!</p>
+<p>Here’s the code. Notice that you just change every + 1 to + h. If you
+passed in 1 as h, it would be a bubble sort.</p>
+<p>void h(int foo[], int n, int h)</p>
+<p>{</p>
+<p>&nbsp; &nbsp; &nbsp;bool swap;</p>
+<p>&nbsp; &nbsp; &nbsp;do</p>
+<p>&nbsp; &nbsp; &nbsp;{</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap = false;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; (n - h); i++) &nbsp;// Don’t want to go past
+the last element because of i+h</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (foo[i] &gt; foo[i + h])</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap(foo[i], foo[i + h]);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap = true;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp;}</p>
+<p>&nbsp; &nbsp; &nbsp;while (swap == true); &nbsp; &nbsp; // Only keep on looping if you swapped at
+least one time</p>
+<p>}</p>
+<p>Is this stable? If it is a 1-sort (bubble sort) it is, but if it’s
+anything other than that it is not.</p>
+<p>Here’s the example again (one more 2 added so we can do a 2-sort).</p>
+<p>h = 2</p>
+<p>2(a)&nbsp;2(b)&nbsp;2(c)&nbsp;1</p>
+<p>i = 0</p>
+<p>i + h = 2</p>
+<p>Don’t swap</p>
+<p>2(a)&nbsp;2(b)&nbsp;2(c)&nbsp;1</p>
+<p>i = 1</p>
+<p>i + h = 3</p>
+<p>Swap</p>
+<p>2(a)&nbsp;1&nbsp;2(c)&nbsp;2(b)</p>
+<p>We did at least one swap, repeat</p>
+<p>2(a)&nbsp;1&nbsp;2(c)&nbsp;2(b)</p>
+<p>Don’t swap</p>
+<p>2(a)&nbsp;1&nbsp;2(c)&nbsp;2(b)</p>
+<p>Don’t swap, done!</p>
+<p>As you can see, the 2s have not preserved their order.</p>
+<p><strong>Shell Sort</strong></p>
+<p>The idea of a shell sort is that you have a sequence of decreasing
+h-values that ends with an h-value of 1 (bubble). This will actually
+fully sort the array! There are different theories as to which sequence
+of h-values you should choose for the most efficiency, but let’s do a
+simple 3-sort, 2-sort, 1-sort.</p>
+<ol class="arabic simple">
+<li>Choose a sequence of decreasing h-values, ending with 1</li>
+<li>Do the first h-sort</li>
+<li>Repeat as necessary for the next h-values</li>
+</ol>
+<p>h = 3</p>
+<p>2&nbsp;6 5&nbsp;1&nbsp;4 3</p>
+<p>i = 0</p>
+<p>i + h = 3</p>
+<p>Compare 2 and 1. 1 &lt; 2 so swap</p>
+<p>1&nbsp;6 5&nbsp;2&nbsp;4 3</p>
+<p>1&nbsp;6&nbsp;5&nbsp;2&nbsp;4&nbsp;3</p>
+<p>i = 1</p>
+<p>i + h = 4</p>
+<p>Compare 6 and 4. Swap</p>
+<p>1&nbsp;4&nbsp;5&nbsp;2&nbsp;6&nbsp;3</p>
+<p>1&nbsp;4&nbsp;5&nbsp;2&nbsp;6&nbsp;3</p>
+<p>i = 2</p>
+<p>i + h = 5</p>
+<p>Compare 5 and 3. Swap</p>
+<p>1&nbsp;4&nbsp;3&nbsp;2&nbsp;6&nbsp;5</p>
+<p>We swapped at least once this loop, start again</p>
+<p>1&nbsp;4&nbsp;3&nbsp;2&nbsp;6&nbsp;5</p>
+<p>i = 0</p>
+<p>i + h = 3</p>
+<p>Don’t swap</p>
+<p>1&nbsp;4&nbsp;3&nbsp;2&nbsp;6&nbsp;5</p>
+<p>i = 1</p>
+<p>i + h = 4</p>
+<p>Don’t swap</p>
+<p>1&nbsp;4&nbsp;3&nbsp;2&nbsp;6&nbsp;5</p>
+<p>i = 2</p>
+<p>i + h = 5</p>
+<p>Don’t swap, didn’t swap at all, done!</p>
+<p>h = 2</p>
+<p>1&nbsp;4&nbsp;3&nbsp;2&nbsp;6&nbsp;5</p>
+<p>i = 0</p>
+<p>i + h = 2</p>
+<p>Don’t swap</p>
+<p>1&nbsp;4&nbsp;3&nbsp;2&nbsp;6&nbsp;5</p>
+<p>i = 1</p>
+<p>i + h = 3</p>
+<p>Swap</p>
+<p>1 2&nbsp;3&nbsp;4&nbsp;6&nbsp;5</p>
+<p>1 2&nbsp;3&nbsp;4&nbsp;6&nbsp;5</p>
+<p>i = 2</p>
+<p>i + h = 4</p>
+<p>Don’t swap</p>
+<p>1 2&nbsp;3&nbsp;4&nbsp;6&nbsp;5</p>
+<p>i = 3</p>
+<p>i + h = 5</p>
+<p>Don’t swap</p>
+<p>We swapped at least once this loop, start again</p>
+<p>1&nbsp;2&nbsp;3&nbsp;4&nbsp;6&nbsp;5</p>
+<p>i = 0</p>
+<p>i + h = 2</p>
+<p>Don’t swap</p>
+<p>1&nbsp;2&nbsp;3&nbsp;4&nbsp;6&nbsp;5</p>
+<p>i = 1</p>
+<p>i + h = 3</p>
+<p>Don’t swap</p>
+<p>1 2&nbsp;3&nbsp;4&nbsp;6&nbsp;5</p>
+<p>i = 2</p>
+<p>i + h = 4</p>
+<p>Don’t swap</p>
+<p>1 2&nbsp;3&nbsp;4&nbsp;6&nbsp;5</p>
+<p>i = 3</p>
+<p>i + h = 5</p>
+<p>Don’t swap, didn’t swap at all, done!</p>
+<p>h = 1</p>
+<p>1&nbsp;2&nbsp;3&nbsp;4&nbsp;6&nbsp;5</p>
+<p>Don’t swap</p>
+<p>1&nbsp;2&nbsp;3&nbsp;4&nbsp;6&nbsp;5</p>
+<p>Don’t swap</p>
+<p>1&nbsp;2&nbsp;3&nbsp;4&nbsp;6&nbsp;5</p>
+<p>Don’t swap</p>
+<p>1&nbsp;2&nbsp;3&nbsp;4&nbsp;6&nbsp;5</p>
+<p>Don’t swap</p>
+<p>1&nbsp;2&nbsp;3&nbsp;4&nbsp;6&nbsp;5</p>
+<p>Swap</p>
+<p>1&nbsp;2&nbsp;3&nbsp;4&nbsp;5&nbsp;6</p>
+<p>Repeat loop because we swapped once</p>
+<p>[after loop]</p>
+<p>1&nbsp;2&nbsp;3&nbsp;4&nbsp;5&nbsp;6</p>
+<p>Done!</p>
+<p>As you can probably guess, the shell sort is unstable because it largely
+consists of the h-sort, which is unstable.</p>
+<p>That’s it!</p>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Big-O.html" class="btn btn-neutral float-right" title="Algorithm Comparison">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Quicksort.html" class="btn btn-neutral" title="Quicksort"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

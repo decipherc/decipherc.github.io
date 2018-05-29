@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Virtual functions &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Generic programming" href="Generic_Programming.html"/>
+        <link rel="prev" title="Polymorphism" href="Polymorphism.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Virtual functions</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Virtual_fucntions.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="virtual-functions">
+<h1>Virtual functions<a class="headerlink" href="#virtual-functions" title="Permalink to this headline">¶</a></h1>
+<p>You use virtual for a function on these three conditions:</p>
+<ol class="arabic simple">
+<li>you are creating derived classes based on the class of the function;</li>
+<li>you want to change the implementation of that function in the derived class; and</li>
+</ol>
+<p>(3) you want the compiler to use the most derived version of the class when using polymorphism
+(when you reference a derived class with a pointer or reference to a base class).</p>
+<p>You CANNOT make a constructor virtual, but you SHOULD make destructors virtual!</p>
+<p>Consider this class:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Character</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">Character</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">m_name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+        <span class="n">m_action</span> <span class="o">=</span> <span class="s">&quot;rushes toward the enemy&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">string</span> <span class="n">name</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">m_name</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <span class="n">printWeapon</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">string</span> <span class="nf">attackAction</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">m_action</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">virtual</span> <span class="o">~</span><span class="n">Character</span><span class="p">()</span> <span class="p">{}</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">m_name</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">m_action</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="section" id="character">
+<h2>Character()<a class="headerlink" href="#character" title="Permalink to this headline">¶</a></h2>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>Character()’’ is not virtual because it is a constructor.</p>
+</div>
+<div class="section" id="name">
+<h2>name()<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h2>
+<p>Let assume that there is the following requirements:
+No two functions with non-empty bodies may have implementations that have the same effect for a caller.
+For example, there’s a better way to deal with the <a href="#id3"><span class="problematic" id="id4">``</span></a>name()’’ function than to have each kind of character declare and identically implement a name function.
+<a href="#id5"><span class="problematic" id="id6">``</span></a>name()’’ is not virtual for two reasons
+(and these are just because of the requirements of the spec, not that you shouldn’t do it in general).</p>
+<p>One of the ways to return the name for that function is to do this for every derived class:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="n">string</span> <span class="nf">name</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="k">return</span> <span class="n">m_name</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and make Character::name() (pure) virtual as well (technically you only need to write “virtual” before the base class version, but it’s better practice to use virtual for the derived class as well):</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="n">string</span> <span class="nf">name</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>This would work, but it is a repetition of implementation to have the same <a href="#id7"><span class="problematic" id="id8">``</span></a>name()’’ in all of the derived classes, so we can’t do it.
+What do we do?
+We need to make the derived classes inherit the correct name function, so we won’t even need to redefine the name function in each of them.
+Now, if you try and just do this in the Character class,</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="nf">name</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="k">return</span> <span class="n">m_name</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This is not going to work because the <a href="#id9"><span class="problematic" id="id10">``</span></a>Character’’ class can’t access a derived classes’ private member variables.
+So now what?</p>
+<p>Thanks to another seemingly random spec requirement:</p>
+<p>The <a href="#id11"><span class="problematic" id="id12">``</span></a>Character’’ class must not have a default constructor.
+The only constructor you may declare for Character must have exactly one parameter.
+That parameter must be of a builtin type or of type string, and it must be a useful parameter.</p>
+<p>We can get the name of the Dwarf/Elf/Boggie from the constructor!
+Simply assign Character’s m_name variable to it!
+But wait?
+How does Character know what their name is?
+Aren’t you creating a new variable with the Dwarf/Elf/Boggie constructor?
+You are, but FIRST, the constructor of the base class (or possibly other derived classes that come before it) is constructed first!
+That’s why we can put an initializer list in before all of the derived class’ constructors,
+because Character’s constructor is called first and it doesn’t (can’t) have a default constructor.
+Yay! So we made <a href="#id13"><span class="problematic" id="id14">``</span></a>name()’’ work.</p>
+</div>
+<div class="section" id="printweapon">
+<h2>printWeapon()<a class="headerlink" href="#printweapon" title="Permalink to this headline">¶</a></h2>
+<p><a href="#id15"><span class="problematic" id="id16">``</span></a>printWeapon()’’ is a pure virtual function.
+This is because, unlike <a href="#id17"><span class="problematic" id="id18">``</span></a>name()’‘,
+we don’t have to worry about repeating the implementation because we are printing out three distinct strings of weapons for each derived class.
+Note that this is allowed by the spec:
+Notice that { return “rushes toward the enemy”; } and { string s(“rushes toward”); return s + ” the enemy”; } have the same effect. And notice that { cout &lt;&lt; “a pointed stick”; } and { cout &lt;&lt; “banana”; } do not have the same effect.</p>
+</div>
+<div class="section" id="attackaction">
+<h2>attackAction()<a class="headerlink" href="#attackaction" title="Permalink to this headline">¶</a></h2>
+<p><a href="#id19"><span class="problematic" id="id20">``</span></a>attackAction()’’ is a virtual function.
+Why?
+First of all, we need to be sure we are not repeating an implementation, as both a Dwarf and an Elf “rushes toward the enemy”, so we can’t just do</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="n">string</span> <span class="nf">attackAction</span><span class="p">()</span>
+<span class="p">{</span>
+       <span class="k">return</span> <span class="s">&quot;rushes toward the enemy&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>for both Dwarf and Elf. So what can we do? Notice that only a Boggie “whimpers” as an attack, so it is okay to do</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="n">string</span> <span class="nf">attackAction</span><span class="p">()</span>
+<span class="p">{</span>
+       <span class="k">return</span> <span class="s">&quot;whimpers&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>in the Boggie class.
+So why don’t we just make Character’s attackAction be, by default, “rushes toward the enemy”, so we can just redefine it for the Boggie class?
+Note though, that Character’s attackAction MUST be virtual so we can redefine it, otherwise a Boggie will also return “rushes toward the enemy”.
+So how do we implement it?
+We can just define a private member variable in Character called m_action, define it in the constructor to be equal to “rushes toward the enemy”, and for the attackAction in Character do this:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="n">string</span> <span class="nf">attackAction</span><span class="p">()</span>
+<span class="p">{</span>
+       <span class="k">return</span> <span class="s">&quot;rushes toward the enemy&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and still do this in the Boggie class:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="n">string</span> <span class="nf">attackAction</span><span class="p">()</span>
+<span class="p">{</span>
+       <span class="k">return</span> <span class="s">&quot;whimpers&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>When the compiler calls a virtual function, it will call the most derived version.
+So when a Boggie calls attackAction, it will use Boggie’s redefined attackAction,
+and when a Dwarf or an Elf calls the action, it will do Character’s version because they don’t redefine it.</p>
+</div>
+<div class="section" id="id21">
+<h2>~Character()<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<p>~Character is virtual because a destructor should always be virtual when using inheritance.
+It doesn’t do anything in the Character class because it doesn’t need to (no dynamic variables, no requirements by spec).
+Each of the derived class’ destructors output the required lines.</p>
+<p>Note: The reason I created a m_weapon variable in Dwarf to hold “an axe” instead of just outputting it like in the other functions
+is solely for the purpose of keeping all of the functions (in this case constructors) to have different implementations.
+I’m not sure if it would count as repetition, but just in case.</p>
+<p>Note that because Character has at least one pure virtual function (printWeapon),
+that it makes it an ADT, and thus you cannot construct an object of type Character, which goes under this requirement:</p>
+<p>Although the expression new Elf(“Orlon”, 8) is fine, the expressions new Character(“Goodgulf”) and new Character(0) must produce compilation errors.
+(A client can create a particular kind of character object, like an Elf object, but is not allowed to create an object that is just a plain Character.)</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Generic_Programming.html" class="btn btn-neutral float-right" title="Generic programming">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Polymorphism.html" class="btn btn-neutral" title="Polymorphism"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

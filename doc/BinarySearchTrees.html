@@ -1,0 +1,653 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Binary Search Trees (BST) &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Unordered map" href="Unordered_map.html"/>
+        <link rel="prev" title="Binary Trees" href="BinaryTrees.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Binary Search Trees (BST)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/BinarySearchTrees.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="binary-search-trees-bst">
+<h1>Binary Search Trees (BST)<a class="headerlink" href="#binary-search-trees-bst" title="Permalink to this headline">¶</a></h1>
+<p>A binary search tree is a type of binary tree whose nodes of the left sub-tree are less than that node’s value and the nodes of the right sub-tree are greater than that node’s value.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>         <span class="mi">5</span>
+   <span class="mi">3</span>          <span class="mi">8</span>
+<span class="mi">1</span>     <span class="mi">4</span>          <span class="mi">10</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>          <span class="n">Marshall</span>
+     <span class="n">Lily</span>       <span class="n">Robin</span>    <span class="n">Ted</span>
+<span class="n">Barney</span>
+</pre></div>
+</div>
+<p>Here is the interface of a BST:</p>
+<ul class="simple">
+<li>Search it for a value</li>
+<li>Insert an item</li>
+<li>Delete an item</li>
+<li>Find the height</li>
+<li>Traverse it</li>
+<li>Free the memory</li>
+</ul>
+<p>Searching a BST:</p>
+<p>Algorithm:
+1. Start at the root of the tree
+2. While a node is not nullptr</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>If the inputted value is equal to the current node’s value, return true</li>
+<li>If it is less than the current node’s value, go left</li>
+<li>If it is greater than the current node’s value, go right</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>If the node is nullptr, return false</li>
+</ol>
+<p>Code Iterative Version:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="nf">search</span><span class="p">(</span><span class="kt">int</span> <span class="n">value</span><span class="p">,</span> <span class="n">Node</span> <span class="o">*</span><span class="n">ptr</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">==</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)</span>
+               <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+          <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">&lt;</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)</span>
+               <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+          <span class="k">else</span>
+               <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Code Recursive Version:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="nf">search</span><span class="p">(</span><span class="kt">int</span> <span class="n">value</span><span class="p">,</span> <span class="n">Node</span> <span class="o">*</span><span class="n">ptr</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+     <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">==</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)</span>
+          <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+     <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">&lt;</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)</span>
+          <span class="k">return</span> <span class="p">(</span><span class="n">search</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">));</span>
+     <span class="k">else</span>
+          <span class="k">return</span> <span class="p">(</span><span class="n">search</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>        <span class="n">d</span>
+    <span class="n">b</span>        <span class="n">e</span>
+<span class="n">a</span>       <span class="n">c</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Search</span> <span class="k">for</span> <span class="n">c</span>
+<span class="n">c</span> <span class="o">&lt;</span> <span class="n">d</span><span class="p">,</span> <span class="n">go</span> <span class="n">left</span>
+     <span class="n">Node</span> <span class="n">is</span> <span class="n">c</span>
+     <span class="n">c</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">,</span> <span class="n">go</span> <span class="n">right</span>
+          <span class="n">Node</span> <span class="n">is</span> <span class="n">c</span>
+          <span class="n">Return</span> <span class="nb">true</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Search</span> <span class="k">for</span> <span class="n">e</span>
+<span class="n">e</span> <span class="o">&gt;</span> <span class="n">d</span><span class="p">,</span> <span class="n">go</span> <span class="n">right</span>
+     <span class="n">Node</span> <span class="n">is</span> <span class="n">e</span>
+     <span class="n">Return</span> <span class="nb">true</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Search</span> <span class="k">for</span> <span class="n">f</span>
+<span class="n">f</span> <span class="o">&gt;</span> <span class="n">d</span><span class="p">,</span> <span class="n">go</span> <span class="n">right</span>
+     <span class="n">Node</span> <span class="n">is</span> <span class="n">f</span>
+     <span class="n">f</span> <span class="o">&gt;</span> <span class="n">e</span><span class="p">,</span> <span class="n">go</span> <span class="n">right</span>
+          <span class="n">Node</span> <span class="n">is</span> <span class="k">nullptr</span>
+          <span class="n">Return</span> <span class="nb">false</span>
+</pre></div>
+</div>
+<p>The average big-O of this search, for a BSt with n values, is <code class="docutils literal notranslate"><span class="pre">O(log(n))</span></code>.
+The worst case big-O is <code class="docutils literal notranslate"><span class="pre">O(n)</span></code>.</p>
+<p>Worst case:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">z</span>
+     <span class="n">y</span>
+          <span class="n">x</span>
+               <span class="n">w</span>
+                    <span class="n">v</span>
+                         <span class="n">u</span>
+                              <span class="n">etc</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>Inserting an item into a BST:</p>
+<p>Algorithm:</p>
+<ol class="arabic simple">
+<li><dl class="first docutils">
+<dt>If the tree is empty</dt>
+<dd><ol class="first last loweralpha">
+<li>Allocate a new node and put the inputted value in</li>
+<li>Point the root pointer to the new node</li>
+<li>Return</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li>Start at the root of the tree</li>
+<li><dl class="first docutils">
+<dt>While we haven’t returned</dt>
+<dd><ol class="first last loweralpha">
+<li>If the value is equal to the current node’s value, return</li>
+<li><dl class="first docutils">
+<dt>If the value is less than the current node’s value</dt>
+<dd><ol class="first last lowerroman">
+<li>If there is a left child, go left</li>
+<li>Otherwise allocate a new node and put the value in it. Set the current node’s left pointer to the new node</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>If the value is greater than the current node’s value</dt>
+<dd><ol class="first last lowerroman">
+<li>If there is a right child, go right</li>
+<li>Otherwise allocate a new node and put the value in it. Set the current node’s right pointer to the new node</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+<p>Code:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">insert</span> <span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">value</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+          <span class="k">return</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">Node</span> <span class="o">*</span><span class="n">cur</span> <span class="o">=</span> <span class="n">root</span><span class="p">;</span>
+     <span class="k">for</span> <span class="p">(;;)</span>
+     <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">==</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)</span>
+               <span class="k">return</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">&lt;</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)</span>
+          <span class="p">{</span>
+               <span class="k">if</span> <span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>     <span class="c1">// Go left</span>
+                    <span class="n">cur</span> <span class="o">=</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+               <span class="k">else</span>
+               <span class="p">{</span>
+                    <span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+                    <span class="k">return</span><span class="p">;</span>
+               <span class="p">}</span>
+          <span class="p">}</span>
+          <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">&gt;</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)</span>
+          <span class="p">{</span>
+               <span class="k">if</span> <span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>     <span class="c1">// Go right</span>
+                    <span class="n">cur</span> <span class="o">=</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+               <span class="k">else</span>
+               <span class="p">{</span>
+                    <span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+                    <span class="k">return</span><span class="p">;</span>
+               <span class="p">}</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The average big-O of insertion is <code class="docutils literal notranslate"><span class="pre">O(log(n))</span></code> (to find the right place), the worst case is <code class="docutils literal notranslate"><span class="pre">O(n)</span></code>.</p>
+<p>You want your BST to be busty and balanced, like a Christmas tree, not a line.</p>
+<p>Good:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>        <span class="n">d</span>
+    <span class="n">b</span>        <span class="n">e</span>
+<span class="n">a</span>       <span class="n">c</span>
+</pre></div>
+</div>
+<p>Bad:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">e</span>
+     <span class="n">d</span>
+          <span class="n">c</span>
+               <span class="n">b</span>
+                    <span class="n">a</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>     <span class="n">b</span>
+<span class="n">a</span>         <span class="n">c</span>
+               <span class="n">d</span>
+                    <span class="n">e</span>
+</pre></div>
+</div>
+<p>Finding the minimum value of a BST (left-most node):</p>
+<p>Code Iterative Version:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">min</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">ptr</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>     <span class="c1">// empty tree</span>
+
+     <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>     <span class="c1">// Keep on going left until you get to the left-most</span>
+          <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+
+     <span class="k">return</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Code Recursive Version:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">min</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">ptr</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>     <span class="c1">// empty tree</span>
+
+     <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>     <span class="c1">// Stop iterating when you get to the left-most</span>
+          <span class="k">return</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+
+     <span class="k">return</span> <span class="p">(</span><span class="n">min</span><span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Finding the maximum value of a BST (right-most node):</p>
+<p>Code Iterative Version:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">max</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">ptr</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>     <span class="c1">// empty tree</span>
+
+     <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>     <span class="c1">// Keep on going right until you get to the right-most</span>
+          <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+
+     <span class="k">return</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Code Recursive Version:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">max</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">ptr</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>     <span class="c1">// empty tree</span>
+
+     <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>     <span class="c1">// Stop iterating when you get to the right-most</span>
+          <span class="k">return</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+
+     <span class="k">return</span> <span class="p">(</span><span class="n">max</span><span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Printing out the values of a BST in alphabetical order:
+This is same as traversing a binary tree with an in-order traversal.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// In-order traversal</span>
+<span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">cur</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="k">return</span><span class="p">;</span>
+     <span class="n">print</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">value</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+     <span class="n">print</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Big-o of this is <code class="docutils literal notranslate"><span class="pre">O(n)</span></code>.</p>
+<p>Freeing all of the memory of the tree:
+This is the same as traversing a binary tree with post-order traversal</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Post-order traversal</span>
+<span class="kt">void</span> <span class="nf">free</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">cur</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="k">return</span><span class="p">;</span>
+     <span class="n">free</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+     <span class="n">free</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+     <span class="k">delete</span> <span class="n">cur</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This is also <code class="docutils literal notranslate"><span class="pre">O(n)</span></code>.</p>
+<p>Deleting a node from a BST:
+This is more complicated than you may think. There are two major steps.</p>
+<p>Algorithm:
+1. Find the value in the tree with a standard BST search, but use two pointers: cur and parent. Cur should point to the node you want to delete, parent should point to that node’s parent.
+2. If the node is found, determine what case it falls into:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>The node is a leaf</li>
+<li>The node has one child</li>
+<li>The node has two children</li>
+</ol>
+</div></blockquote>
+<ol class="arabic" start="3">
+<li><dl class="first docutils">
+<dt>If case a,</dt>
+<dd><ol class="first last loweralpha simple">
+<li>If cur is the root node, set the root pointer to nulltpr</li>
+<li>Otherwise set either the parent’s left or right pointer nullptr (depends on whether cur is the left or right child)</li>
+<li>Delete cur</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>If case b,</dt>
+<dd><ol class="first loweralpha simple">
+<li>Create a grandchild pointer and set it to either cur’s left or right pointer (depends on whether it has a left or a right child)</li>
+</ol>
+<p class="last">b. If cur is the root node, set the root pointer to the grandchild
+b. Otherwise link either the parent’s left or right pointer to the grandchild (depends on whether cur is the left or right child)
+c. Delete cur</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>If case c,</dt>
+<dd><ol class="first last loweralpha simple">
+<li>Find either the largest child (right-most child) of the value’s left sub-tree or the smallest child (left-most child) of the right sub-tree</li>
+<li>Copy that node’s value into temp</li>
+<li>Remove that node</li>
+<li>Copy temp into the node you wish to delete</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">delete</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">cur</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="n">Node</span><span class="o">*</span> <span class="n">parent</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+     <span class="n">cur</span> <span class="o">=</span> <span class="n">root</span><span class="p">;</span>
+     <span class="k">while</span> <span class="p">(</span><span class="n">cur</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">==</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)</span>
+               <span class="k">break</span><span class="p">;</span>     <span class="c1">// Found the value</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">&lt;</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)</span>
+          <span class="p">{</span>
+               <span class="n">parent</span> <span class="o">=</span> <span class="n">cur</span><span class="p">;</span>
+               <span class="n">cur</span> <span class="o">=</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">&gt;</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)</span>
+          <span class="p">{</span>
+               <span class="n">parent</span> <span class="o">=</span> <span class="n">cur</span><span class="p">;</span>
+               <span class="n">cur</span> <span class="o">=</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+          <span class="p">}</span>
+     <span class="p">}</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="k">nullptr</span> <span class="o">&amp;&amp;</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>     <span class="c1">// Case a</span>
+     <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">parent</span> <span class="o">==</span> <span class="n">root</span><span class="p">)</span>
+               <span class="n">root</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+          <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="n">cur</span><span class="p">)</span>
+               <span class="n">parent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+          <span class="k">else</span>
+               <span class="n">parent</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+          <span class="k">delete</span> <span class="n">cur</span><span class="p">;</span>
+     <span class="p">}</span>
+
+     <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">!=</span> <span class="k">nullptr</span> <span class="o">||</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>     <span class="c1">// Case b</span>
+     <span class="p">{</span>
+          <span class="n">Node</span> <span class="o">*</span><span class="n">grandchild</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+               <span class="n">grandchild</span> <span class="o">=</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+          <span class="k">else</span>
+               <span class="n">grandchild</span> <span class="o">=</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">parent</span> <span class="o">==</span> <span class="n">cur</span><span class="p">)</span>
+               <span class="n">root</span> <span class="o">=</span> <span class="n">grandchild</span><span class="p">;</span>
+          <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="n">cur</span><span class="p">)</span>
+               <span class="n">parent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">grandchild</span><span class="p">;</span>
+          <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">==</span> <span class="n">cur</span><span class="p">)</span>
+               <span class="n">parent</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="n">grandchild</span><span class="p">;</span>
+          <span class="k">delete</span> <span class="n">cur</span><span class="p">;</span>
+     <span class="p">}</span>
+
+     <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">!=</span> <span class="k">nullptr</span> <span class="o">&amp;&amp;</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>     <span class="c1">// Case c</span>
+     <span class="p">{</span>
+          <span class="n">Node</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+          <span class="p">{</span>
+               <span class="n">ptr</span> <span class="o">=</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+               <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+                    <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="k">else</span>     <span class="c1">// If there isn&#39;t a left child</span>
+          <span class="p">{</span>
+               <span class="n">ptr</span> <span class="o">=</span> <span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+               <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+                    <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="k">nullptr</span> <span class="o">&amp;&amp;</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+               <span class="c1">// Delete it with case a</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">!=</span> <span class="k">nullptr</span> <span class="o">||</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+               <span class="c1">// Delete it with case b</span>
+          <span class="n">cur</span><span class="o">-&gt;</span><span class="n">value</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Unordered_map.html" class="btn btn-neutral float-right" title="Unordered map">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="BinaryTrees.html" class="btn btn-neutral" title="Binary Trees"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

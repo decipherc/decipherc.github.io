@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Abstract Data Types (ADT) &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Constructors" href="Constructors.html"/>
+        <link rel="prev" title="Introduction" href="Introduction.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Abstract Data Types (ADT)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Abstract_Data_Types.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="abstract-data-types-adt">
+<h1>Abstract Data Types (ADT)<a class="headerlink" href="#abstract-data-types-adt" title="Permalink to this headline">¶</a></h1>
+<p>The first topic is on Abstract Data Types (ADT).
+But before we go into what that is, we need to look at the three components that make up an ADT:
+(1) data structure,
+(2) algorithm, and
+(3) interface.</p>
+<div class="section" id="data-structure">
+<h2>1) Data Structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">¶</a></h2>
+<p>A data structure is basically just a bunch of data that you want to do something with.
+That data can be 100 random numbers, the first five prime numbers, the names of all the characters in The Big Bang Theory, or a items in a grocery list.
+How do you store this data in C++?
+You can use an int, an array of strings, etc.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">numberOfFriends</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">string</span> <span class="n">BigBang</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;Sheldon&quot;</span><span class="p">,</span> <span class="s">&quot;Leonard&quot;</span><span class="p">,</span> <span class="s">&quot;Raj&quot;</span><span class="p">,</span> <span class="s">&quot;Howard&quot;</span><span class="p">,</span> <span class="s">&quot;Penny&quot;</span><span class="p">};</span>
+</pre></div>
+</div>
+<p>But what do you do with these data structures?
+That’s where the algorithm comes in.</p>
+</div>
+<div class="section" id="algorithm">
+<h2>2) Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">¶</a></h2>
+<p>An algorithm is a fancy word for a set of instructions that when implemented solve some problem.
+What kind of problem? Any problem that is related to data manipulation.
+The data the algorithm will be using is called the input, and the result the algorithm produces is the output.
+Here is the implementation of a very simple algorithm that tells you whether you can drink alcohol in the U.S.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">age</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">21</span><span class="p">)</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Yes&quot;</span><span class="p">;</span>
+<span class="k">else</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;No&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Notice how I specified that this is the implementation of an algorithm.
+When we use programs that solve some problem, we don’t see the implementation of the program.
+Why not? Because we don’t need too.
+The program will still work without us knowing, so it’s unnecessary (and even risky, as we will see later).
+The same goes for the data structure.
+In the example above, hiding the information may not seem so important as the algorithm is very simple,
+but with programs that have algorithms+data structures that are much more complex, like Facebook,
+it would be useful and much more usable to hide it.
+So how do we mask the gory details?</p>
+</div>
+<div class="section" id="interface">
+<h2>3) Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<p>The interface is the walls around the algorithm and data structure.
+The user of the program can interact with the program through specially designed functions that are user-friendly
+(that is, anyone who doesn’t know the gory details should still be able to use it.
+Imagine trying to use Microsoft Word without the interface, very few people would actually be able to use it).
+The interface also prevents people from stealing or messing with the code.
+Together, these make up an ADT.
+Programs are made up of multiple ADTs, each of which solve a small problem of the puzzle.
+By the way, C++ is an object oriented programming language, meaning it is modeled on ADTs!
+You will see this illustrated below.</p>
+<p>So what do we do with these ADTs in C++?
+ADTs translate to C++ classes. The data structures and algorithms, which need to be private,
+translate to the private data members and functions of the class
+(by the way, for some reason, we have only been making data members private, not the functions.
+The examples will be based on what we learned).
+The interface translates to the public functions.
+In C++, the private functions can only be accessed by objects of the class, while the public functions can be accessed by anyone.
+Perfect!
+Here is an example illustrating how we define each of the components of an ADT in a class.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Alcohol</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="n">Alcohol</span><span class="p">(</span><span class="kt">int</span> <span class="n">age</span><span class="p">)</span>     <span class="c1">// The initializing interface</span>
+     <span class="p">{</span>
+          <span class="n">m_age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="kt">bool</span> <span class="n">legal</span><span class="p">()</span>          <span class="c1">// The interface</span>
+     <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">m_age</span> <span class="o">&gt;=</span> <span class="mi">21</span><span class="p">)</span>     <span class="c1">// The algorithms are hidden</span>
+              <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+          <span class="k">else</span>
+              <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="kt">int</span> <span class="n">m_age</span><span class="p">;</span>     <span class="c1">// The data structure</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="n">Alcohol</span> <span class="n">Bob</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>     <span class="c1">// Using the interface</span>
+     <span class="n">legal</span><span class="p">();</span>             <span class="c1">// returns false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Constructors.html" class="btn btn-neutral float-right" title="Constructors">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Introduction.html" class="btn btn-neutral" title="Introduction"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

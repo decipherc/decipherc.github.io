@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Inheritance &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Polymorphism" href="Polymorphism.html"/>
+        <link rel="prev" title="Stacks" href="Stacks.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Inheritance</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Inheritance.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="inheritance">
+<h1>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h1>
+<p>Inheritance is a technique used in C++ that allows you to reuse code in one class or object (called a base class)
+in another (called a derived class) without actually copying everything; you are inheriting information and methods.
+How convenient!
+When would you use this?
+Say you have a person object.
+Let’s say a person has a name, a job, a way to get and set the name, and a way to get and set the job title.
+Now let’s create a wizard object.
+A wizard has a wand, in addition to a name and a job.
+We can have the wizard object inherit the name and job features.
+But why don’t we just copy and paste it? In coding having duplicate code is considered bad.
+Why?
+If you change one of the versions of the code, you may incorrectly copy the changes to the other versions or even forget to completely.
+This can result in careless mistakes.
+Also it takes time!</p>
+<p>VERSION WITHOUT INHERITANCE</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">setName</span><span class="p">(</span><span class="n">string</span> <span class="n">nm</span><span class="p">){</span>
+          <span class="n">m_name</span> <span class="o">=</span> <span class="n">nm</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getName</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="kt">void</span> <span class="n">setJob</span><span class="p">(</span><span class="n">string</span> <span class="n">jb</span><span class="p">){</span>
+               <span class="n">m_job</span> <span class="o">=</span> <span class="n">jb</span><span class="p">;</span>
+               <span class="n">party</span><span class="p">();</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getJob</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">getJob</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">party</span><span class="p">(){</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Wooo!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="n">string</span> <span class="n">m_job</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Wizard</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">setName</span><span class="p">(</span><span class="n">string</span> <span class="n">nm</span><span class="p">){</span>
+          <span class="n">m_name</span> <span class="o">=</span> <span class="n">nm</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getName</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="kt">void</span> <span class="n">setJob</span><span class="p">(</span><span class="n">string</span> <span class="n">jb</span><span class="p">){</span>
+               <span class="n">m_job</span> <span class="o">=</span> <span class="n">jb</span><span class="p">;</span>
+               <span class="n">party</span><span class="p">();</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getJob</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">getJob</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="kt">void</span> <span class="n">setWand</span><span class="p">(</span><span class="n">string</span> <span class="n">w</span><span class="p">){</span>
+          <span class="n">m_wand</span> <span class="o">=</span> <span class="n">w</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getWand</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">m_wand</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">party</span><span class="p">(){</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Wooo!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="n">string</span> <span class="n">m_job</span><span class="p">;</span>
+     <span class="n">string</span> <span class="n">m_wand</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Notice that setName, getName, setJob, getJob, and party are the same in both classes.
+To have wizard inherit these functions, put, after the name of the class, a colon, write “public”, and then the name of the class from which you want to get the functions from.
+Now you delete the duplicate functions and data members from Wizard, and you will still be able to use them as if they were there.
+How?
+When you write “: public Person”, the compiler automatically copies and pastes all of Person’s public functions into Wizard’s definition.
+However, you still can’t access the base class’ private members.
+As a professor of mine once said, you can’t touch your parent’s privates; only other instances of the same class (or other Wizards) may touch your privates.</p>
+<p>VERSION 1 WITH INHERITANCE</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">setName</span><span class="p">(</span><span class="n">string</span> <span class="n">nm</span><span class="p">){</span>
+          <span class="n">m_name</span> <span class="o">=</span> <span class="n">nm</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getName</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="kt">void</span> <span class="n">setJob</span><span class="p">(</span><span class="n">string</span> <span class="n">jb</span><span class="p">){</span>
+               <span class="n">m_job</span> <span class="o">=</span> <span class="n">jb</span><span class="p">;</span>
+               <span class="n">party</span><span class="p">();</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getJob</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">getJob</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">party</span><span class="p">(){</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Wooo!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="n">string</span> <span class="n">m_job</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Wizard</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Person</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">setWand</span><span class="p">(</span><span class="n">string</span> <span class="n">w</span><span class="p">){</span>
+          <span class="n">m_wand</span> <span class="o">=</span> <span class="n">w</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getWand</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">m_wand</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">party</span><span class="p">(){</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Wooo!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">m_wand</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="n">Person</span> <span class="n">bob</span><span class="p">;</span>
+     <span class="n">bob</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;Bob Bobington&quot;</span><span class="p">);</span>
+     <span class="n">bob</span><span class="p">.</span><span class="n">setJob</span><span class="p">(</span><span class="s">&quot;Bobber&quot;</span><span class="p">);</span>
+     <span class="n">bob</span><span class="p">.</span><span class="n">getName</span><span class="p">();</span>
+     <span class="n">bob</span><span class="p">.</span><span class="n">getJob</span><span class="p">();</span>
+
+     <span class="n">Wizard</span> <span class="n">harry</span><span class="p">;</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;Harry Potter&quot;</span><span class="p">);</span>     <span class="c1">// Uses class Person</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">setJob</span><span class="p">(</span><span class="s">&quot;Auror&quot;</span><span class="p">);</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">getName</span><span class="p">();</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">getJob</span><span class="p">();</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">setWand</span><span class="p">(</span><span class="s">&quot;dragon heart&quot;</span><span class="p">);</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">getWand</span><span class="p">();</span>
+
+     <span class="n">bob</span><span class="p">.</span><span class="n">setWand</span><span class="p">();</span>     <span class="c1">// Error! Person can&#39;t access Wizard&#39;s functions! It doesn&#39;t even know Wizard exists.</span>
+
+     <span class="n">bob</span><span class="p">.</span><span class="n">party</span><span class="p">();</span>     <span class="c1">// Error! Can&#39;t access a class&#39; private functions from main</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">party</span><span class="p">();</span>     <span class="c1">// Error! Can&#39;t access a base class&#39; private functions, anywhere, period.</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>But what about Person’s private function <code class="docutils literal notranslate"><span class="pre">party()</span></code> that we also want to have in Wizard?
+Note that you CANNOT call any of Person’s private data, whether they be functions or variables (or any class’ privates that aren’t yours, for that matter). So what do we do? C++ provides an option in which you can declare a protected function. A protected function can only be accessed by the derived class. This allows the derived class’ public functions to use it, but that’s it. You still can’t access it in main or anywhere else.</p>
+<p>VERSION 2 WITH INHERITANCE</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">setName</span><span class="p">(</span><span class="n">string</span> <span class="n">nm</span><span class="p">){</span>
+          <span class="n">m_name</span> <span class="o">=</span> <span class="n">nm</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getName</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="kt">void</span> <span class="n">setJob</span><span class="p">(</span><span class="n">string</span> <span class="n">jb</span><span class="p">){</span>
+               <span class="n">m_job</span> <span class="o">=</span> <span class="n">jb</span><span class="p">;</span>
+               <span class="n">party</span><span class="p">();</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getJob</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">getJob</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">protected</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">party</span><span class="p">(){</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Wooo!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="n">string</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="n">string</span> <span class="n">m_job</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Wizard</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Person</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">setWand</span><span class="p">(</span><span class="n">string</span> <span class="n">w</span><span class="p">){</span>
+          <span class="n">m_wand</span> <span class="o">=</span> <span class="n">w</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getWand</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">m_wand</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="n">string</span> <span class="n">m_wand</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="n">Person</span> <span class="n">bob</span><span class="p">;</span>
+     <span class="n">bob</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;Bob Bobington&quot;</span><span class="p">);</span>
+     <span class="n">bob</span><span class="p">.</span><span class="n">setJob</span><span class="p">(</span><span class="s">&quot;Bobber&quot;</span><span class="p">);</span>
+     <span class="n">bob</span><span class="p">.</span><span class="n">getName</span><span class="p">();</span>
+     <span class="n">bob</span><span class="p">.</span><span class="n">getJob</span><span class="p">();</span>
+
+     <span class="n">Wizard</span> <span class="n">harry</span><span class="p">;</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;Harry Potter&quot;</span><span class="p">);</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">setJob</span><span class="p">(</span><span class="s">&quot;Auror&quot;</span><span class="p">);</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">getName</span><span class="p">();</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">getJob</span><span class="p">();</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">setWand</span><span class="p">(</span><span class="s">&quot;dragon heart&quot;</span><span class="p">);</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">getWand</span><span class="p">();</span>
+
+     <span class="n">bob</span><span class="p">.</span><span class="n">setWand</span><span class="p">();</span>     <span class="c1">// Error! Person can&#39;t access Wizard&#39;s functions! It doesn&#39;t even know Wizard exists.</span>
+
+     <span class="n">bob</span><span class="p">.</span><span class="n">party</span><span class="p">();</span>     <span class="c1">// Error! Can&#39;t access a class&#39; private functions from main</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">party</span><span class="p">();</span>     <span class="c1">// Error! Can&#39;t access a class&#39; private functions from main</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>There are three types of inheritance: reuse, extension, and specialization. Don’t worry about these formal names; they are just words to describe different things you can do with inheritance.</p>
+<p>Reuse: Reuse is when you use inheritance to duplicate the base class’ methods in the derived class.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">setName</span><span class="p">(</span><span class="n">string</span> <span class="n">nm</span><span class="p">){</span>
+          <span class="n">m_name</span> <span class="o">=</span> <span class="n">nm</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getName</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="kt">void</span> <span class="n">setJob</span><span class="p">(</span><span class="n">string</span> <span class="n">jb</span><span class="p">){</span>
+               <span class="n">m_job</span> <span class="o">=</span> <span class="n">jb</span><span class="p">;</span>
+               <span class="n">party</span><span class="p">();</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getJob</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">getJob</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">protected</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">party</span><span class="p">(){</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Wooo!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="n">string</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="n">string</span> <span class="n">m_job</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Muggle</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Person</span>     <span class="c1">// Muggle can do all of the same things a Person can, and no more</span>
+<span class="p">{</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="n">Person</span> <span class="n">bob</span><span class="p">;</span>
+     <span class="n">bob</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;Bob Bobington&quot;</span><span class="p">);</span>
+     <span class="n">bob</span><span class="p">.</span><span class="n">setJob</span><span class="p">(</span><span class="s">&quot;Bobber&quot;</span><span class="p">);</span>
+     <span class="n">bob</span><span class="p">.</span><span class="n">getName</span><span class="p">();</span>
+     <span class="n">bob</span><span class="p">.</span><span class="n">getJob</span><span class="p">();</span>
+
+     <span class="n">Muggle</span> <span class="n">jane</span><span class="p">;</span>
+     <span class="n">jane</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;Jane Janeson&quot;</span><span class="p">);</span>
+     <span class="n">jane</span><span class="p">.</span><span class="n">setJob</span><span class="p">(</span><span class="s">&quot;Jailer&quot;</span><span class="p">);</span>
+     <span class="n">jane</span><span class="p">.</span><span class="n">getName</span><span class="p">();</span>
+     <span class="n">jane</span><span class="p">.</span><span class="n">getJob</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Extension: Extension is when you use inheritance to add methods in addition to the base class’ methods.
+This is what we did in the example above; we added two new public functions to the derived class Wizard.</p>
+<p>Specialization: Specialization is when you use inheritance to change the base class’ methods in the derived class.
+When doing this you need to include the word “virtual” in front of all functions you plan to change in both the based and derived class;
+this let’s the compiler know that there is a different version in a derived class.
+We’ll go over in more detail what this means later. Note that you do NOT write virtual in front of the function’s name if you define it outside of its class declaration;
+you only use virtual in the function’s definition or in class declaration.
+Say we want to change Wizard’s party function to say something else (I’m going to change it to be public as well so we can call it directly from main).
+First we need to add “virtual” to the base class’ party function.
+Then we add our new party function to the derived class and add “virtual” to the beginning.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">setName</span><span class="p">(</span><span class="n">string</span> <span class="n">nm</span><span class="p">){</span>
+          <span class="n">m_name</span> <span class="o">=</span> <span class="n">nm</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getName</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="kt">void</span> <span class="n">setJob</span><span class="p">(</span><span class="n">string</span> <span class="n">jb</span><span class="p">){</span>
+               <span class="n">m_job</span> <span class="o">=</span> <span class="n">jb</span><span class="p">;</span>
+               <span class="n">party</span><span class="p">();</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getJob</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">getJob</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="k">virtual</span> <span class="kt">void</span> <span class="n">party</span><span class="p">(){</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Wooo!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="n">string</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="n">string</span> <span class="n">m_job</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Wizard</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Person</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="kt">void</span> <span class="n">setWand</span><span class="p">(</span><span class="n">string</span> <span class="n">w</span><span class="p">){</span>
+          <span class="n">m_wand</span> <span class="o">=</span> <span class="n">w</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getWand</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">m_wand</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="k">virtual</span> <span class="kt">void</span> <span class="n">party</span><span class="p">(){</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Wooo, I&#39;m a wizard!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="n">string</span> <span class="n">m_wand</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Now when you call the party function for harry, an instance of the Wizard class, it will print out “Wooo, I’m a wizard!”.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="n">Wizard</span> <span class="n">harry</span><span class="p">;</span>
+     <span class="n">harry</span><span class="p">.</span><span class="n">party</span><span class="p">();</span>     <span class="c1">// Prints out &quot;Wooo, I&#39;m a wizard!&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Let’s go over how the compiler works in this case.
+When you call the party function, the compiler first goes to Person’s party function (<code class="docutils literal notranslate"><span class="pre">Person::party()</span></code>).
+When it sees that it has the word “virtual” in front of it, he thinks, “oh wait, I need to use the one defined by the most derived class,” in this case,
+Wizard (<code class="docutils literal notranslate"><span class="pre">Wizard::party()</span></code>).</p>
+<p>If you do want to call the Person’s party function with harry, you would do so with:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">harry</span><span class="p">.</span><span class="n">Person</span><span class="o">::</span><span class="n">party</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>When constructing a derived class, whose constructor gets called first, the base class or the derived class?
+The base class, because it needs to be constructed before you try and use it (which you can in the derived class).
+And for destructors, the derived class gets destructed first.
+If the base class needs parameters for its constructor (i.e. it is not a default constructor),
+you need to initialize it with a initializer list, in the form of className(argument).</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="n">Person</span><span class="p">(</span><span class="kt">int</span> <span class="n">age</span><span class="p">){</span>
+          <span class="n">m_age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="k">virtual</span> <span class="kt">void</span> <span class="n">setName</span><span class="p">(</span><span class="n">string</span> <span class="n">nm</span><span class="p">){</span>
+          <span class="n">m_name</span> <span class="o">=</span> <span class="n">nm</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getName</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="k">virtual</span> <span class="kt">void</span> <span class="n">party</span><span class="p">(){</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Wooo!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="n">string</span> <span class="n">m_name</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">m_age</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Wizard</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Person</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+     <span class="n">Wizard</span><span class="p">(</span><span class="kt">int</span> <span class="n">age</span><span class="p">)</span> <span class="o">:</span> <span class="n">Person</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">m_wand</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="kt">void</span> <span class="n">setWand</span><span class="p">(</span><span class="n">string</span> <span class="n">w</span><span class="p">){</span>
+          <span class="n">m_wand</span> <span class="o">=</span> <span class="n">w</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="n">string</span> <span class="n">getWand</span><span class="p">(){</span>
+          <span class="k">return</span> <span class="n">m_wand</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="k">virtual</span> <span class="kt">void</span> <span class="n">party</span><span class="p">(){</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Wooo, I&#39;m a wizard!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+     <span class="n">string</span> <span class="n">m_wand</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+     <span class="n">Wizard</span> <span class="n">harry</span><span class="p">(</span><span class="mi">17</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Polymorphism.html" class="btn btn-neutral float-right" title="Polymorphism">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Stacks.html" class="btn btn-neutral" title="Stacks"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

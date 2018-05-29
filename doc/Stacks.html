@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Stacks &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Inheritance" href="Inheritance.html"/>
+        <link rel="prev" title="Queues" href="Queues.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Stacks</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Stacks.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="stacks">
+<h1>Stacks<a class="headerlink" href="#stacks" title="Permalink to this headline">¶</a></h1>
+<p>The first is a stack.
+Let’s start by talking about the algorithm.
+The idea is that the first item in is the last out (LIFO), or the last item in is the first out.
+Think of it like a stack of plates.
+The last one you place in will be the first one to use.
+In the example below, 3 is the last one to be put in and the first to be taken out.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
+<span class="o">-</span>
+<span class="mi">2</span>
+<span class="o">-</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>Why would this algorithm be useful? It can be used for evaluating mathematical expressions and converting infix expressions to postfix expressions (A + B -&gt; A B +).
+It is also used to store actions done in say, a word processing program, which is how the undo button works.
+Say I write “My name is Netta”.
+The stack would look like this as you type it in:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;My&quot;</span>
+<span class="o">----</span>
+</pre></div>
+</div>
+<p>Then:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;name&quot;</span>
+<span class="o">------</span>
+<span class="s">&quot;My&quot;</span>
+<span class="o">----</span>
+</pre></div>
+</div>
+<p>Then:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;is&quot;</span>
+<span class="o">----</span>
+<span class="s">&quot;name&quot;</span>
+<span class="o">------</span>
+<span class="s">&quot;My&quot;</span>
+<span class="o">----</span>
+</pre></div>
+</div>
+<p>Then:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;Netta&quot;</span>
+<span class="o">-------</span>
+<span class="s">&quot;is&quot;</span>
+<span class="o">----</span>
+<span class="s">&quot;name&quot;</span>
+<span class="o">------</span>
+<span class="s">&quot;My&quot;</span>
+<span class="o">----</span>
+</pre></div>
+</div>
+<p>To undo the last thing we wrote, the program would remove the last item, leaving us with “My name is”:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;is&quot;</span>
+<span class="o">----</span>
+<span class="s">&quot;name&quot;</span>
+<span class="o">------</span>
+<span class="s">&quot;My&quot;</span>
+<span class="o">----</span>
+</pre></div>
+</div>
+<p>Then you can fix the mistake:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;Neda&quot;</span>
+<span class="o">------</span>
+<span class="s">&quot;is&quot;</span>
+<span class="o">----</span>
+<span class="s">&quot;name&quot;</span>
+<span class="o">------</span>
+<span class="s">&quot;My&quot;</span>
+<span class="o">----</span>
+</pre></div>
+</div>
+<p>Now let’s look at the data structure of a stack.
+The most common one is also called a stack, and it’s defined in the Standard Template Library (STL).
+You could also implement your own data structure, like an array or linked list, and use the same algorithm with it.
+To use a stack from the STL include this in your code:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stack&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>Or you can write <code class="docutils literal notranslate"><span class="pre">&quot;std::&quot;</span></code> in front of any functions or keywords you use.
+To create a stack, write <code class="docutils literal notranslate"><span class="pre">&quot;stack&quot;</span></code>, the name of the type of value you want it to hold in angular brackets
+(I believe this could also be an object), and the name you want it to have.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">stack</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">foo</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The advantage to using the stack defined in the STL is that it includes predefined functions for the stack interface.
+If you used other data structures, you would have to define these functions.
+The interface of a stack consists of five basic functions.</p>
+<p>1. Put something on the top of the stack.
+Note that the top is the only place where you can insert an item in a stack.
+This function is called “push” and its parameter(s?) is the value you want to insert.
+It doesn’t return any value.</p>
+<p>2. Remove the top item. Note that the top is the only place where you can remove an item in a stack.
+This function is called “pop” and it takes no parameters (why? It automatically takes off the top, no need for anything else).
+Also note that this function does NOT return any thing, so it will NOT tell you what value it has just removed.
+If you want to know what value you removed, you need to use this next function.</p>
+<p>3. See the value of the top item.
+This function is called “top” and it takes no parameters.
+It returns the value of the top item, and does nothing else.</p>
+<p>4. See whether the stack is empty. This function is called “empty” and it takes no parameters.
+It returns a boolean value; true if it’s empty, false if it isn’t.</p>
+<p>5. Gets the size of the stack.
+This function is called “size”</p>
+<p>Let’s see these functions in action!</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stack&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">stack</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">southPark</span><span class="p">;</span>       <span class="c1">// stack of strings</span>
+    <span class="n">southPark</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="s">&quot;Stan&quot;</span><span class="p">);</span>       <span class="c1">// Adds &quot;Stan&quot; to the stack</span>
+    <span class="n">southPark</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="s">&quot;Kyle&quot;</span><span class="p">);</span>
+    <span class="n">southPark</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="s">&quot;Cartman&quot;</span><span class="p">);</span>
+    <span class="n">southPark</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="s">&quot;Kenny&quot;</span><span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;They killed &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">southPark</span><span class="p">.</span><span class="n">top</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; !&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;You bastards!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">southPark</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">southPark</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;And then there were &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">southPark</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note that you need to call <code class="docutils literal notranslate"><span class="pre">top()</span></code> if you want to access the value before you use <code class="docutils literal notranslate"><span class="pre">pop()</span></code> on it.</p>
+<div class="section" id="infix-and-postfix-expressions">
+<h2>Infix and Postfix expressions<a class="headerlink" href="#infix-and-postfix-expressions" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s look at a subject related to stacks: infix and postfix expressions.
+These expressions can refer to any mathematical or logical expression.
+In infix notation, the operator goes between the numbers it applies to.
+Makes the most sense, right? Well, that’s only because that’s how we were taught math in school.
+You can also write an expression in postfix expression, and the operators go after the number(s) it applies to.
+Here are some expressions in infix and postfix notation:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">INFIX</span><span class="p">:</span> <span class="mi">30</span> <span class="o">+</span> <span class="mi">12</span>
+<span class="nl">POSTFIX</span><span class="p">:</span> <span class="mi">30</span> <span class="mi">12</span> <span class="o">+</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">INFIX</span><span class="p">:</span> <span class="p">(</span><span class="mi">18</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="nl">POSTFIX</span><span class="p">:</span> <span class="mi">18</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">INFIX</span><span class="p">:</span> <span class="mi">18</span> <span class="o">+</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nl">POSTFIX</span><span class="p">:</span> <span class="mi">18</span> <span class="mi">3</span> <span class="mi">2</span> <span class="o">*</span> <span class="o">+</span>
+</pre></div>
+</div>
+<p>So why the hell would we want to do it this way?
+Isn’t it just a more confusing way of writing?
+Actually, it’s less confusing! Let’s look at two of the examples above.</p>
+<p>In examples 2 and 3, we differentiate between the two expressions in infix notation with parentheses.
+But what about if the expression was just “18 + 3 * 2”.
+What is the correct interpretation of this expression?
+Well, if you follow precedence rules, then it would be “18 + (3 * 2)”.
+But that means you have to know what the precedence rules are.
+The postfix expression, however, is completely unambiguous: “18 3 2 * +”.
+Let me first explain how to read a postfix notation, and then you will understand.</p>
+<p>Here is example 1 from above.
+It’s pretty self-explanatory, but let’s still look at the proper way to read it.</p>
+<p>Keep on reading the numbers until there’s an operator.
+Then you take the last two numbers and put the operator in between them and calculate the result.
+The result REPLACES the two numbers and the operator.
+Continue doing this until the expression is finished.
+Now let’s read this expression:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mi">30</span> <span class="mi">12</span> <span class="o">+</span>
+</pre></div>
+</div>
+<p>We have a <code class="docutils literal notranslate"><span class="pre">30</span></code>. We think “cool!” and keep on reading.</p>
+<p><code class="docutils literal notranslate"><span class="pre">12</span></code> Think: “cool”</p>
+<p><code class="docutils literal notranslate"><span class="pre">+</span></code> “Ooo something different.”</p>
+<p>Take the last two numbers (in the order they were read) and put the operator in between: <code class="docutils literal notranslate"><span class="pre">30</span> <span class="pre">+</span> <span class="pre">12</span></code>.</p>
+<p>The result is <code class="docutils literal notranslate"><span class="pre">42</span></code> (“Cool.”).</p>
+<p>Replace the two numbers and the operator with it.</p>
+<p><code class="docutils literal notranslate"><span class="pre">42</span></code></p>
+<p>Check: is there anything else?</p>
+<p>Nope?</p>
+<p>That’s it!</p>
+<p>Now let’s do the Example 2.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mi">18</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">18</span></code> “Cool.”</p>
+<p><code class="docutils literal notranslate"><span class="pre">3</span></code> “Cool.”</p>
+<p><code class="docutils literal notranslate"><span class="pre">+</span></code>  Now we do something!</p>
+<p>Take the last two numbers and put the operator in between and calculate: <code class="docutils literal notranslate"><span class="pre">18</span> <span class="pre">+</span> <span class="pre">3</span> <span class="pre">=</span>&#160; <span class="pre">21</span></code>.</p>
+<p>Replace the numbers and the operator with the result.</p>
+<p><code class="docutils literal notranslate"><span class="pre">21</span> <span class="pre">2</span> <span class="pre">*</span></code></p>
+<p>Let’s keep going!</p>
+<p><code class="docutils literal notranslate"><span class="pre">21</span></code> “Cool.”</p>
+<p><code class="docutils literal notranslate"><span class="pre">2</span></code> “Cool.”</p>
+<p><code class="docutils literal notranslate"><span class="pre">*</span></code> Yay! <code class="docutils literal notranslate"><span class="pre">21</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">42</span></code> (“Cool.”).</p>
+<p><code class="docutils literal notranslate"><span class="pre">42</span></code></p>
+<p>Is there anything else?
+Nope, we are done!
+Notice that this is indeed the same as doing <code class="docutils literal notranslate"><span class="pre">(18</span> <span class="pre">+</span> <span class="pre">3)</span> <span class="pre">*</span> <span class="pre">2</span></code>: <code class="docutils literal notranslate"><span class="pre">18</span> <span class="pre">+</span> <span class="pre">3</span></code> is <code class="docutils literal notranslate"><span class="pre">21</span></code>, <code class="docutils literal notranslate"><span class="pre">21</span> <span class="pre">*</span> <span class="pre">2</span></code> is <code class="docutils literal notranslate"><span class="pre">42</span></code>.</p>
+<p>And finally, example 3.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mi">18</span> <span class="mi">3</span> <span class="mi">2</span> <span class="o">*</span> <span class="o">+</span>
+</pre></div>
+</div>
+<p>Notice that now we have three numbers and then an operator.
+Wait!
+No!
+Don’t panic!
+Let’s just go through our steps and you’ll see that it all works out.</p>
+<p><code class="docutils literal notranslate"><span class="pre">18</span></code> “Cool.”</p>
+<p><code class="docutils literal notranslate"><span class="pre">3</span></code> “Cool.”</p>
+<p><code class="docutils literal notranslate"><span class="pre">2</span></code> “Cool.”</p>
+<p><code class="docutils literal notranslate"><span class="pre">*</span></code>  Oh no!
+What do we do?
+You take the last TWO numbers and apply the operator to them.
+<code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">6</span></code> (“Cool.”).
+Replace it and you get:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mi">18</span> <span class="mi">6</span> <span class="o">+</span>
+</pre></div>
+</div>
+<p>Whew!
+Now it’s not so bad.
+Just keep on reading from where you left off.</p>
+<p><code class="docutils literal notranslate"><span class="pre">+</span></code> Last two numbers were: <code class="docutils literal notranslate"><span class="pre">18</span></code> and <code class="docutils literal notranslate"><span class="pre">6</span></code>. <code class="docutils literal notranslate"><span class="pre">18</span> <span class="pre">+</span> <span class="pre">6</span> <span class="pre">=</span> <span class="pre">24</span></code> (“Cool.”).</p>
+<p><code class="docutils literal notranslate"><span class="pre">24</span></code></p>
+<p>Notice that this is the same as doing <code class="docutils literal notranslate"><span class="pre">18</span> <span class="pre">+</span> <span class="pre">(3</span> <span class="pre">*</span> <span class="pre">2)</span></code>: <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span></code> is <code class="docutils literal notranslate"><span class="pre">6</span></code>, <code class="docutils literal notranslate"><span class="pre">18</span> <span class="pre">+</span> <span class="pre">6</span></code> is <code class="docutils literal notranslate"><span class="pre">24</span></code>.</p>
+<p>How can we get a computer to do this? By using a stack!
+Let’s translate the way we read a postfix expression into our stack’s interface functions.
+Instead of saying “Cool.” every time we have a new token (a number or operator), we will push the token onto the stack.
+Every time we read a token that is an operator, we pop off the last two items of the stack.
+After we do our calculation and say “Cool.”, we will now push it onto the stack (and say “Cool.” in our heads).
+Let’s translate the instructions for example 3 into pseudo code.</p>
+<p>Now we can make this into actual code (I’m going to assume that the user is inputting valid tokens).</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Inheritance.html" class="btn btn-neutral float-right" title="Inheritance">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Queues.html" class="btn btn-neutral" title="Queues"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

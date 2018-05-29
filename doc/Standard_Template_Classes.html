@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Standard Template Library (STL) Classes &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Recursion" href="Recursion.html"/>
+        <link rel="prev" title="Templates" href="Templates.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Quicksort.html">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Standard Template Library (STL) Classes</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Standard_Template_Classes.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="standard-template-library-stl-classes">
+<h1>Standard Template Library (STL) Classes<a class="headerlink" href="#standard-template-library-stl-classes" title="Permalink to this headline">¶</a></h1>
+<p>Just like queue and stack are pre-written functions in the Standard Template Library (STL), there are more.
+We will be looking at the vector class, list class, map class, and set class.</p>
+<div class="section" id="vectors">
+<h2>Vectors<a class="headerlink" href="#vectors" title="Permalink to this headline">¶</a></h2>
+<p>A vector is basically like a dynamically allocated array.
+You add (push) and remove (pop) items in a similar way to a queue, but you can also access individual elements with brackets, like an array.</p>
+<p>Here are some of the functions of the interface:
+1) <cite>push_back()`</cite>: The ability to add an item (put the value between the parentheses)
+2) <code class="docutils literal notranslate"><span class="pre">[]</span></code>: Access and/or change an item
+3) <code class="docutils literal notranslate"><span class="pre">pop_back()</span></code>: Remove the last item
+4) <code class="docutils literal notranslate"><span class="pre">front()</span></code>: Access the first item
+5) <code class="docutils literal notranslate"><span class="pre">back()</span></code>: Access the last item
+6) <code class="docutils literal notranslate"><span class="pre">size()</span></code>: Get the size of the vector
+7) <code class="docutils literal notranslate"><span class="pre">empty()</span></code>: Determine whether it is empty or not</p>
+<p>To use vectors, include this at the top of the program.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>To create a vector, write “vector”, the type of the variables you want it to hold in angular brackets, the name you want it to have,
+and in parentheses the number of items it starts out with.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">foo</span><span class="p">(</span><span class="mi">67</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>You can also add a second parameter; this will initialize all the elements to that value.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">bar</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s">&quot;poop&quot;</span><span class="p">);</span>    <span class="c1">// 5 items all initialized to &quot;poop&quot;</span>
+</pre></div>
+</div>
+<p>To access the nth element, use brackets.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="n">second</span> <span class="o">=</span> <span class="n">bar</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>You can <em>NOT</em> access elements outside of the existing ones.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">bar</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>   <span class="c1">// No!</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lists">
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<p>A list is a class that creates a linked list and its nodes for you.
+It has all of the same functions as the vector class, except that you can <em>NOT</em> use brackets to access individual elements.
+A list also has the ability to add an item to the front and to add an item to the back, unlike a vector.</p>
+<ol class="arabic simple">
+<li><code class="docutils literal notranslate"><span class="pre">push_back()</span></code>: Add an item to the back of the list (put the value between the parentheses)</li>
+<li><code class="docutils literal notranslate"><span class="pre">push_front()</span></code>: Add an item to the front (put the value between the parentheses)</li>
+</ol>
+<p>To create a list, write <code class="docutils literal notranslate"><span class="pre">list</span></code>, the type of the variables you want it to hold in angular brackets,
+he name you want it to have, and in parentheses the number of items it starts out with.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">list</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">foo</span><span class="p">(</span><span class="mi">44</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>So how do you access individual elements?
+For a linked list, you may think that you should use a pointer.
+Well, with this class, you can’t use one, you have to use an iterator variable, which is basically the same as a pointer,
+but it is an object and only works for STL containers.
+Specifically, you can use an iterator in correspondence with the list class’ <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> functions because they return an address.
+The iterator knows what element it points to, as well as how to find the previous element and next element in a container,
+so you can use the <code class="docutils literal notranslate"><span class="pre">++</span></code> with a linked list iterator and it will work fine.</p>
+<p>To declare an iterator, write the class’ name (<code class="docutils literal notranslate"><span class="pre">vector</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, etc.), its type in angular brackets, two colons, the word <code class="docutils literal notranslate"><span class="pre">iterator</span></code>,
+and the name you want it to have.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">list</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span> <span class="n">iterator</span> <span class="n">poo</span><span class="p">;</span>    <span class="c1">// iterator of type list</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;::</span> <span class="n">iterator</span> <span class="n">par</span><span class="p">;</span> <span class="c1">// iterator of type vector</span>
+</pre></div>
+</div>
+<p>So how do <code class="docutils literal notranslate"><span class="pre">begin()</span></code> and <code class="docutils literal notranslate"><span class="pre">end()</span></code> work?
+Set your iterator to the beginning.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">poo</span> <span class="o">=</span> <span class="n">foo</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>    <span class="c1">// poo points to the first element</span>
+</pre></div>
+</div>
+<p>To get the last element, set your iterator to end, which is one past the last element, and then move the iterator one back.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">poo</span> <span class="o">=</span> <span class="n">foo</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+<span class="n">poo</span><span class="o">--</span><span class="p">;</span>     <span class="c1">// Now poo points to the last element.</span>
+</pre></div>
+</div>
+<p>To cycle through all of the elements, just make a while loop, but be sure you stop before you go past the last element.
+You can use the star operator to access the value of the element an iterator points to just like you can with pointer.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">poo</span> <span class="o">=</span> <span class="n">foo</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">poo</span> <span class="o">!=</span> <span class="n">foo</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+<span class="p">{</span>
+     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="o">*</span><span class="n">poo</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>    <span class="c1">// Prints out the value of every element</span>
+     <span class="n">poo</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can also use the arrow operator with an iterator.</p>
+<p>Also, if you have a const list or vector (like in a parameter for a function), the iterator must also be const.
+You declare a const iterator by writing “const” after the two colons and before “iterator.”</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">list</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;::</span><span class="k">const</span> <span class="n">iterator</span> <span class="n">boo</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="maps">
+<h2>Maps<a class="headerlink" href="#maps" title="Permalink to this headline">¶</a></h2>
+<p>A map is used to associate two different values, which could be of any type.
+It has five functions in its interface (from what we’ve learned).</p>
+<ol class="arabic simple">
+<li><code class="docutils literal notranslate"><span class="pre">[]</span></code>: Used ONLY for creating new map items</li>
+<li><code class="docutils literal notranslate"><span class="pre">find()</span></code>: Returns the address of an item by putting its first parameter (only the first parameter will work) in between the parentheses. This should be used with an iterator so it can hold the address.</li>
+<li><code class="docutils literal notranslate"><span class="pre">first</span></code>: When used with an iterator (<code class="docutils literal notranslate"><span class="pre">(*foo).first</span></code> or <code class="docutils literal notranslate"><span class="pre">foo-&gt;first</span></code>), gives the value of a certain item’s first parameter.</li>
+<li><code class="docutils literal notranslate"><span class="pre">second</span></code>: When used with an iterator (<code class="docutils literal notranslate"><span class="pre">(*foo).second</span></code> or <code class="docutils literal notranslate"><span class="pre">foo-&gt;second</span></code>), gives the value of a certain item’s second parameter.</li>
+<li><code class="docutils literal notranslate"><span class="pre">begin()</span></code>: Like a vector’s and list’s begin function, returns the address of the first item.</li>
+<li><code class="docutils literal notranslate"><span class="pre">end()</span></code>: Like a vector’s and list’s end function, goes past the map’s items.</li>
+</ol>
+<p>To use a map, include this header.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;map&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>To declare a map, write “map”, the two types of values you want to store in angular brackets and a comma in between, and the name of the map.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">string</span><span class="o">&gt;</span> <span class="n">foo</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>To add a value, write the name of the map, the value of the first type in between brackets, and set it equal to the second value.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;uno&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>In the map we declared, we can only associate an int to a string, not a string to an int.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">[</span><span class="s">&quot;dos&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>    <span class="c1">// No!</span>
+</pre></div>
+</div>
+<p>If you want to associate a string to an int, you would have to create a separate map that is declared with the string as the first parameter.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">bar</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Note that a map sorts all of the items by alphabetical/numerical order (depends on what the first parameter is).
+Because of this, if you have a self-defined struct or class as the first parameter (not necessary if it is the second parameter),
+you need to create your own less than comparison operator so that map can sort the elements.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+   <span class="n">string</span> <span class="n">get</span><span class="p">();</span>
+<span class="k">private</span><span class="o">:</span>
+   <span class="n">string</span> <span class="n">m_foo</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">Foo</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">Foo</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">get</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sets">
+<h2>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">¶</a></h2>
+<p>A set is is similar to an array; it holds items of one type, but they are also alphabetically ordered and you can access an item by its value quickly.</p>
+<p>A set has four interface functions, plus a <code class="docutils literal notranslate"><span class="pre">begin()</span></code> and <code class="docutils literal notranslate"><span class="pre">end()</span></code> function that work the same as in the order classes we have seen.
+1) <code class="docutils literal notranslate"><span class="pre">insert()</span></code>: Adds an item to the set; the value goes in the parentheses.
+2) <code class="docutils literal notranslate"><span class="pre">size()</span></code>: Returns the size of the set.
+3) <code class="docutils literal notranslate"><span class="pre">erase()</span></code>: Erases an item that has the value that’s in the parentheses. You can also have the iterator point to the item and delete the iterator. But that also means you can’t use the iterator once you have used it to erase something.
+4) <code class="docutils literal notranslate"><span class="pre">find()</span></code>: Returns the address of an item based on its value that is in the parentheses. If it doesn’t find it, it will return the address of <code class="docutils literal notranslate"><span class="pre">end()</span></code>. Use an iterator to hold the address</p>
+<p>To use the class include this:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;set&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>To create a set, write “set”, the type of value in between angular brackets, and the name you want it to have.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">foo</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Just like a map, the set organizes the items by alphabetical/numerical order.
+So, like with a map, if you create a set of structs or classes, you must define the less than comparison operator for it.</p>
+<p>Note for vectors and iterators: If use an iterator and point to some where in the vector, and then it you either add or erase an item from the vector, the iterator will NOT work any more, regardless of whether where that item is in relation to the iterator.
+This is because a vector changes how much memory it has open depending on the number of items, so it could change it without you knowing, and then the iterator may not point to the same place.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Recursion.html" class="btn btn-neutral float-right" title="Recursion">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Templates.html" class="btn btn-neutral" title="Templates"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

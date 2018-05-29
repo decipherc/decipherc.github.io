@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quicksort &mdash; decipher 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="decipher 0.1 documentation" href="../index.html"/>
+        <link rel="next" title="&lt;no title&gt;" href="Sorting.html"/>
+        <link rel="prev" title="Recursion" href="Recursion.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> decipher</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abstract_Data_Types.html">Abstract Data Types (ADT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#data-structure">1) Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#algorithm">2) Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Abstract_Data_Types.html#interface">3) Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Constructors.html">Constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Destructors.html">Destructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pointers.html">Pointers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#void-pointers">Void Pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pointers.html#fuction-pointers">Fuction Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Linked_lists.html">Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linked_lists.html#doubly-linked-lists">Doubly-linked Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Class_composition.html">Class composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headers.html">Header Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Copy_Constructors.html">Copy Constructors and Assignment Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Queues.html">Queues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#algorithm">Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Queues.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stacks.html">Stacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stacks.html#infix-and-postfix-expressions">Infix and Postfix expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inheritance.html">Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polymorphism.html">Polymorphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual_fucntions.html">Virtual functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#character">Character()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#name">name()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#printweapon">printWeapon()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#attackaction">attackAction()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Virtual_fucntions.html#id21">~Character()</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generic_Programming.html">Generic programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Standard_Template_Classes.html">Standard Template Library (STL) Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Standard_Template_Classes.html#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Recursion.html">Recursion</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quicksort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Big-O.html">Algorithm Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HashTables.html">Hash Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#closed-hash-table">Closed Hash Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HashTables.html#open-hash-table">Open Hash Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryTrees.html">Binary Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BinaryTrees.html#traversals">Traversals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BinarySearchTrees.html">Binary Search Trees (BST)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unordered_map.html">Unordered map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heap.html">Heap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#extracting-the-biggest-item-from-a-maxheap-smallest-item-from-a-minheap">Extracting the biggest item from a maxheap (smallest item from a minheap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heap.html#adding-a-node-to-a-maxheap-minheap-reheapification">Adding a node to a maxheap/minheap (reheapification)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Priority_queue.html">Priority queue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Heapsort.html">Heapsort</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-1">Step 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heapsort.html#step-2">Step 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tables.html">Tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">decipher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Quicksort</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/doc/Quicksort.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="quicksort">
+<h1>Quicksort<a class="headerlink" href="#quicksort" title="Permalink to this headline">¶</a></h1>
+<p>The quicksort divides the array into two groups and sorts the either group (conquering).
+It divides the array based on a random element from the array.</p>
+<ol class="arabic simple">
+<li>Check if array has at least 2 elements</li>
+<li>Select the first element in the array (the <code class="docutils literal notranslate"><span class="pre">pivot</span></code>)</li>
+<li><dl class="first docutils">
+<dt>Move all elements that are less than or equal to the selected element to the left of the <code class="docutils literal notranslate"><span class="pre">pivot</span></code> element and move all the elements greater to the right of it (do this with the partition function)</dt>
+<dd><ol class="first last lowerroman">
+<li>Set a variable <code class="docutils literal notranslate"><span class="pre">low</span></code> as the first index and a variable <code class="docutils literal notranslate"><span class="pre">high</span></code> as the last index.</li>
+<li>Keep on incrementing <code class="docutils literal notranslate"><span class="pre">low</span></code> until its value is greater than the pivot value.</li>
+<li>Keep on decrementing <code class="docutils literal notranslate"><span class="pre">high</span></code> until its value is less than or equal to the pivot value.</li>
+<li>If <code class="docutils literal notranslate"><span class="pre">low</span></code>’s value is less than <code class="docutils literal notranslate"><span class="pre">high</span></code>’s value, swap the elements.</li>
+<li>Repeat steps ii-iv until <code class="docutils literal notranslate"><span class="pre">high</span></code> is less than or equal to <code class="docutils literal notranslate"><span class="pre">low</span></code>.</li>
+<li>When <code class="docutils literal notranslate"><span class="pre">high</span></code> is less than or equal to <code class="docutils literal notranslate"><span class="pre">low</span></code>, swap the <code class="docutils literal notranslate"><span class="pre">pivot</span></code> element with the <code class="docutils literal notranslate"><span class="pre">high</span></code> element.</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li>Repeat 1-3 each sub-array.</li>
+</ol>
+<p>Let’s try this with an array of numbers.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>*2* 6 5 1 4 3
+1. Select a Moses (``pivot``).
+2. Partition the array based on Moses.
+2 6 5 1 4 3
+moses = 2
+low = 0 (2)     index (value)
+high = 5 (3)
+low = 1 (6)     greater than moses
+high = 4 (4)
+high = 3 (1)     less than moses
+Low (1) &lt; high (3), so swap 6 and 1
+2 1 5 6 4 3
+low = 1 (1)
+low = 2 (5)     greater than moses
+high = 3 (6)
+high = 2 (5)
+high = 1 (1)    less than moses
+Low (2) not &lt; high (1), break out of loop
+Swap moses with high
+1 2 5 6 4 3
+
+3. Repeat on left sub-array.
+1
+Since it has one element, return.
+
+4. Repeat on right sub-array
+5 6 4 3
+moses = 5
+low = 0 (5)
+high = 3 (3)
+low = 1 (6)     greater than moses
+high = 3 (3)    less than moses
+Low (1) &lt; high (3), so swap 6 and 3
+5 3 4 6
+low = 1 (3)
+low = 2 (4)
+low = 3 (6)     greater than moses
+high = 3 (6)
+high = 2 (4)     less than moses
+Low (3) not &lt; high (2), break out of loop
+Swap moses with high
+4 3 5 6
+
+
+5. Repeat on this sub-array&#39;s left sub-array
+4 3
+moses = 4
+low = 0 (4)
+high = 1 (3)
+low = 1 (3)
+low = 2 (?)     index greater than high
+high = 1 (3)    less than moses
+Low (2) not &lt; high (1), break out of loop
+Swap moses and high
+3 4
+
+5. Repeat on sub-array&#39;s right sub-array
+6
+Since it has one element, return.
+
+foo = 3 4 5 6
+Return
+
+foo = 1 2 3 4 5 6
+Return
+Done!
+</pre></div>
+</div>
+<p>Here is the code:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">quick</span><span class="p">(</span><span class="kt">int</span> <span class="n">foo</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">first</span><span class="p">,</span> <span class="kt">int</span> <span class="n">last</span><span class="p">)</span>     <span class="c1">// Indexes of first and last elements you wish to sort</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">last</span> <span class="o">-</span> <span class="n">first</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>     <span class="c1">// If there are at least two elements</span>
+     <span class="p">{</span>
+          <span class="kt">int</span> <span class="n">moses</span><span class="p">;</span>     <span class="c1">// Index of partitioner</span>
+          <span class="n">moses</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">);</span>
+          <span class="n">quick</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">moses</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>     <span class="c1">// left sub-array</span>
+          <span class="n">quick</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">moses</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">last</span><span class="p">);</span>     <span class="c1">// right sub-array</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">partition</span><span class="p">(</span><span class="kt">int</span> <span class="n">sea</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">low</span><span class="p">,</span> <span class="kt">int</span> <span class="n">high</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="kt">int</span> <span class="n">pivotIndex</span> <span class="o">=</span> <span class="n">low</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">pivotValue</span> <span class="o">=</span> <span class="n">sea</span><span class="p">[</span><span class="n">low</span><span class="p">];</span>     <span class="c1">// Set pivotValue to first element</span>
+     <span class="k">do</span>
+     <span class="p">{</span>
+          <span class="k">while</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span> <span class="o">&amp;&amp;</span> <span class="n">sea</span><span class="p">[</span><span class="n">low</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">pivotValue</span><span class="p">)</span>     <span class="c1">// Find first value greater than pivotValue</span>
+               <span class="n">low</span><span class="o">++</span><span class="p">;</span>
+          <span class="k">while</span> <span class="p">(</span><span class="n">sea</span><span class="p">[</span><span class="n">high</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pivotValue</span><span class="p">)</span>     <span class="c1">// Find the first value less than or equal to the pivotValue</span>
+               <span class="n">high</span><span class="o">--</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">)</span>
+               <span class="n">swap</span><span class="p">(</span><span class="n">sea</span><span class="p">[</span><span class="n">low</span><span class="p">],</span> <span class="n">sea</span><span class="p">[</span><span class="n">high</span><span class="p">);</span>
+     <span class="p">}</span>
+     <span class="k">while</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">);</span>     <span class="c1">// Continue looping until high has a lesser value than low</span>
+     <span class="n">swap</span><span class="p">(</span><span class="n">sea</span><span class="p">[</span><span class="n">pivotIndex</span><span class="p">],</span> <span class="n">sea</span><span class="p">[</span><span class="n">high</span><span class="p">]);</span>     <span class="c1">// Swap the pivotValue with this one because we know that high points to the correct place for the pivot</span>
+     <span class="n">pivotIndex</span> <span class="o">=</span> <span class="n">high</span><span class="p">;</span>     <span class="c1">// Get the index of the high because that&#39;s the pivot&#39;s index now</span>
+     <span class="k">return</span> <span class="n">pivotIndex</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>What is the big-o? You exponentially split the array up (O(log(n))) and loop through all the elements for at most O(n) times. On average it is O(n * log(n)).</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">quick</span><span class="p">(</span><span class="kt">int</span> <span class="n">foo</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">first</span><span class="p">,</span> <span class="kt">int</span> <span class="n">last</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">last</span> <span class="o">-</span> <span class="n">first</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
+     <span class="p">{</span>
+          <span class="kt">int</span> <span class="n">moses</span><span class="p">;</span>     <span class="c1">// Index of partitioner</span>
+          <span class="n">moses</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">);</span>
+          <span class="n">quick</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">moses</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>     <span class="c1">// O(log(n) / 2)</span>
+          <span class="n">quick</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">moses</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">last</span><span class="p">);</span>     <span class="c1">// O(log(n) / 2)</span>
+     <span class="p">}</span>
+<span class="p">}</span>     <span class="c1">// O(n * log(n) / 2 + n * log(n) / 2) = O(n * log(n))</span>
+
+<span class="kt">int</span> <span class="nf">partition</span><span class="p">(</span><span class="kt">int</span> <span class="n">sea</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">low</span><span class="p">,</span> <span class="kt">int</span> <span class="n">high</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="kt">int</span> <span class="n">pivotIndex</span> <span class="o">=</span> <span class="n">low</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">pivotValue</span> <span class="o">=</span> <span class="n">sea</span><span class="p">[</span><span class="n">low</span><span class="p">];</span>
+     <span class="k">do</span>
+     <span class="p">{</span>
+          <span class="k">while</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span> <span class="o">&amp;&amp;</span> <span class="n">sea</span><span class="p">[</span><span class="n">low</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">pivotValue</span><span class="p">)</span>
+               <span class="n">low</span><span class="o">++</span><span class="p">;</span>
+          <span class="k">while</span> <span class="p">(</span><span class="n">sea</span><span class="p">[</span><span class="n">high</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pivotValue</span><span class="p">)</span>
+               <span class="n">high</span><span class="o">--</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">)</span>
+               <span class="n">swap</span><span class="p">(</span><span class="n">sea</span><span class="p">[</span><span class="n">low</span><span class="p">],</span> <span class="n">sea</span><span class="p">[</span><span class="n">high</span><span class="p">);</span>
+     <span class="p">}</span>
+     <span class="k">while</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">);</span>     <span class="c1">// O(n), at most n steps</span>
+     <span class="n">swap</span><span class="p">(</span><span class="n">sea</span><span class="p">[</span><span class="n">pivotIndex</span><span class="p">],</span> <span class="n">sea</span><span class="p">[</span><span class="n">high</span><span class="p">]);</span>
+     <span class="n">pivotIndex</span> <span class="o">=</span> <span class="n">high</span><span class="p">;</span>
+     <span class="k">return</span> <span class="n">pivotIndex</span><span class="p">;</span>
+<span class="p">}</span>     <span class="c1">// O(n)</span>
+</pre></div>
+</div>
+<p>In the worst case it is O(n^2). This is when you have an already ordered array, because you will split up the array n times instead of log(n).</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>   <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
+<span class="mi">1</span>     <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
+    <span class="mi">2</span>     <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
+        <span class="mi">3</span>     <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
+             <span class="mi">4</span>     <span class="mi">5</span> <span class="mi">6</span>
+                  <span class="mi">5</span>   <span class="mi">6</span>
+</pre></div>
+</div>
+<p>The quicksort is unstable.</p>
+<p>2(a) 2(b) 1
+moses = 2(a)
+low = 0 (2(a))
+high = 2 (1)
+low = 1 (2(b))
+low = 2 (1)
+low = 3 (?)     greater than high
+high = 2 (1)     less than high
+Low (3) is not &lt; high (2), break out of loop
+Swap moses and high
+1 2(b) 2(a)
+[after evaluating left sub-array]
+Done!</p>
+<p>Notice that the 2s have not retained their original order.</p>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Sorting.html" class="btn btn-neutral float-right" title="&lt;no title&gt;">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Recursion.html" class="btn btn-neutral" title="Recursion"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, neda vesselinova.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
